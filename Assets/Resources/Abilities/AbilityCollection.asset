@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8504c9103e65c4cbf0aa364c58edfe, type: 3}
+  m_Name: AbilityCollection
+  m_EditorClassIdentifier: 
+  guid:
+    value1: 5202579797750104828
+    value2: 6512268852496080823
+  items:
+  - {fileID: 11400000, guid: d4364bc20d9795845be2191b5a40dd4d, type: 2}
+  automaticallyLoaded: 1
+  generateAsPartialClass: 1
+  generateAsBaseClass: 0
+  generatedFileLocationPath: Assets\Generated\Scripts
+  generatedStaticClassFileName: AbilityCollectionStatic
+  generateStaticFileNamespace: Collections.Resources.Abilities

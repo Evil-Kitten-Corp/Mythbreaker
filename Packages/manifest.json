@@ -49,7 +49,9 @@
     "com.codewriter.triinspector": "1.13.2",
     "com.brunomikoski.servicelocator": "1.0.0",
     "com.solidalloy.extevents": "1.7.0",
-    "com.nobi.roundedcorners": "3.0.1"
+    "com.nobi.roundedcorners": "3.0.1",
+    "com.brunomikoski.scriptableobjectcollection": "2.2.1",
+    "com.solidalloy.type-references": "2.16.0"
   },
   "scopedRegistries": [
     {
@@ -57,6 +59,7 @@
       "url": "https://package.openupm.com",
       "scopes": [
         "com.brunomikoski.animationsequencer",
+        "com.brunomikoski.scriptableobjectcollection",
         "com.brunomikoski.servicelocator",
         "com.codewriter.triinspector",
         "com.nobi.roundedcorners",

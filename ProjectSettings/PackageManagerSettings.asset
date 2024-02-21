@@ -31,6 +31,7 @@ MonoBehaviour:
     m_Url: https://package.openupm.com
     m_Scopes:
     - com.brunomikoski.animationsequencer
+    - com.brunomikoski.scriptableobjectcollection
     - com.brunomikoski.servicelocator
     - com.codewriter.triinspector
     - com.nobi.roundedcorners

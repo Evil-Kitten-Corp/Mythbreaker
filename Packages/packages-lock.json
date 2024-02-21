@@ -7,6 +7,13 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
+    "com.brunomikoski.scriptableobjectcollection": {
+      "version": "2.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.brunomikoski.servicelocator": {
       "version": "1.0.0",
       "depth": 0,
@@ -44,7 +51,7 @@
     },
     "com.solidalloy.type-references": {
       "version": "2.16.0",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.solidalloy.util": "1.40.0",
