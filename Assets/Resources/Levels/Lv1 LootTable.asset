@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f4db149bc43a0a11520b8b1164dd7, type: 3}
   m_Name: Lv1 LootTable
   m_EditorClassIdentifier: 
-  GuaranteedLootTable: []
-  OneItemFromList:
-  - Drop: {fileID: 11400000, guid: d4364bc20d9795845be2191b5a40dd4d, type: 2}
-    MinCountItem: 1
-    MaxCountItem: 1
-  WeightToNoDrop: 0
+  guaranteedLootTable: []
+  oneItemFromList:
+  - drop: {fileID: 11400000, guid: d4364bc20d9795845be2191b5a40dd4d, type: 2}
+    minCountItem: 1
+    maxCountItem: 1
+  weightToNoDrop: 0

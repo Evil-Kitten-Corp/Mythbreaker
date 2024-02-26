@@ -2,50 +2,51 @@
 using Tayx.Graphy.Utils.NumString;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FpsDebugger : MonoBehaviour
 {
-    [SerializeField] private TMP_Text m_fpsText = null;
+    [FormerlySerializedAs("m_fpsText")] [SerializeField] private TMP_Text mFPSText;
         
-    private GraphyManager m_graphyManager = null;
+    private GraphyManager _mGraphyManager;
         
-    private int m_updateRate = 4;
-    private int m_frameCount = 0;
-    private float m_deltaTime = 0f;
-    private float m_fps = 0f;
+    private int _mUpdateRate = 4;
+    private int _mFrameCount;
+    private float _mDeltaTime;
+    private float _mFPS;
 
     private void Awake()
     {
         G_IntString.Init( 0, 2000 ); // Max fps expected
         G_FloatString.Init( 0, 100 ); // Max ms expected per frame
 
-        m_graphyManager = transform.root.GetComponentInChildren<GraphyManager>();
+        _mGraphyManager = transform.root.GetComponentInChildren<GraphyManager>();
 
         UpdateParameters();
     }
-        
-    public void UpdateParameters()
+
+    private void UpdateParameters()
     {
-        m_updateRate = m_graphyManager.FpsTextUpdateRate;
+        _mUpdateRate = _mGraphyManager.FpsTextUpdateRate;
     }
         
     private void Update()
     {
-        m_deltaTime += Time.unscaledDeltaTime;
+        _mDeltaTime += Time.unscaledDeltaTime;
 
-        m_frameCount++;
+        _mFrameCount++;
 
-        if( m_deltaTime > 1f / m_updateRate )
+        if (_mDeltaTime > 1f / _mUpdateRate)
         {
-            m_fps = m_frameCount / m_deltaTime;
+            _mFPS = _mFrameCount / _mDeltaTime;
 
             // Update fps
-            m_fpsText.text = Mathf.RoundToInt( m_fps ).ToStringNonAlloc();
-            SetFpsRelatedTextColor( m_fpsText, m_fps );
+            mFPSText.text = Mathf.RoundToInt( _mFPS ).ToStringNonAlloc();
+            SetFpsRelatedTextColor( mFPSText, _mFPS );
 
             // Reset variables
-            m_deltaTime = 0f;
-            m_frameCount = 0;
+            _mDeltaTime = 0f;
+            _mFrameCount = 0;
         }
     }
         
@@ -53,17 +54,17 @@ public class FpsDebugger : MonoBehaviour
     {
         int roundedFps = Mathf.RoundToInt( fps );
 
-        if( roundedFps >= m_graphyManager.GoodFPSThreshold )
+        if( roundedFps >= _mGraphyManager.GoodFPSThreshold )
         {
-            text.color = m_graphyManager.GoodFPSColor;
+            text.color = _mGraphyManager.GoodFPSColor;
         }
-        else if( roundedFps >= m_graphyManager.CautionFPSThreshold )
+        else if( roundedFps >= _mGraphyManager.CautionFPSThreshold )
         {
-            text.color = m_graphyManager.CautionFPSColor;
+            text.color = _mGraphyManager.CautionFPSColor;
         }
         else
         {
-            text.color = m_graphyManager.CriticalFPSColor;
+            text.color = _mGraphyManager.CriticalFPSColor;
         }
     }
 }

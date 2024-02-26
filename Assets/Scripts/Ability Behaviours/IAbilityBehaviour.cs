@@ -1,7 +1,10 @@
-﻿namespace Ability_Behaviours
+﻿using System.Collections;
+
+namespace Ability_Behaviours
 {
     public interface IAbilityBehaviour
     {
-        public void Use();
+        public IEnumerator Apply();
+        public void Unapply();
     }
 }

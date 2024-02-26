@@ -18,7 +18,7 @@ namespace Level
 
         private void GetRewards()
         {
-            var guaranteed = levelController.levelEndRewards.GetGuaranteeedLoot();
+            var guaranteed = levelController.levelEndRewards.GetGuaranteedLoot();
             
             var rand = levelController.levelEndRewards
                 .GetRandomLoot(rewardsList.Count - guaranteed.Count);
