@@ -7,3 +7,7 @@
 - [ ] Weapons
 - [ ] Skills
 - [ ] Shapeshifting :tada:
+
+
+To Do:
+- Flip face orientation inside factory so platforms and walls inside are visible
