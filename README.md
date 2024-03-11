@@ -10,4 +10,8 @@
 
 
 To Do:
-- Flip face orientation inside factory so platforms and walls inside are visible
+- Edit Crate UVs
+- Import robot fbx from maya to blender to unity to not have clipping issues
+- Add sounds
+- Add more textures
+- Update enemy models
