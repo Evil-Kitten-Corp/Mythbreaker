@@ -10,8 +10,8 @@
 
 
 To Do:
-- Edit Crate UVs
-- Import robot fbx from maya to blender to unity to not have clipping issues
+- Import new crates with updated uvs
+- Import new factory with updated uvs and scaling
 - Add sounds
 - Add more textures
 - Update enemy models
