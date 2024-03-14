@@ -18,3 +18,24 @@ MonoBehaviour:
   collectionGUID:
     value1: 5202579797750104828
     value2: 6512268852496080823
+  itemName: 
+  itemDescription: 
+  input: {fileID: 0}
+  itemImg: {fileID: 0}
+  itemIcon: {fileID: 0}
+  rarity: 0
+  listReferenceField:
+  - rid: 2694071337378119686
+  - rid: 2694071337378119688
+  references:
+    version: 2
+    RefIds:
+    - rid: 2694071337378119686
+      type: {class: TimedAbility, ns: Ability_Behaviours.Properties, asm: Assembly-CSharp}
+      data:
+        maxTime: 0
+        image: {fileID: 0}
+    - rid: 2694071337378119688
+      type: {class: GameObjectStateChanger, ns: Ability_Behaviours.Properties, asm: Assembly-CSharp}
+      data:
+        gameObject: {fileID: 0}
