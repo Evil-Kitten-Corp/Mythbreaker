@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   guid:
-    value1: 5609796632295263256
-    value2: -6633691330796573304
+    value1: 5154887432726990008
+    value2: -3540475868189117527
   collectionGUID:
     value1: 5273801037116167014
     value2: 7798150736381798047
+  hasCachedCollection: 1
+  cachedCollection: {fileID: 11400000, guid: 3837b49a40e5dfb49ad95c8ad9651b60, type: 2}
+  prefab: {fileID: 0}
+  weaponBehaviour:
+    GuidAssignmentFailed: 0
+    GUID: 
+    _typeNameAndAssembly: 
+    _suppressLogs: 0
+    _needToLogTypeNotFound: 0
+    _typeChanged: 0
