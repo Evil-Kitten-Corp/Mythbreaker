@@ -8,16 +8,16 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class IKFootSolver : MonoBehaviour
 {
-    Transform body;
-    float footSpacing;
+    public Transform body;
+    public float footSpacing;
     public LayerMask terrainLayer;
 
     private Vector3 newPosition;
     private Vector3 oldPosition;
-    private float lerp = 0f;
-    private float stepDistance = 0.1f;
-    private float stepHeight = 0.1f;
-    private float speed = 1f;
+    public float lerp = 0f;
+    public float stepDistance = 0.1f;
+    public float stepHeight = 0.1f;
+    public float speed = 1f;
     private Vector3 currentPosition;
 
     // Start is called before the first frame update
