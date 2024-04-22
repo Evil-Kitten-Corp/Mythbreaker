@@ -80,7 +80,8 @@ namespace Invector.vCharacterController
                 _isStrafing = value;
             }
         }
-        internal bool isGrounded { get; set; }
+
+        public bool isGrounded { get; set; }
         internal bool isSprinting { get; set; }
         public bool stopMove { get; protected set; }
 
@@ -98,7 +99,7 @@ namespace Invector.vCharacterController
         internal bool lockRotation = false;                 // lock the rotation of the controller (not the animation)        
         internal bool _isStrafing;                          // internally used to set the strafe movement                
         internal Transform rotateTarget;                    // used as a generic reference for the camera.transform
-        internal Vector3 input;                             // generate raw input for the controller
+        public Vector3 input;                             // generate raw input for the controller
         internal Vector3 colliderCenter;                    // storage the center of the capsule collider info                
         internal Vector3 inputSmooth;                       // generate smooth input based on the inputSmooth value       
         internal Vector3 moveDirection;                     // used to know the direction you're moving 

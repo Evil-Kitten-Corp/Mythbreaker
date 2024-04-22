@@ -75,7 +75,7 @@ namespace LT.Shi
         private void OnCollisionEnter(Collision collision) {
             if(_explosionPrefab)
             {
-                if (!collision.gameObject.CompareTag("Player"))
+                if (!collision.gameObject.CompareTag("Player") | !collision.gameObject.CompareTag("Missile"))
                 {
                     Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
                 }

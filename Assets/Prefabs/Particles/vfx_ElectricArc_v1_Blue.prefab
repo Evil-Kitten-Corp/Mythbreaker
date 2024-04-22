@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33720379817669157}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.06, z: -0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074539229924275315}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2034239705216070531
 GameObject:
@@ -54,13 +54,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034239705216070531}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.588, z: 1.926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074539229924275315}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2074539229924275316
 GameObject:
@@ -85,6 +85,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074539229924275316}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -97,7 +98,6 @@ Transform:
   - {fileID: 9142203472888268227}
   - {fileID: 1385470094718641981}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2074539231107966432
 GameObject:
@@ -111,10 +111,10 @@ GameObject:
   - component: {fileID: 2074539231107966445}
   - component: {fileID: 2074539231107966446}
   - component: {fileID: 7610406639385943468}
-  - component: {fileID: 1465183933718526966}
-  - component: {fileID: 6789758863519565088}
-  - component: {fileID: 5604385740010273830}
-  - component: {fileID: 3398720198792176387}
+  - component: {fileID: 4783852455383778459}
+  - component: {fileID: 4949062002353681452}
+  - component: {fileID: 2473465720610727994}
+  - component: {fileID: 8775285260215502258}
   m_Layer: 0
   m_Name: vfxgraph_ArchedElectricity_v1
   m_TagString: Untagged
@@ -129,13 +129,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074539231107966432}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.45028532, z: -0, w: 0.89288473}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074539229924275315}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -53.524, z: 0}
 --- !u!2083052967 &2074539231107966445
 VisualEffect:
@@ -150,6 +150,7 @@ VisualEffect:
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
+  m_AllowInstancing: 1
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -279,12 +280,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
   m_Bindings:
-  - {fileID: 1465183933718526966}
-  - {fileID: 6789758863519565088}
-  - {fileID: 5604385740010273830}
-  - {fileID: 3398720198792176387}
+  - {fileID: 4783852455383778459}
+  - {fileID: 4949062002353681452}
+  - {fileID: 2473465720610727994}
+  - {fileID: 8775285260215502258}
   m_VisualEffect: {fileID: 2074539231107966445}
---- !u!114 &1465183933718526966
+--- !u!114 &4783852455383778459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,13 +294,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074539231107966432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: Pos1
   Target: {fileID: 5087318286573945132}
---- !u!114 &6789758863519565088
+--- !u!114 &4949062002353681452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,13 +309,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074539231107966432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: Pos2
   Target: {fileID: 7043364119620365539}
---- !u!114 &5604385740010273830
+--- !u!114 &2473465720610727994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,13 +324,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074539231107966432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: Pos3
   Target: {fileID: 8119008913420679765}
---- !u!114 &3398720198792176387
+--- !u!114 &8775285260215502258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,7 +339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074539231107966432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
@@ -367,13 +368,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3556228131821491495}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.854, z: 5.522}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074539229924275315}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5118150790707099500
 GameObject:
@@ -398,13 +399,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5118150790707099500}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.029, y: 1.635, z: 9.059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074539229924275315}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5530514479935761935
 GameObject:
@@ -418,10 +419,10 @@ GameObject:
   - component: {fileID: 2595044610348574731}
   - component: {fileID: 3606156488499029259}
   - component: {fileID: 7697237890544137845}
-  - component: {fileID: 453233091593389287}
-  - component: {fileID: 747744162292332221}
-  - component: {fileID: 5727297078746333229}
-  - component: {fileID: 3677990207411104729}
+  - component: {fileID: 6894938759362615282}
+  - component: {fileID: 8253768218967338432}
+  - component: {fileID: 6884659873117797289}
+  - component: {fileID: 3459369502557488918}
   m_Layer: 0
   m_Name: vfxgraph_ArchedElectricity_v1 (1)
   m_TagString: Untagged
@@ -436,13 +437,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5530514479935761935}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2074539229924275315}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!2083052967 &2595044610348574731
 VisualEffect:
@@ -457,6 +458,7 @@ VisualEffect:
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
+  m_AllowInstancing: 1
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -574,12 +576,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
   m_Bindings:
-  - {fileID: 453233091593389287}
-  - {fileID: 747744162292332221}
-  - {fileID: 5727297078746333229}
-  - {fileID: 3677990207411104729}
+  - {fileID: 6894938759362615282}
+  - {fileID: 8253768218967338432}
+  - {fileID: 6884659873117797289}
+  - {fileID: 3459369502557488918}
   m_VisualEffect: {fileID: 2595044610348574731}
---- !u!114 &453233091593389287
+--- !u!114 &6894938759362615282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -588,13 +590,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5530514479935761935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: Pos1
   Target: {fileID: 5087318286573945132}
---- !u!114 &747744162292332221
+--- !u!114 &8253768218967338432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -603,13 +605,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5530514479935761935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: Pos2
   Target: {fileID: 7043364119620365539}
---- !u!114 &5727297078746333229
+--- !u!114 &6884659873117797289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -618,13 +620,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5530514479935761935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
     m_Name: Pos3
   Target: {fileID: 8119008913420679765}
---- !u!114 &3677990207411104729
+--- !u!114 &3459369502557488918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -633,7 +635,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5530514479935761935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4ac5c6dbf247bf87d146fcdd5c5a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:

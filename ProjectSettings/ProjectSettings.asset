@@ -813,7 +813,7 @@ PlayerSettings:
     PS5: DOTWEEN
     QNX: DOTWEEN
     Stadia: DOTWEEN
-    Standalone: DOTWEEN;DOTWEEN_ENABLED
+    Standalone: DOTWEEN_ENABLED;DOTWEEN
     VisionOS: DOTWEEN
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
