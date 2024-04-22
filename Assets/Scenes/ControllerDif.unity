@@ -829,6 +829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 594135076}
+  - component: {fileID: 594135077}
   m_Layer: 0
   m_Name: IK_LeftLeg_target
   m_TagString: Untagged
@@ -851,6 +852,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846697610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &594135077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594135075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd688f499a9971440be47424edfd99ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &611294417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1409,7 +1425,7 @@ GameObject:
   - component: {fileID: 914771300}
   - component: {fileID: 914771299}
   - component: {fileID: 914771298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8116,6 +8132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd688f499a9971440be47424edfd99ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &2114495650
 PrefabInstance:
   m_ObjectHideFlags: 0
