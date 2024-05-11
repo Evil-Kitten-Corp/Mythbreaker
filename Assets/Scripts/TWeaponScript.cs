@@ -31,9 +31,9 @@ public class TWeaponScript: MonoBehaviour
     {
         if (other.CompareTag("Enemy") && activated)
         {
-            if (other.GetComponent<AttributesManager>() != null)
+            if (other.GetComponent<EnemyBehaviour>() != null)
             {
-                other.GetComponent<AttributesManager>().TakeDamage(100);
+                other.GetComponent<EnemyBehaviour>().TakeDamage.Invoke(100);
             }
         }
     }

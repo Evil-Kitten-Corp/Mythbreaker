@@ -28,5 +28,11 @@ namespace Abilities
             abilityCooldown.text = ab.Data.cooldown + "s";
             abilityDescription.text = ab.Data.abDescription;
         }
+
+        public void Close()
+        {
+            FindObjectOfType<AttackControl>().DisableWeapon();
+            gameObject.SetActive(false);
+        }
     }
 }

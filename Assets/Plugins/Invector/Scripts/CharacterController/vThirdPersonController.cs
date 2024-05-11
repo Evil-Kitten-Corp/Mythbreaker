@@ -9,8 +9,8 @@ namespace Invector.vCharacterController
         private void Start()
         {
             currentStamina = maxStamina;
-            staminaBar.maxValue = maxStamina;
-            staminaBar.value = currentStamina;
+            //staminaBar.maxValue = maxStamina;
+            //staminaBar.value = currentStamina;
         }
 
         private void Update()

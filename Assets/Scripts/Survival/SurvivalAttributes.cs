@@ -76,10 +76,6 @@ namespace Survival
                     currentHunger = 0;
                 }
 
-                if (currentHunger < 20)
-                {
-                    protag.hungerDebuff = true;
-                }
             }
             
             if (allowSleep)

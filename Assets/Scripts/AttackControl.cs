@@ -6,6 +6,7 @@ using UnityEngine;
 public class AttackControl : MonoBehaviour
 {
     [Header("Debug")] public float blastForce = 1;
+    public Collider weaponCollider;
     
     private Animator anim;
     internal event Action OnAttackSuccessful;
@@ -30,14 +31,26 @@ public class AttackControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("Attack");
+            EnableWeapon();
             LightAttackAllowed?.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             anim.SetTrigger("HeavyAttack");
+            EnableWeapon();
             HeavyAttackAllowed?.Invoke();
         }
+    }
+
+    public void EnableWeapon()
+    {
+        weaponCollider.enabled = true;
+    }
+
+    public void DisableWeapon()
+    {
+        weaponCollider.enabled = false;
     }
     
     private void AltAltUpdate()
@@ -73,7 +86,7 @@ public class AttackControl : MonoBehaviour
     {
         // Check if the player is currently in an attackable state
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        return !stateInfo.IsTag("Attack"); // Assuming your attack animations are tagged with "Attack"
+        return !stateInfo.IsTag("Attack"); // Assuming attack animations are tagged with "Attack"
     }
     
     void XUpdate()

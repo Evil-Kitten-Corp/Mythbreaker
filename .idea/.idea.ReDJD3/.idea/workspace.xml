@@ -2,74 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e185f76-a792-45d3-8eb0-9b79dc4342a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Casual1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Casual1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/MagicSword_Ice.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MagicSword_Ice.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/MagicSword_Iron.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MagicSword_Iron.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Invector-3rdPersonController_LITE/Animator/Invector@BasicLocomotion.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Invector-3rdPersonController_LITE/Animator/Invector@BasicLocomotion.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AbilityProps.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Drake_Blue.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Drake_Blue.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MagicSword_Ice.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MagicSword_Ice.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MagicSword_Iron.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MagicSword_Iron.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/Homing Missile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/Homing Missile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Particles/vfx_ElectricArc_v1_Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/vfx_ElectricArc_v1_Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/background-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/background-white.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Canvas 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Canvas 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Canvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Canvas.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Global Volume.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Global Volume.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve/Dissolve.vfx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve/Dissolve.vfx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve/DissolveInfidels.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve/DissolveInfidels.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve/Dissolving.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve/Dissolving.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/DissolveShader.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/DissolveShader.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Sky/MySkybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Sky/MySkybox.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Sword.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Sword.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/SwordDissolve.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/SwordDissolve.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/FlyingMageSet_for_UnityChan.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/FlyingMageSet_for_UnityChan.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/body_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/body_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/cheek_00.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/cheek_00.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/eye_iris_L_00.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/eye_iris_L_00.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/eye_iris_R_00.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/eye_iris_R_00.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/eyeline_00.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/eyeline_00.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/face_00.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/face_00.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/hair_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/hair_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/skin_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Animation/Materials/skin_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Frank_Slash_Pack/Assets/Animations/Frank_SlashPack_Assassin/FBX Animation/In_Place/Frank_RPG_Assassin_Combo03_3_IP.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Frank_Slash_Pack/Assets/Animations/Frank_SlashPack_Assassin/FBX Animation/In_Place/Frank_RPG_Assassin_Combo03_3_IP.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Frank_Slash_Pack/Assets/Animations/Frank_SlashPack_Assassin/FBX Animation/Motions_for_Demo/Frank_RPG_Assassin_Skill04_Demo.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Frank_Slash_Pack/Assets/Animations/Frank_SlashPack_Assassin/FBX Animation/Motions_for_Demo/Frank_RPG_Assassin_Skill04_Demo.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TBMoved/Frank_Slash_Pack/Assets/Materials/Frank_GreatSword_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TBMoved/Frank_Slash_Pack/Assets/Materials/Frank_GreatSword_Body.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/for deletion/LT/Shi/HomingMissile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/for deletion/LT/Shi/HomingMissile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/for deletion/LT/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/for deletion/LT/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/for deletion/TBDeleted/Forester/Example/Models/Materials/defaultMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/for deletion/TBDeleted/Forester/Example/Models/Materials/defaultMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.solidalloy.ext-events/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.solidalloy.ext-events/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.solidalloy.type-references/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.solidalloy.type-references/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_BlendDistort.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_BlendDistort.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Blend_Normals.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Blend_Normals.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Explosion.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Explosion.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SoftNoise.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SoftNoise.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SwordSlash.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SwordSlash.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Graphy - Ultimate Stats Monitor/Graphy_CustomizationScene.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Graphy - Ultimate Stats Monitor/Graphy_CustomizationScene.unitypackage.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Animations/Enemy/_Enemy Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Animations/Enemy/_Enemy Animator Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Animations/Player/CATS.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Animations/Player/CATS.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/BebasNeue-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/BebasNeue-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/AbilityInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/AbilityInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/HS_TargetProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/HS_TargetProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Fresnel2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Fresnel2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Impact1dn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Impact1dn.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Mask50dn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Mask50dn.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttributesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttributesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Survival/SurvivalAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Survival/SurvivalAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TWeaponScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TWeaponScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +32,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ChangeWeaponState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HealthbarMC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.8/Runtime/Utilities/PropertyBinding/Implementation/VFXPositionBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.8/Runtime/Utilities/PropertyBinding/Implementation/VFXTransformBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Unity_VRoid_Melee_Hits/After Tutorial/Assets/CameraShakeAddOn.cs" root0="SKIP_HIGHLIGHTING" />
@@ -147,6 +104,8 @@
       <workItem from="1710511825311" duration="16033000" />
       <workItem from="1710547635225" duration="16070000" />
       <workItem from="1710713461444" duration="13989000" />
+      <workItem from="1715423322443" duration="35000" />
+      <workItem from="1715426578306" duration="8702000" />
     </task>
     <servers />
   </component>

@@ -133,9 +133,9 @@ public class HS_TargetProjectile : MonoBehaviour
             }
         }
 
-        if (target.GetComponentInParent<AttributesManager>() != null)
+        if (target.GetComponentInParent<EnemyBehaviour>() != null)
         {
-            target.GetComponentInParent<AttributesManager>().TakeDamage(5, true);
+            target.GetComponentInParent<EnemyBehaviour>().TakeDamage.Invoke(10);
         }
         Destroy(gameObject);
     }
