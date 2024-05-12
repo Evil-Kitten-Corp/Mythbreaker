@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Minimalist.Bar.Quantity;
+using Abilities;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -82,6 +83,7 @@ public class EnemyBehaviour : MonoBehaviour
        {
            _anim.SetTrigger(Die);
            health.PassiveDynamics.Enabled = false;
+           TargetingSystem.Instance.screenTargets.Remove(gameObject);
            Destroy(gameObject, _anim.GetCurrentAnimatorClipInfo(1).Length + 5f);
        });
        
