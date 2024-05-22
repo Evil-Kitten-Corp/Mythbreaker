@@ -3,28 +3,798 @@
   <component name="ChangeListManager">
     <list default="true" id="5e185f76-a792-45d3-8eb0-9b79dc4342a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_BlendDistort.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_BlendDistort.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Blend_Normals.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Blend_Normals.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Explosion.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_Explosion.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SoftNoise.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SoftNoise.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SwordSlash.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Render Pipelines support/Shaders/URP_SwordSlash.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Graphy - Ultimate Stats Monitor/Graphy_CustomizationScene.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Graphy - Ultimate Stats Monitor/Graphy_CustomizationScene.unitypackage.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Animations/Enemy/_Enemy Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Animations/Enemy/_Enemy Animator Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Animations/Player/CATS.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Animations/Player/CATS.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/BebasNeue-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/BebasNeue-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/AbilityInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/AbilityInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/HS_TargetProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Scripts/Abilities/HS_TargetProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Fresnel2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Fresnel2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Impact1dn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Impact1dn.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Mask50dn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/VFX/Hovl/Sword slash VFX/Materials/Mask50dn.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations/X Bot@Cross Punch.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations/X Bot@Cross Punch.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations/X Bot@Falling Back Death.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations/X Bot@Falling Back Death.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations/X Bot@Walking.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AIAnimations/X Bot@Walking.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroupTemplates/Packed Assets.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Built In Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Built In Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptFastMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptFastMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedPlayMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptPackedPlayMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptVirtualMode.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DataBuilders/BuildScriptVirtualMode.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DefaultObject.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/DefaultObject.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AltStopCam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AltStopCam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimRootController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimRootController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraShakeAddOn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraShakeAddOn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraShaker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraShaker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraShaking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraShaking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Casual1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Casual1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeWeaponState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeWeaponState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Character.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Character.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/CharacterController5-Targetting.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/CharacterController5-Targetting.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/Toon PBR.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/Toon PBR.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/Toon_Lit TriPlanar 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/Toon_Lit TriPlanar 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/Toon_Lit TriPlanar.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Materials/Toon_Lit TriPlanar.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/NoFriction.physicMaterial" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/NoFriction.physicMaterial.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Ascending Stairs.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Ascending Stairs.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Braced Hang Shimmy.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Braced Hang Shimmy.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Braced Hang To Crouch.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Braced Hang To Crouch.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Crouch Idle (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Crouch Idle (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Crouched Walking (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Crouched Walking (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Descending Stairs (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Descending Stairs (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Hanging Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Hanging Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Idle To Braced Hang (1).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Idle To Braced Hang (1).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Jumping Up.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Jumping Up.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Running (3).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Running (3).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Standing Idle (2).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Standing Idle (2).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Walking (2).fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Animations/Walking (2).fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Materials/Robot_Color.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Materials/Robot_Color.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Model.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Model/Robot Kyle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Model/Robot Kyle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Textures/Robot_Color.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Textures/Robot_Color.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Textures/Robot_Normal.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Robot Kyle/Textures/Robot_Normal.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/CharacterIK.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/CharacterIK.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/CharacterMove.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/CharacterMove.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/FollowCam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/FollowCam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/LedgeDet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/LedgeDet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/TargetTracker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/TargetTracker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/TargetingPos.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Scripts/TargetingPos.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Shaders/Triplanar.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Shaders/Triplanar.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/Gradient.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/Gradient.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/Grass 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/Grass 1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/RockTextureSeamless 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/RockTextureSeamless 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/noise3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterController5/Textures/noise3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_GraphViewStyles.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_GraphViewStyles.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_NodeStyles.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_NodeStyles.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_StateInspectorStyles.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_StateInspectorStyles.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_TransitionStyles.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_TransitionStyles.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_WindowStyles.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Editor Resources/FSMC_WindowStyles.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/FSMC.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/FSMC.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors/FSMC_ControllerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors/FSMC_ControllerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors/FSMC_StateEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors/FSMC_StateEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors/FSMC_TransitionEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Inspectors/FSMC_TransitionEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_AnyNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_AnyNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_BaseNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_BaseNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_Edge.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_Edge.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_EdgeArrow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_EdgeArrow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_StartNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_StartNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_StateNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Nodes/FSMC_StateNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/CreateStatePopup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/CreateStatePopup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_EditorWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_EditorWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_GraphChanges.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_GraphChanges.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_GraphView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_GraphView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_GraphViewSer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_GraphViewSer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_ParameterDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_ParameterDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_Utils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Editor/Windows/FSMC_Utils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/README.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Behaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Behaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_BoolParameter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_BoolParameter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Controller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Controller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_FloatParameter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_FloatParameter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_IntegerParameter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_IntegerParameter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Parameter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Parameter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_State.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_State.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Transition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/FSMC_Transition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/SMicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Data/SMicon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/FSMC.Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/FSMC.Runtime.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Mono.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Mono/FSMC_Executer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FSMC/Runtime/Mono/FSMC_Executer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/GENSHIN_1 SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/GENSHIN_1 SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/GENSHIN_1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/GENSHIN_1.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/Linux Biolinum Bold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/Linux Biolinum Bold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/Linux Biolinum Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/Linux Biolinum Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Getting Up.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Getting Up.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HealthbarMC.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HealthbarMC.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IKFootSolver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IKFootSolver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTween.Modules.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTween.Modules.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/Telegrama_raw SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/Telegrama_raw SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/Ability.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/Ability.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/AbilityCollection.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/AbilityCollection.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/AbilityCollection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/AbilityCollection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/AbilityIndirectReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/AbilityIndirectReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/Items/Dash.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Abilities/Items/Dash.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Lv1 LootTable.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Levels/Lv1 LootTable.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/Items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/Items/Sword.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/Items/Sword.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/Weapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/Weapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/WeaponCollection.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/WeaponCollection.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/WeaponCollection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/WeaponCollection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/WeaponIndirectReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Weapons/WeaponIndirectReference.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttackControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttributesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AttributesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Survival/SurvivalAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Survival/SurvivalAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TWeaponScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TWeaponScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/01-FSMC__Behaviour-NewFSMCBehaviour.cs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptTemplates/01-FSMC__Behaviour-NewFSMCBehaviour.cs.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability Instances.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability Instances/Dash.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability Instances/Dash.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability Instances/Shield.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability Instances/Shield.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Ability.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/AbilityData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/AbilityData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/AbilityData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/AbilityData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/IAbilityBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/IAbilityBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Properties.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Properties/GameObjectStateChanger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Properties/GameObjectStateChanger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Properties/TimedAbility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Properties/TimedAbility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Rarities.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/Rarities.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/AbilitySlot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/AbilitySlot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/AbilityUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/AbilityUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/AbilityUIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/AbilityUIController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/DamagePopUpAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/DamagePopUpAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/DamagePopUpGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/DamagePopUpGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/UIBillboard.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ability Behaviours/UI/UIBillboard.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttackControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttributesManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AttributesManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamagePopUpAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamagePopUpAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamagePopUpGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamagePopUpGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamageTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamageTester.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FpsDebugger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FpsDebugger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlobalDefs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlobalDefs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractableObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractableObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementDisabler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementDisabler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementLocker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementLocker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objective.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objective.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectiveDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectiveDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RarityChooser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RarityChooser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopItemSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopItemSO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopPanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopPreviewer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopPreviewer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TWeaponScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TWeaponScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowSkill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowSkill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectableGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectableGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectableObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SelectableObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SettingsMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SettingsMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SettingsMenuItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SettingsMenuItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIBillboarding.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIBillboarding.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon Behaviours.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon Behaviours/IWeaponBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon Behaviours/IWeaponBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon Behaviours/WeaponInstance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon Behaviours/WeaponInstance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponAttributes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/1 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/1 (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/1 (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/1 (2).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/MySkybox.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/MySkybox.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/Stylized Skybox.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sky/Stylized Skybox.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/AssemblyInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Combo.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Combo.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Input System.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Input System/Combo Actions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Input System/Combo Actions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller/Balrond3pCameraFollow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller/Balrond3pCameraFollow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller/Balrond3pMainCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller/Balrond3pMainCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller/Balrond3personCameraCollision.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Models/Character/G2_CyborgCharacters/Scrips/Balrond3Pcontroller/Balrond3personCameraCollision.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/1Character.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/1Character.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/Character.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/Character.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/CharacterBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/CharacterBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/CharacterMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/CharacterMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/Locomotion Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Character/Locomotion Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Common.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Common/AnimationEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Common/AnimationEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/ClimbComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/ClimbComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/CombatComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/CombatComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/FinisherComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/FinisherComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/FlowMoveComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/FlowMoveComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/FreeFlowComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/FreeFlowComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/HitDecalComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Component/HitDecalComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Controller/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Controller/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Debug.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Debug/InputLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Debug/InputLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Framework.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Framework/1MonoSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Framework/1MonoSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Framework/MonoSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Framework/MonoSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Manager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Manager/InputSystemManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Manager/InputSystemManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Manager/TimeManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Manager/TimeManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Rigging.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Rigging/HeadTracking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Rigging/HeadTracking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects/1LocomotionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects/1LocomotionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects/LocomotionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects/LocomotionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects/SO_Finisher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Scriptable Objects/SO_Finisher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/ControllerDisable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/ControllerDisable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/FreeFlow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/FreeFlow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/Jump.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/Jump.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/LockedRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/LockedRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/RootMotion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/RootMotion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/SetCombatType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/SetCombatType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/SpawnEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/StateMachine/SpawnEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/UI/LoggerItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/UI/LoggerItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Util.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Util/Util.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Util/Util.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Weapon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Weapon/WeaponBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/Scripts/Weapon/WeaponBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/AraTrail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/AraTrail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/ElasticArray.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/ElasticArray.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/BakeTrail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/BakeTrail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/ColorFromSpeed.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/ColorFromSpeed.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/ElectricalArc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/ElectricalArc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/TireTrack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/HelperScripts/TireTrack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/AxleInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/AxleInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/CarController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/CarController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/ObjectDragger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/ObjectDragger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/Rotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/Rotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/WallPlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/WallPlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/WobblePath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/SampleScenes/Scripts/WobblePath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/TrailSection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/AraTrail/TrailSection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts/ME_DemoGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts/ME_DemoGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts/ME_MouseOrbit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts/ME_MouseOrbit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts/ME_RealtimeReflection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/DemoResources/Scripts/ME_RealtimeReflection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers/ME_AnimatorEvents.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers/ME_AnimatorEvents.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers/ME_ColorHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers/ME_ColorHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers/ME_EffectSettingColor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/Helpers/ME_EffectSettingColor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_FixParticlesAligment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_FixParticlesAligment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_LightCurves.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_LightCurves.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_ParticleCollisionDecal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_ParticleCollisionDecal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_ParticleGravityPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_ParticleGravityPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_ParticleTrails.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_ParticleTrails.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_Reflection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_Reflection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_TrailRendererNoise.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/ME_TrailRendererNoise.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/PSMeshRendererUpdater.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/KriptoFX/MeshEffect/Scripts/PSMeshRendererUpdater.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AnimationCurveData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AnimationCurveData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AnimationCurves.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AnimationCurves.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AnimationEventEffects.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AnimationEventEffects.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AttachWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/AttachWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CharacterOptional.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CharacterOptional.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CharacterState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CharacterState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CombatData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CombatData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ComboData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ComboData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CurrentMovementSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/CurrentMovementSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EAttachSocket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EAttachSocket.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EAttackDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EAttackDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EAttackType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EAttackType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ECombatType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ECombatType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EComboState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EComboState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ECursorMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ECursorMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EFlowType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EFlowType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EKeystroke.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/EKeystroke.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/HandIK.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/HandIK.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/HandInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/HandInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/HitResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/HitResult.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/IPickable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/IPickable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/LoggerData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/LoggerData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ME_CustomLight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ME_CustomLight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ME_MeshMaterialEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ME_MeshMaterialEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ME_PerPlatformSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/ME_PerPlatformSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/SO_Combo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/SO_Combo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/SO_Finisher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/SO_Finisher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_AxisRotateByTime.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_AxisRotateByTime.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_GrvityPoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_GrvityPoint.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_Light.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_Light.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_UIEffectList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_UIEffectList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_WroomWroom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Slash_WroomWroom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/VelocityBlend.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/VelocityBlend.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Weapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/Weapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eAllowedGait.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eAllowedGait.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eCharacterMoveMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eCharacterMoveMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eCharacterState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eCharacterState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eClimbMoveDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eClimbMoveDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eHeightType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eHeightType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eMovementState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eMovementState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eThicknessType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eThicknessType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eTraceType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TEMP_SCRIPTS/Hack-And-Slash-Test/VFX/OrdosFX/Magic Slashes FX/Scripts/eTraceType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/BaseCharacter.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/BaseCharacter.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eye.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eye.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/EyeBack.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/EyeBack.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eye_reflection.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eye_reflection.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eyebrows.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eyebrows.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eyelashes.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eyelashes.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eyeliner.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Eyeliner.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Face.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Face.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Hair_head.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Hair_head.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_EyeReflection.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_EyeReflection.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_1_hair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_1_hair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_1_head.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_1_head.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_2_hair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_2_hair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_2_head.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_2_head.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_3_hair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_3_hair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_3_head.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_3_head.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_4_hair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_4_hair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_4_head.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_4_head.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_5_hair.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_5_hair.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_5_head.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_Hair_5_head.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_transp_Eye_color2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_transp_Eye_color2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_transp_Eye_color3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_transp_Eye_color3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_transp_Eye_color4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_transp_Eye_color4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_underwear_1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_underwear_1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_underwear_2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_underwear_2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_underwear_3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/Mat_underwear_3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/mouth_inside.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Mat/mouth_inside.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Shader/DoubleSided.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Shader/DoubleSided.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Shader/UnlitColor.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Shader/UnlitColor.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Body.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Body.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_EyeReflection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_EyeReflection.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_EyeWhite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_EyeWhite.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyebrows.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyebrows.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyelashes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyelashes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyeliner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyeliner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Eyes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Face.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Face.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Face_makeup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Face_makeup.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair1_hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair1_hair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair1_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair1_head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair2_hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair2_hair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair2_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair2_head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair3_hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair3_hair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair3_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair3_head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair4_hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair4_hair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair4_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair4_head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair5_hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair5_hair.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair5_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Hair5_head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Mouth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_Mouth.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_underwear_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_underwear_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_underwear_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/BaseCharacter/Sourcefiles/Tex/Tex_underwear_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/AC.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/AC.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Anim_Idle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Anim_Idle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Mat_Background.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Mat_Background.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Mesh_Background.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Mesh_Background.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Tex_Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Demo files/Tex_Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Underwear1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/BaseCharacter/Underwear1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/Casual1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/Casual1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Material/Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Material/Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Mesh/AnimeGirl.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Mesh/AnimeGirl.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Texture/Casual1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Texture/Casual1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Texture/Casual1NORMAL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Temporary Character/Casual1/SourceFiles/Texture/Casual1NORMAL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/URP.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/diamondthree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/diamondthree.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/diamondtwo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/diamondtwo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +802,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ChangeWeaponState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HealthbarMC.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Me Gameys/MPWyzard Start/Assets/Scripts/PowerupOption.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Me Gameys/MPWyzard Start/Assets/Scripts/PowerupSelector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FinalScripts/Enemy/WaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WaveTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.8/Runtime/Utilities/PropertyBinding/Implementation/VFXPositionBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.8/Runtime/Utilities/PropertyBinding/Implementation/VFXTransformBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Unity_VRoid_Melee_Hits/After Tutorial/Assets/CameraShakeAddOn.cs" root0="SKIP_HIGHLIGHTING" />
@@ -105,7 +877,9 @@
       <workItem from="1710547635225" duration="16070000" />
       <workItem from="1710713461444" duration="13989000" />
       <workItem from="1715423322443" duration="35000" />
-      <workItem from="1715426578306" duration="8702000" />
+      <workItem from="1715426578306" duration="9327000" />
+      <workItem from="1716194021679" duration="340000" />
+      <workItem from="1716194856623" duration="17578000" />
     </task>
     <servers />
   </component>

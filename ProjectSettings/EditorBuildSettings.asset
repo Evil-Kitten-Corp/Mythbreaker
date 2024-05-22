@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/FinalScripts/SubtitleTest.unity
+    guid: 68777f21c75657d45afe496b3dd0f2ce
+  - enabled: 1
     path: Assets/Scenes/Combat.unity
     guid: 493b81edc842247419abefd95ddae0bb
   m_configObjects:
