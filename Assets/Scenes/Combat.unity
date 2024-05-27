@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 406162347}
+  m_Material: {fileID: 1132081928}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -3990,45 +3990,6 @@ Transform:
   - {fileID: 1543501261}
   m_Father: {fileID: 683608111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &406162347
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/RoundedCorners/RoundedCorners
-  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_LockedProperties: 
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _WidthHeightRadius: {r: 133.4441, g: 131.3834, b: 20.54, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1 &406821587
 GameObject:
   m_ObjectHideFlags: 0
@@ -5954,7 +5915,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: -3195828791156449804, guid: edb36c23dea061145a7f925f9dc13b58,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5964,7 +5925,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 919132149155446097, guid: edb36c23dea061145a7f925f9dc13b58,
         type: 3}
       propertyPath: m_Name
@@ -5974,12 +5935,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 1738776581880846596, guid: edb36c23dea061145a7f925f9dc13b58,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 2355982399387309400, guid: edb36c23dea061145a7f925f9dc13b58,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5994,12 +5955,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 8567717000986892130, guid: edb36c23dea061145a7f925f9dc13b58,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 8616184511030011274, guid: edb36c23dea061145a7f925f9dc13b58,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6009,7 +5970,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14463,6 +14424,45 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!21 &1132081928
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _WidthHeightRadius: {r: 133.4441, g: 131.3834, b: 20.54, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1 &1140558262
 GameObject:
   m_ObjectHideFlags: 0
@@ -15436,22 +15436,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: -7385189512676675294, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: -4220204009960789408, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: -3097340288434626328, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: -2936431032205602233, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15471,17 +15471,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 4059279300811166479, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 6272350532052637613, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19a99552ef422d04b8d41359adfca3d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 4565da81b8661a94d8f8dc56b778a69a, type: 2}
     - target: {fileID: 7152520436077478166, guid: 379314f1f06218649ad4fc64d2a35f34,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18106,7 +18106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1489012736
 Transform:
   m_ObjectHideFlags: 0
