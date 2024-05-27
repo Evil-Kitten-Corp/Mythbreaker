@@ -155,11 +155,11 @@ public class AttackControl : MonoBehaviour
             }
 
             Vector3 direction = (t.transform.position - transform.position).normalized;
-            Animator anim = rb.GetComponent<Animator>();
-            
-            if (anim != null)
+            EnemyBehaviour bh = rb.GetComponent<EnemyBehaviour>();
+
+            if (bh != null)
             {
-               anim.SetTrigger("KnockUp");  
+                bh.KnockUp?.Invoke();
             }
             
             rb.AddForce(direction * blastForce, ForceMode.Impulse);

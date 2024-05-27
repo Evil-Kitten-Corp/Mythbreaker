@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - TerrainLayer
+  - AbilityInventory
+  - TargetCenter
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - TerrainLayer
-  - 
+  - NoCulling
   - 
   - 
   - 

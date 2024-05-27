@@ -252,6 +252,7 @@ MonoBehaviour:
   - Head
   - Nose
   - Mouth
+  finalLoopReward: Dick
   waves: 5
   enemiesToSpawn:
     _keys:

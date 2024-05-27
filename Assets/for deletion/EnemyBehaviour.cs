@@ -23,6 +23,8 @@ public class EnemyBehaviour : MonoBehaviour
     private Material[] _skinnedMats;
     
     public Action<float> TakeDamage;
+    public Action<GameObject> OnDeath;
+    public Action KnockUp;
     
     private EnemyStates _currentState;
     private Animator _anim;
@@ -41,7 +43,6 @@ public class EnemyBehaviour : MonoBehaviour
     private static readonly int Die = Animator.StringToHash("Die");
     
     public EnemyStats stats;
-    public Action<GameObject> OnDeath;
     private static readonly int DissolveAmount = Shader.PropertyToID("_DissolveAmount");
 
     public enum EnemyStates 
@@ -50,7 +51,8 @@ public class EnemyBehaviour : MonoBehaviour
         SEEK, 
         ATTACK, 
         HIT, 
-        DEATH
+        DEATH,
+        KNOCKDOWN
     }
 
     void Start()
@@ -60,6 +62,7 @@ public class EnemyBehaviour : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         OnDeath += OnDie;
         TakeDamage += OnTakeDamage;
+        KnockUp += OnKnockup;
 
         if (skinnedMeshRenderer != null)
         {
@@ -69,6 +72,11 @@ public class EnemyBehaviour : MonoBehaviour
         //Hard coding for now, we'll implement this better after testing
         
        //ENTRY
+       
+       _entryActions.Add(EnemyStates.KNOCKDOWN, () =>
+       {
+           _anim.SetTrigger("KnockUp");  
+       });
        
        _entryActions.Add(EnemyStates.IDLE, null);
        
@@ -104,7 +112,7 @@ public class EnemyBehaviour : MonoBehaviour
            health.PassiveDynamics.Enabled = false;
            TargetingSystem.Instance.screenTargets.Remove(gameObject);
            OnDeath?.Invoke(gameObject);
-           Destroy(gameObject, _anim.GetCurrentAnimatorClipInfo(1).Length + 5f);
+           Destroy(gameObject, _anim.GetCurrentAnimatorClipInfo(0).Length + 5f);
        });
        
        //UPDATE
@@ -124,6 +132,17 @@ public class EnemyBehaviour : MonoBehaviour
        _updateActions.Add(EnemyStates.HIT, null);
        _updateActions.Add(EnemyStates.DEATH, null);
        
+       _updateActions.Add(EnemyStates.KNOCKDOWN, () =>
+       {
+           if (_anim.GetCurrentAnimatorStateInfo(0).IsName("Knockdown") | 
+               _anim.GetCurrentAnimatorStateInfo(0).IsName("GetUp"))
+           {
+               return;
+           }
+           
+           SwitchState(EnemyStates.IDLE);
+       });
+       
        //EXIT
        
        _exitActions.Add(EnemyStates.IDLE, null);
@@ -136,6 +155,17 @@ public class EnemyBehaviour : MonoBehaviour
        _exitActions.Add(EnemyStates.ATTACK, null);
        _exitActions.Add(EnemyStates.HIT, null);
        _exitActions.Add(EnemyStates.DEATH, null);
+       _exitActions.Add(EnemyStates.KNOCKDOWN, null);
+    }
+
+    private void OnKnockup()
+    {
+        if (_currentState == EnemyStates.DEATH)
+        {
+            return;
+        }
+        
+        SwitchState(EnemyStates.KNOCKDOWN);
     }
 
     private void OnDie(GameObject obj)
@@ -207,6 +237,8 @@ public class EnemyBehaviour : MonoBehaviour
             case EnemyStates.HIT:
                 if (health.Amount > 0) SwitchState(EnemyStates.IDLE);
                 if (health.Amount <= 0) SwitchState(EnemyStates.DEATH);
+                break;
+            case EnemyStates.KNOCKDOWN:
                 break;
             case EnemyStates.DEATH:
                 break;
