@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Combat.unity
     guid: 493b81edc842247419abefd95ddae0bb
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: 2141a7804e32cd142ae4441e5b6c0bc6,
+    com.unity.addressableassets: {fileID: 11400000, guid: de64ea482b0f7e246b9e59c0e3c0a1d8,
       type: 2}
