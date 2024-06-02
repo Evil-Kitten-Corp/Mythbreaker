@@ -115,5 +115,12 @@ public class MenuController : MonoBehaviour
             yield return null;
         }
         fadePanel.color = new Color(0f, 0f, 0f, 0f);
+
+        // Check if alpha is 0, then disable the GameObject
+        if (fadePanel.color.a <= 0f)
+        {
+            fadePanel.gameObject.SetActive(false);
+        }
     }
+
 }
