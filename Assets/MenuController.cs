@@ -1,50 +1,119 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class MenuController : MonoBehaviour
 {
-    public GameObject controlsPanel; // Reference to the ControlsPanel
-    public GameObject creditsPanel; // Reference to the CreditsPanel
+    public GameObject controlsPanel;
+    public GameObject creditsPanel;
+    public Image fadePanel;
+    public float fadeDuration = 1f;
 
-    // This function will be called when the Start Game button is clicked
+    bool hasFaded = false;
+
+    void Start()
+    {
+        // Start the fade-in effect when the game starts
+        StartCoroutine(FadeInOut());
+    }
+
+    IEnumerator FadeInOut()
+    {
+        if (!hasFaded)
+        {
+            hasFaded = true;
+
+            // Start with fully opaque
+            fadePanel.color = new Color(0f, 0f, 0f, 1f);
+
+            // Fade out
+            float elapsedTime = 0f;
+            while (elapsedTime < fadeDuration)
+            {
+                float t = elapsedTime / fadeDuration;
+                fadePanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, t)); // Fade out from 100% to 0%
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            fadePanel.color = new Color(0f, 0f, 0f, 0f); // Ensure the panel is fully transparent
+            fadePanel.gameObject.SetActive(false); // Disable the fade panel
+        }
+    }
+
     public void StartGame()
     {
-        // Replace "Combat" with the name of your game scene
-        SceneManager.LoadScene("Combat");
+        StartCoroutine(FadeAndLoadScene("Combat"));
     }
 
-    // This function will be called when the Controls button is clicked
     public void ShowControls()
     {
-        // Show the controls panel
-        controlsPanel.SetActive(true);
+        StartCoroutine(FadeAndSetActive(controlsPanel, true));
     }
 
-    // This function will be called when the Close button on the Controls panel is clicked
     public void HideControls()
     {
-        // Hide the controls panel
-        controlsPanel.SetActive(false);
+        StartCoroutine(FadeAndSetActive(controlsPanel, false));
     }
 
-    // This function will be called when the Credits button is clicked
     public void ShowCredits()
     {
-        // Show the credits panel
-        creditsPanel.SetActive(true);
+        StartCoroutine(FadeAndSetActive(creditsPanel, true));
     }
 
-    // This function will be called when the Close button on the Credits panel is clicked
     public void HideCredits()
     {
-        // Hide the credits panel
-        creditsPanel.SetActive(false);
+        StartCoroutine(FadeAndSetActive(creditsPanel, false));
     }
 
-    // This function will be called when the Quit Game button is clicked
     public void QuitGame()
     {
-        // Quit the application
+        StartCoroutine(FadeAndQuit());
+    }
+
+    IEnumerator FadeAndLoadScene(string sceneName)
+    {
+        yield return FadeOut();
+        SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator FadeAndSetActive(GameObject panel, bool setActive)
+    {
+        yield return FadeOut();
+        panel.SetActive(setActive);
+        yield return FadeIn();
+    }
+
+    IEnumerator FadeAndQuit()
+    {
+        yield return FadeOut();
         Application.Quit();
+    }
+
+    IEnumerator FadeOut()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            float t = elapsedTime / fadeDuration;
+            fadePanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(0f, 1f, t));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        fadePanel.color = new Color(0f, 0f, 0f, 1f);
+    }
+
+    IEnumerator FadeIn()
+    {
+        fadePanel.gameObject.SetActive(true); // Enable the fade panel
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            float t = elapsedTime / fadeDuration;
+            fadePanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, t));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        fadePanel.color = new Color(0f, 0f, 0f, 0f);
     }
 }
