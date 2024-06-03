@@ -1,24 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnterWarehouse : MonoBehaviour
+public class TriggerWarehouse : MonoBehaviour
 {
-    [SerializeField] private Animator MyAnimationController;
+    public TriggeredObject triggeredObject;
+    public TriggeredObject triggeredObject2;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        { 
-            MyAnimationController.SetBool("Enter", true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
         {
-            MyAnimationController.SetBool("Enter", false);
+            triggeredObject.Trigger();
+            triggeredObject2.Trigger();
         }
     }
 }
