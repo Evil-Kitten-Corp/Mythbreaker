@@ -4,19 +4,7 @@
     <list default="true" id="5e185f76-a792-45d3-8eb0-9b79dc4342a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Enemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Extras/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Extras/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Linux Biolinum Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Linux Biolinum Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Animations/Enemy/_Enemy Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Animations/Enemy/_Enemy Animator Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/BebasNeue-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/BebasNeue-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/Telegrama_raw SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Plugins/Minimalist Bar System/Fonts/Telegrama_raw SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Reforged/Weapons/Magic sword/Materials/MagicSword_Iron.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Reforged/Weapons/Magic sword/Materials/MagicSword_Iron.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Combat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Combat.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ACTUAL USABLE SHIT/AttackControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ACTUAL USABLE SHIT/AttackControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/New Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/New Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/for deletion/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/for deletion/EnemyBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +90,9 @@
       <workItem from="1715426578306" duration="9327000" />
       <workItem from="1716194021679" duration="340000" />
       <workItem from="1716194856623" duration="17637000" />
-      <workItem from="1716799230431" duration="5055000" />
+      <workItem from="1716799230431" duration="5765000" />
+      <workItem from="1717789092977" duration="254000" />
+      <workItem from="1717791019179" duration="2736000" />
     </task>
     <servers />
   </component>
