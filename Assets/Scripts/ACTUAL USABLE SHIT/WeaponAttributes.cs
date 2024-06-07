@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FinalScripts;
 using UnityEngine;
 
 public class WeaponAttributes : MonoBehaviour
@@ -8,9 +9,14 @@ public class WeaponAttributes : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Enemy"))
+        if (other.TryGetComponent<EnemyBehaviour>(out var eb))
         {
-            other.GetComponent<EnemyBehaviour>().TakeDamage.Invoke(atm.attack);
+            eb.TakeDamage.Invoke(atm.attack);
+            GetComponentInParent<AttackControl>().AttackSuccessful();
+        }
+        else if (other.TryGetComponent<EnemyAppendage>(out var ap))
+        {
+            ap.TakeDamage(atm.attack);
             GetComponentInParent<AttackControl>().AttackSuccessful();
         }
     }

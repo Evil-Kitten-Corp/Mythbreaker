@@ -31,7 +31,8 @@ public abstract class EnemyBehaviour : MonoBehaviour
     internal NavMeshAgent _agent;
     internal Transform _target;
     internal float _dmgToTake;
-    internal float _lastAttackTime; 
+    internal float _lastAttackTime;
+    internal bool _canBeKnockedup;
     
     internal readonly Dictionary<EnemyStates, Action> _updateActions = new();
     internal readonly Dictionary<EnemyStates, Action> _entryActions = new();
@@ -63,7 +64,11 @@ public abstract class EnemyBehaviour : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         OnDeath += OnDie;
         TakeDamage += OnTakeDamage;
-        KnockUp += OnKnockup;
+
+        if (_canBeKnockedup)
+        {
+           KnockUp += OnKnockup; 
+        }
 
         if (skinnedMeshRenderer != null)
         {
