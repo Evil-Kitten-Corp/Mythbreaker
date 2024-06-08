@@ -8,6 +8,7 @@ TagManager:
   - TerrainLayer
   - AbilityInventory
   - TargetCenter
+  - Effects
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - TerrainLayer
   - NoCulling
-  - 
+  - Effects
   - 
   - 
   - 

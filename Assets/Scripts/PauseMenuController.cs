@@ -5,6 +5,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenuPanel; // Reference to the PauseMenuPanel
     public GameObject controlsImage; // Reference to the ControlsImage
+    public GameObject optionsImage; // Reference to the OptionsImage
 
     private bool isPaused = false;
 
@@ -28,6 +29,7 @@ public class PauseMenuController : MonoBehaviour
     {
         pauseMenuPanel.SetActive(false);
         controlsImage.SetActive(false); // Hide the controls image if it's shown
+        optionsImage.SetActive(false); // Hide the options image if it's shown
         Time.timeScale = 1f; // Resume game time
         isPaused = false;
     }
@@ -57,9 +59,67 @@ public class PauseMenuController : MonoBehaviour
         controlsImage.SetActive(false);
     }
 
+    public void ShowOptions()
+    {
+        // Show the options image
+        optionsImage.SetActive(true);
+    }
+
+    public void HideOptions()
+    {
+        // Hide the options image
+        optionsImage.SetActive(false);
+    }
+
     public void LoadMainMenu()
     {
         Time.timeScale = 1f; // Resume game time before changing the scene
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void EnableEffects()
+    {
+        Debug.Log("EnableEffects method called."); // Debug log
+        GameObject[] effectsParents = GameObject.FindGameObjectsWithTag("Effects");
+
+        foreach (GameObject parent in effectsParents)
+        {
+            EnableChildren(parent);
+        }
+    }
+
+    private void EnableChildren(GameObject parent)
+    {
+        if (parent != null)
+        {
+            foreach (Transform child in parent.transform)
+            {
+                child.gameObject.SetActive(true);
+                Debug.Log("Enabled child object: " + child.gameObject.name); // Debug log
+            }
+        }
+    }
+
+    public void DisableEffects()
+    {
+        Debug.Log("DisableEffects method called."); // Debug log
+        GameObject[] effectsParents = GameObject.FindGameObjectsWithTag("Effects");
+
+        foreach (GameObject parent in effectsParents)
+        {
+            DisableChildren(parent);
+        }
+    }
+
+    private void DisableChildren(GameObject parent)
+    {
+        if (parent != null)
+        {
+            foreach (Transform child in parent.transform)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("Disabled child object: " + child.gameObject.name); // Debug log
+            }
+        }
     }
 }
