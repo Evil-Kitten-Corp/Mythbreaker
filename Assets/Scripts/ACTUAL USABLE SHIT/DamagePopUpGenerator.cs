@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class DamagePopUpGenerator : MonoBehaviour
 {
-    public static DamagePopUpGenerator current;
+    public static DamagePopUpGenerator Current;
     public GameObject prefab;
 
     private void Awake()
     {
-        current = this;
+        Current = this;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F10))
+        if (Input.GetKeyDown(KeyCode.F10))
         {
             CreatePopUp(Vector3.one, Random.Range(0, 1000).ToString(), Color.yellow);
         }

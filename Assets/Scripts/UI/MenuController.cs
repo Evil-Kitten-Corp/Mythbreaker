@@ -10,40 +10,45 @@ public class MenuController : MonoBehaviour
     public Image fadePanel;
     public float fadeDuration = 1f;
 
-    bool hasFaded = false;
+    private bool _hasFaded;
+    private SaveLoadJsonFormatter _saveSys;
 
     void Start()
     {
-        // Start the fade-in effect when the game starts
         StartCoroutine(FadeInOut());
+        _saveSys = FindObjectOfType<SaveLoadJsonFormatter>();
     }
 
     IEnumerator FadeInOut()
     {
-        if (!hasFaded)
+        if (!_hasFaded)
         {
-            hasFaded = true;
+            _hasFaded = true;
 
-            // Start with fully opaque
             fadePanel.color = new Color(0f, 0f, 0f, 1f);
 
-            // Fade out
             float elapsedTime = 0f;
             while (elapsedTime < fadeDuration)
             {
                 float t = elapsedTime / fadeDuration;
-                fadePanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, t)); // Fade out from 100% to 0%
+                fadePanel.color = new Color(0f, 0f, 0f, Mathf.Lerp(1f, 0f, t)); 
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
-            fadePanel.color = new Color(0f, 0f, 0f, 0f); // Ensure the panel is fully transparent
-            fadePanel.gameObject.SetActive(false); // Disable the fade panel
+            fadePanel.color = new Color(0f, 0f, 0f, 0f); 
+            fadePanel.gameObject.SetActive(false);
         }
     }
 
     public void StartGame()
     {
-        StartCoroutine(FadeAndLoadScene("Combat"));
+        //try to get the save data info
+        _saveSys.LoadGame(out int wave);
+        
+        Debug.Log(wave);
+        
+        //if wave = 0, start from cutscene
+        StartCoroutine(wave == 0 ? FadeAndLoadScene("Cutscene") : FadeAndLoadScene("Loading"));
     }
 
     public void ShowControls()
@@ -105,7 +110,7 @@ public class MenuController : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        fadePanel.gameObject.SetActive(true); // Enable the fade panel
+        fadePanel.gameObject.SetActive(true);
         float elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
         {
@@ -116,7 +121,6 @@ public class MenuController : MonoBehaviour
         }
         fadePanel.color = new Color(0f, 0f, 0f, 0f);
 
-        // Check if alpha is 0, then disable the GameObject
         if (fadePanel.color.a <= 0f)
         {
             fadePanel.gameObject.SetActive(false);

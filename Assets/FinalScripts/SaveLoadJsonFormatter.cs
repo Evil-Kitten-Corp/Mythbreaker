@@ -10,11 +10,12 @@ public class SaveLoadJsonFormatter : MonoBehaviour
     {
         _playerData = new PlayerData(0);
         _saveFilePath = Application.persistentDataPath + "/PlayerData.json";
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SaveGame(PlayerData data)
     {
-        string saveData = JsonUtility.ToJson(_playerData);
+        string saveData = JsonUtility.ToJson(data);
         File.WriteAllText(_saveFilePath, saveData);
         Debug.Log("Save file created at: " + _saveFilePath);
     }
@@ -30,9 +31,10 @@ public class SaveLoadJsonFormatter : MonoBehaviour
             currentWaveIndex = _playerData.wave;
         }
         else
+        {
             Debug.Log("There is no save files to load!");
-
-        currentWaveIndex = 0;
+            currentWaveIndex = 0;
+        }
     }
  
     public void DeleteSaveFile()

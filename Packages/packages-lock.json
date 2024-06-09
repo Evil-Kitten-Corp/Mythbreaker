@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.brunomikoski.scriptableobjectcollection": {
-      "version": "2.2.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://package.openupm.com"
-    },
     "com.codewriter.triinspector": {
       "version": "1.13.2",
       "depth": 0,
@@ -294,13 +287,6 @@
         "com.unity.shadergraph": "14.0.8",
         "com.unity.render-pipelines.core": "14.0.8"
       }
-    },
-    "com.wooshii.hierarchydecorator": {
-      "version": "0.9.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://package.openupm.com"
     },
     "net.tnrd.serializableinterface": {
       "version": "2.2.0",

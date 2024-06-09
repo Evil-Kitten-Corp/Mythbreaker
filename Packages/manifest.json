@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.brunomikoski.scriptableobjectcollection": "2.2.1",
     "com.codewriter.triinspector": "1.13.2",
     "com.nobi.roundedcorners": "3.0.1",
     "com.solidalloy.extevents": "1.7.0",
@@ -20,7 +19,6 @@
     "com.unity.timeline": "1.7.5",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualeffectgraph": "14.0.8",
-    "com.wooshii.hierarchydecorator": "0.9.1",
     "net.tnrd.serializableinterface": "2.2.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

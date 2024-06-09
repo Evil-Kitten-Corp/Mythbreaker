@@ -1,20 +1,22 @@
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenuController : MonoBehaviour
+public class PauseMenuController : MythUIElement
 {
+    public KeyCode key;
+    
     public GameObject pauseMenuPanel; // Reference to the PauseMenuPanel
     public GameObject controlsImage; // Reference to the ControlsImage
     public GameObject optionsImage; // Reference to the OptionsImage
 
-    private bool isPaused = false;
+    private bool _isPaused = false;
 
     void Update()
     {
-        // Toggle pause menu when the Escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(key))
         {
-            if (isPaused)
+            if (_isPaused)
             {
                 ResumeGame();
             }
@@ -31,14 +33,16 @@ public class PauseMenuController : MonoBehaviour
         controlsImage.SetActive(false); // Hide the controls image if it's shown
         optionsImage.SetActive(false); // Hide the options image if it's shown
         Time.timeScale = 1f; // Resume game time
-        isPaused = false;
+        _isPaused = false;
+        IsInUI = false;
     }
 
     public void PauseGame()
     {
         pauseMenuPanel.SetActive(true);
         Time.timeScale = 0f; // Pause game time
-        isPaused = true;
+        _isPaused = true;
+        IsInUI = true;
     }
 
     public void QuitGame()

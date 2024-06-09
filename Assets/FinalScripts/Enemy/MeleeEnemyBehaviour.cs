@@ -37,7 +37,7 @@ namespace FinalScripts
                Vector3 randomness = new Vector3(Random.Range(0f, 0.25f), 
                    Random.Range(0f, 0.25f), Random.Range(0f, 0.25f));
                
-               DamagePopUpGenerator.current.CreatePopUp(transform.position + randomness, 
+               DamagePopUpGenerator.Current.CreatePopUp(transform.position + randomness, 
                    _dmgToTake.ToString(), Color.cyan);
                
                _anim.SetTrigger(Hit);
@@ -46,7 +46,8 @@ namespace FinalScripts
            _entryActions.Add(EnemyStates.DEATH, () =>
            {
                _anim.SetTrigger(Die);
-               health.PassiveDynamics.Enabled = false;
+               healthBar.SetActive(false);
+               health.enabled = false;
                TargetingSystem.Instance.screenTargets.Remove(gameObject);
                OnDeath?.Invoke(gameObject);
                Destroy(gameObject, _anim.GetCurrentAnimatorClipInfo(0).Length + 5f);

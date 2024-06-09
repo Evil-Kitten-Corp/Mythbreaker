@@ -13,6 +13,8 @@ public class SubtitleSystem : MonoBehaviour
     public AudioSource audioPlayer;
     public TMP_Text subtitle;
     public TMP_Text skip;
+    public TMP_Text character;
+    public Image icon;
     public Image skipBar;
     public float skipDurationTrigger;
 
@@ -85,6 +87,8 @@ public class SubtitleSystem : MonoBehaviour
 
         Subtitle currentSubtitle = lines[_currentLine];
         subtitle.text = currentSubtitle.text;
+        character.text = currentSubtitle.character;
+        icon.sprite = currentSubtitle.characterIcon;
         
         if (currentSubtitle.voiceline != null)
         {
@@ -108,4 +112,6 @@ public struct Subtitle
     public string text;
     public AudioClip voiceline;
     public float duration;
+    public string character;
+    public Sprite characterIcon;
 }

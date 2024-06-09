@@ -11986,15 +11986,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e37dd8034cf72814e9ef1c3fb1c9e15b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3513400254618287367}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e37dd8034cf72814e9ef1c3fb1c9e15b,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3071557381567244577}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e37dd8034cf72814e9ef1c3fb1c9e15b,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -8798829348985557354}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e37dd8034cf72814e9ef1c3fb1c9e15b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2506274765854342088}
   m_SourcePrefab: {fileID: 100100000, guid: e37dd8034cf72814e9ef1c3fb1c9e15b, type: 3}
 --- !u!137 &3807623738946436097 stripped
 SkinnedMeshRenderer:
@@ -12106,25 +12106,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3513400254618287367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7873057747601634475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d34902ee98b239746984b80b3c6a512e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 3084296381609377954}
-  startingState: 0
-  attackCooldown: 4
-  skinnedMeshRenderer: {fileID: 3807623738946436097}
-  dissolveRate: 0.0125
-  refreshRate: 0.025
-  stats: {fileID: 11400000, guid: 106a8906d1ad82648b909e4f402cd5c4, type: 2}
 --- !u!195 &3071557381567244577
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12165,3 +12146,23 @@ MonoBehaviour:
   precomputeOutline: 1
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2506274765854342088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873057747601634475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826cfb9913c443f1a5b8008d618616c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 334991159915354880}
+  health: {fileID: 3084296381609377954}
+  startingState: 0
+  attackCooldown: 1
+  skinnedMeshRenderer: {fileID: 3807623738946436097}
+  dissolveRate: 0.0125
+  refreshRate: 0.025
+  stats: {fileID: 11400000, guid: 106a8906d1ad82648b909e4f402cd5c4, type: 2}

@@ -1,23 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using FinalScripts;
 using UnityEngine;
 
 public class WeaponAttributes : MonoBehaviour
 {
-    public AttributesManager atm;
+    public AttributesManager attributes;
 
     private void OnTriggerEnter(Collider other)
     {
+        WeaponAndAttackManager wp = GetComponentInParent<WeaponAndAttackManager>();
+        
         if (other.TryGetComponent<EnemyBehaviour>(out var eb))
         {
-            eb.TakeDamage.Invoke(atm.attack);
-            GetComponentInParent<AttackControl>().AttackSuccessful();
+            eb.TakeDamage.Invoke(attributes.attack);
+            wp.AttackSuccessful();
         }
         else if (other.TryGetComponent<EnemyAppendage>(out var ap))
         {
-            ap.TakeDamage(atm.attack);
-            GetComponentInParent<AttackControl>().AttackSuccessful();
+            ap.TakeDamage(attributes.attack);
+            wp.AttackSuccessful();
         }
     }
 }

@@ -126,7 +126,7 @@ public class WaveManager : MonoBehaviour
     {
         _saveLoadSystem.LoadGame(out _currentWaveIndex);
         _currentWaveIndex--;
-        StartWave();
+        StartCountdown();
     }
 
     public void OnPlayerDeath()
