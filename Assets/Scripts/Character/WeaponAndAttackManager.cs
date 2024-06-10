@@ -25,6 +25,7 @@ public class WeaponAndAttackManager : MonoBehaviour
     public float clickThreshold = 0.3f; // Adjust this threshold as needed
     public float cooldownDuration = 1.0f; // Adjust this cooldown duration as needed
     private bool isCoolingDown = false;
+    private bool _controllable = true;
 
     private void Awake()
     {
@@ -33,19 +34,27 @@ public class WeaponAndAttackManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if (_controllable)
         {
-            _anim.SetTrigger("Attack");
-            EnableWeapon();
-            LightAttackAllowed?.Invoke();
-        }
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                _anim.SetTrigger("Attack");
+                EnableWeapon();
+                LightAttackAllowed?.Invoke();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            _anim.SetTrigger("HeavyAttack");
-            EnableWeapon();
-            HeavyAttackAllowed?.Invoke();
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                _anim.SetTrigger("HeavyAttack");
+                EnableWeapon();
+                HeavyAttackAllowed?.Invoke();
+            }
         }
+    }
+
+    public void SetControllable(bool b)
+    {
+        _controllable = b;
     }
     
     public void ShakeCamera()

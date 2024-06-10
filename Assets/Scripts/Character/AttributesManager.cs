@@ -17,6 +17,7 @@ public class AttributesManager : MonoBehaviour
     public int attack;
 
     private bool _invulnerable;
+    private bool _dead;
     
     public KeyCode keyToRecenterCamera;
     public WeaponAndAttackManager attackManager;
@@ -30,7 +31,7 @@ public class AttributesManager : MonoBehaviour
     
     private static readonly int Hit = Animator.StringToHash("Hit");
     private static readonly int Die = Animator.StringToHash("Die");
-    
+    private static readonly int Knockup1 = Animator.StringToHash("Knockup");
     private static readonly int OpenOrClose = Animator.StringToHash("OpenOrClose");
 
     [Title("Warehouse Objects")] 
@@ -142,25 +143,21 @@ public class AttributesManager : MonoBehaviour
 
     private IEnumerator Death()
     {
+        if (_dead)
+        {
+            yield break;
+        }
+        
         OnDie?.Invoke();
         moveController.lockMovement = true;
         
         anim.SetTrigger(Die);
+        _dead = true;
         yield return new WaitForSeconds(6f);
         Time.timeScale = 0;
         deathScreen.SetActive(true);
     }
 
-    public void DealDamage(GameObject target)
-    {
-        var atm = target.GetComponent<EnemyBehaviour>();
-        
-        if (atm != null)
-        {
-            atm.TakeDamage.Invoke(attack);
-        }
-    }
-    
     private void Update()
     {
         if (Input.GetKeyDown(keyToRecenterCamera))
@@ -227,5 +224,21 @@ public class AttributesManager : MonoBehaviour
             yield return new WaitForSeconds(time);
             tpc.jumpHeight -= quantity;
         }
+    }
+
+    public void Knockup()
+    {
+        anim.SetTrigger(Knockup1);
+        StartCoroutine(KnockupCc());
+
+        IEnumerator KnockupCc()
+        {
+            moveController.lockMovement = true;
+            attackManager.SetControllable(false);
+            yield return new WaitForSeconds(2f);
+            moveController.lockMovement = false;
+            attackManager.SetControllable(true);
+        }
+        
     }
 }

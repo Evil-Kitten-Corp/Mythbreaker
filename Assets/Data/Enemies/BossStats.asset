@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   health: 0
-  speed: 3
+  speed: -4
   attackDamage: 10
   rangedEnemy: 1
   range: 10

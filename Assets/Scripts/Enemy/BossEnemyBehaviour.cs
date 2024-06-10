@@ -10,6 +10,7 @@ namespace FinalScripts
         public EnemyAppendage[] legs;
         public Transform eye;
         public Laser laser;
+        public float laserCooldown;
         private float _chargeTimer;
         private float _laserTimer;
 
@@ -17,10 +18,21 @@ namespace FinalScripts
         public float lerpSpeed;
         public float lerpThicknessSpeed;
         public ParticleSystem scorch;
+        
+        public float stompRadius = 5.0F;
+        public float stompPower = 10.0F;
+        public ParticleSystem shockwave;
+        
+        private float _lastUsedLaser;
+
+        private bool _canLaser = false;
+        private bool _canStomp = true;
 
         public override void Start()
         {
             _canBeKnockedup = false;
+            _lastUsedLaser = Time.time;
+            StartCoroutine(LaserCooldown());
             base.Start();
             
             //ENTRY
@@ -37,8 +49,30 @@ namespace FinalScripts
            _entryActions.Add(EnemyStates.ATTACK, () =>
            {
                Debug.Log("Boss is attacking.");
-               _laserTimer = 0;
-               ShootLaser();
+
+               if (_canLaser)
+               {
+                   _laserTimer = 0;
+                   _lastUsedLaser = Time.time;
+                   ShootLaser();
+               }
+               else
+               {
+                   shockwave.Play();
+                   Rigidbody rb = _target.GetComponent<Rigidbody>();
+
+                   if (rb != null)
+                       rb.AddExplosionForce(stompPower, transform.position, stompRadius, 3.0F);
+
+                   if (rb.TryGetComponent<AttributesManager>(out var att))
+                   {
+                       att.Knockup();
+                   }
+
+                   _canStomp = false;
+                   StartCoroutine(StompCooldown());
+               }
+               
            });
            
            _entryActions.Add(EnemyStates.HIT, null);
@@ -65,13 +99,18 @@ namespace FinalScripts
            
            _updateActions.Add(EnemyStates.ATTACK, () =>
            {
-               _laserTimer += Time.deltaTime;
-
-               if (_laserTimer >= 3)
+               if (_canLaser)
                {
-                   laser.gameObject.SetActive(false);
-                   SwitchState(EnemyStates.IDLE);
-                   _lastAttackTime = Time.time;
+                   _laserTimer += Time.deltaTime;
+
+                   if (_laserTimer >= 3)
+                   {
+                       laser.gameObject.SetActive(false);
+                       _canLaser = false;
+                       StartCoroutine(LaserCooldown());
+                       SwitchState(EnemyStates.IDLE);
+                       _lastAttackTime = Time.time;
+                   }
                }
            });
            
@@ -106,10 +145,11 @@ namespace FinalScripts
                        lerp += Time.deltaTime * lerpThicknessSpeed;
                        yield return null;
                    }
-                   
+               
                    laser.ResetLaser();
                    laser.length = 0;
                }
+               
            });
            
            _exitActions.Add(EnemyStates.HIT, null);
@@ -156,6 +196,18 @@ namespace FinalScripts
             StartCoroutine(Laser(_target));
         }
 
+        private IEnumerator StompCooldown()
+        {
+            yield return new WaitForSeconds(attackCooldown);
+            _canStomp = true;
+        }
+        
+        private IEnumerator LaserCooldown()
+        {
+            yield return new WaitForSeconds(laserCooldown);
+            _canLaser = true;
+        }
+
         private IEnumerator Laser(Transform target)
         {
             laser.Activate();
@@ -172,12 +224,11 @@ namespace FinalScripts
             }
             
             laser.HitActivate();
-            scorch.Play();
+            //scorch.Play();
             
             while (true)
             {
-                scorch.transform.localPosition = new Vector3(target.position.x * 2 - 1f, 
-                    target.position.y * 2 - 1f, 10);
+               // scorch.transform.localPosition = new Vector3(target.position.x * 2 - 1f, target.position.y * 2 - 1f, 10);
                 
                 if ((target.position - eye.position).magnitude < 0)
                 {
@@ -208,8 +259,7 @@ namespace FinalScripts
                     break;
                 case EnemyStates.SEEK:
                     if (_target == null) SwitchState(EnemyStates.IDLE);
-                    if (Vector3.Distance(transform.position, _target.position) <= stats.range && CanAttack()) 
-                        SwitchState(EnemyStates.PREPARE);
+                    if (_canLaser || _canStomp) SwitchState(EnemyStates.PREPARE);
                     break;
                 case EnemyStates.ATTACK:
                     SwitchState(EnemyStates.IDLE);
