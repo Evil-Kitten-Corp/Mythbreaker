@@ -47,8 +47,7 @@ public class PauseMenuController : MythUIElement
 
     public void QuitGame()
     {
-        // Add functionality to quit the game or load the main menu
-        SceneManager.LoadScene("MainMenu");
+        Application.Quit();
     }
 
     public void ShowControls()
