@@ -163,7 +163,8 @@ AnimationClip:
         time: 1.3333334
         value: {x: -0.11406962, y: 0.08532943, z: -0.738539, w: 0.6589895}
         inSlope: {x: -0.0000017881387, y: -0.00000044703722, z: -0.000002682202, w: -0.000002682202}
-        outSlope: {x: -0.0000017881387, y: -0.00000044703722, z: -0.000002682202, w: -0.000002682202}
+        outSlope: {x: -0.0000017881387, y: -0.00000044703722, z: -0.000002682202,
+          w: -0.000002682202}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
@@ -140244,4 +140245,11 @@ AnimationClip:
     flags: 0
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.53333336
+    functionName: PlayAttackChainSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

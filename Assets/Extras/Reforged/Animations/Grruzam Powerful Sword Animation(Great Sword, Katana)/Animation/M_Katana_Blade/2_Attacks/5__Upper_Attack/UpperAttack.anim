@@ -108,8 +108,10 @@ AnimationClip:
       - serializedVersion: 3
         time: 1.0333334
         value: {x: -0.11854421, y: 0.11237961, z: -0.7382928, w: 0.6544019}
-        inSlope: {x: -0.0000010058238, y: -0.00000055879485, z: -0.0000008940737, w: -0.0000008940737}
-        outSlope: {x: -0.0000010058238, y: -0.00000055879485, z: -0.0000008940737, w: -0.0000008940737}
+        inSlope: {x: -0.0000010058238, y: -0.00000055879485, z: -0.0000008940737,
+          w: -0.0000008940737}
+        outSlope: {x: -0.0000010058238, y: -0.00000055879485, z: -0.0000008940737,
+          w: -0.0000008940737}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
@@ -115035,6 +115037,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlayAttackChainSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 4
+    messageOptions: 0
   - time: 1.1333333
     functionName: ShakeCamera
     data: 

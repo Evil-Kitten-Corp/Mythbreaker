@@ -7,15 +7,18 @@ namespace FinalScripts
     {
         public Transform shootPoint;
         public Bullet bullet;
+        private ObjectPool _pool;
         
         public override void Start()
         {
             base.Start();
+
+            _pool = ObjectPool.CreateInstance(bullet as PoolableObject, 5);  
             
             //ENTRY
-            _entryActions.Add(EnemyStates.KNOCKDOWN, () =>
+            _entryActions.Add(EnemyStates.KNOCKDOWN, () => 
            {
-               _anim.SetTrigger("KnockUp");  
+               _anim.SetTrigger("KnockUp");   
            });
            
            _entryActions.Add(EnemyStates.IDLE, null);
@@ -28,7 +31,7 @@ namespace FinalScripts
            _entryActions.Add(EnemyStates.ATTACK, () =>
            {
                //aka Shoot
-               transform.LookAt(_target);
+               transform.LookAt(_target); 
                _anim.SetTrigger(Attack);
                Shoot(_target);
                _lastAttackTime = Time.time;
@@ -107,7 +110,8 @@ namespace FinalScripts
 
         private void Shoot(Transform target)
         {
-            Bullet bull = Instantiate(bullet, shootPoint);
+            Bullet bull = _pool.GetObject() as Bullet;
+            bull.transform.position = shootPoint.position;
             bull.Spawn(transform.forward, (int)stats.attackDamage, target);
         }
 

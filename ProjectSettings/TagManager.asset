@@ -9,6 +9,7 @@ TagManager:
   - AbilityInventory
   - TargetCenter
   - Effects
+  - UnlockBoss
   layers:
   - Default
   - TransparentFX

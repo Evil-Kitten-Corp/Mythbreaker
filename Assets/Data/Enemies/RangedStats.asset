@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be7b058864b48b195bcb383786441d3, type: 3}
+  m_Name: RangedStats
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3386848574670431, guid: 5538a7e463bcf42438d77a3634fff870, type: 3}
+  health: 100
+  speed: 5
+  attackDamage: 15
+  rangedEnemy: 1
+  range: 10
