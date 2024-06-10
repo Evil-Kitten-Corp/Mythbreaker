@@ -21,7 +21,7 @@ namespace Abilities
 
         private void Start()
         {
-            screenTargets = GameObject.FindGameObjectsWithTag("TargetCenter").ToList();
+            screenTargets = GameObject.FindGameObjectsWithTag("Enemy").ToList();
         }
 
         private void Update()
@@ -93,6 +93,6 @@ namespace Abilities
 
             return index;
 
-        }
+        } 
     }
 }
