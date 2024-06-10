@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using FinalScripts;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -14,6 +15,8 @@ namespace DefaultNamespace
         public static DebugCheat KILL_ALL;
         public static DebugCheat INVUL;
         public static DebugCheat ALL_POWERS;
+        public static DebugCheat UNLOCK_BOSS;
+        public static DebugCheat REGINALD;
 
         private List<object> _commandList;
 
@@ -36,13 +39,31 @@ namespace DefaultNamespace
                 am.SetInvulnerable(!am.IsInvulnerable());
             });
 
-            ALL_POWERS = new DebugCheat("powers_all", "p_all", () => {});
+            ALL_POWERS = new DebugCheat("powers_all", "p_all", () =>
+            {
+                RewardSystem rew = FindObjectOfType<RewardSystem>();
+
+                foreach (var ability in rew.abilities)
+                {
+                    ability.Unlock?.Invoke();
+                }
+            });
+            
+            UNLOCK_BOSS = new DebugCheat("u_boss", "unlock_boss", () =>
+            {
+                GameObject ob = GameObject.FindWithTag("UnlockBoss");
+                ob.SetActive(false);
+            });
+            
+            REGINALD = new DebugCheat("reggie", "reginald", () => {});
 
             _commandList = new List<object>
             {
                 KILL_ALL,
                 INVUL,
-                ALL_POWERS
+                ALL_POWERS,
+                UNLOCK_BOSS,
+                REGINALD
             };
         }
 
