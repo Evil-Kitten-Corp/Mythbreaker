@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Abilities;
+using AYellowpaper.SerializedCollections;
 using FinalScripts;
 using FinalScripts.Specials;
+using SolidUtilities.Collections;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -18,7 +20,8 @@ namespace DefaultNamespace
         public Transform spawnPoint;
         
         [Header("Rewards")]
-        public List<AbilityData> rewards;
+        [SerializedDictionary("Abilities", "Script")]
+        public SerializableDictionary<AbilityData, AbilityController> rewards;
         public AbilityData finalLoopReward;
         
         [Header("References")]
@@ -52,7 +55,7 @@ namespace DefaultNamespace
         {
             _saveLoadSystem = FindObjectOfType<SaveLoadJsonFormatter>();
             _inv = FindObjectOfType<PlayerInv>();
-            _availableRewards = rewards;
+            _availableRewards = rewards.Keys.ToList();
             
             LoadWave();
             _chooseReward += OnRewardChosen;
@@ -70,7 +73,16 @@ namespace DefaultNamespace
         void OnRewardChosen(int obj)
         {
             _availableRewards.Remove(_possibleRewards[obj - 1]);
+            
             _possibleRewards.Clear();
+            
+            _inv.ReceiveRewards(new Reward
+            {
+                ability = _possibleRewards[obj-1],
+                abilityUpgrade = null,
+                type = RewardType.Ability
+            });
+            
             waveAnnouncer.text = "Next wave will start in...";
             StartCoroutine(WaveCooldown());
         }
@@ -153,7 +165,7 @@ namespace DefaultNamespace
         {
             _possibleRewards.Clear();
             
-            _availableRewards = rewards.Where(reward => 
+            _availableRewards = rewards.Keys.Where(reward => 
                 reward.canGetMoreThanOnce || !_inv.abilities.Keys.Contains(reward)).ToList();
             
             HashSet<AbilityData> selectedRewards = new HashSet<AbilityData>();

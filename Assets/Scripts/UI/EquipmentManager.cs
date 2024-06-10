@@ -107,11 +107,22 @@ namespace DefaultNamespace
 
         void OnAbilityButtonClick(int index)
         {
+            Debug.Log("Ability button clicked, index: " + index);
+
             if (_selectedSlotIndex != -1)
             {
                 Sprite abilityImage = abilities[index].ability.icon;
-                _playerInv.SetAbilityOnSlot(abilities[index].ability, index);
-                
+                Debug.Log("Selected slot index: " + _selectedSlotIndex);
+
+                // Check if the selected ability exists
+                if (abilities[index].ability == null)
+                {
+                    Debug.LogError("Selected ability is null for index: " + index);
+                    return;
+                }
+
+                _playerInv.SetAbilityOnSlot(abilities[index].ability, _selectedSlotIndex);
+
                 if (abilityImage != null)
                 {
                     slotImages[_selectedSlotIndex].sprite = abilityImage;

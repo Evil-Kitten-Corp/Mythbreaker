@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Abilities;
 using AYellowpaper.SerializedCollections;
+using DefaultNamespace;
 using SolidUtilities.Collections;
 using TriInspector;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace FinalScripts
 {
     public class PlayerInv : MonoBehaviour
     {
-        private RewardSystem _rewardSystem;
+        private WaveFinal _rewardSystem;
         private SaveLoadJsonFormatter _saveSystem;
 
         public List<AbilitySlot> abilitySlots;
@@ -29,9 +30,8 @@ namespace FinalScripts
 
         private void Start()
         {
-            _rewardSystem = FindObjectOfType<RewardSystem>();
+            _rewardSystem = FindObjectOfType<WaveFinal>();
             _saveSystem = FindObjectOfType<SaveLoadJsonFormatter>();
-            _rewardSystem.GiveRewards += ReceiveRewards;
 
             LoadGameInventory();
         }
@@ -49,7 +49,7 @@ namespace FinalScripts
             }
         }
 
-        private void ReceiveRewards(Reward obj)
+        public void ReceiveRewards(Reward obj)
         {
             switch (obj.type)
             {
@@ -76,9 +76,13 @@ namespace FinalScripts
 
         public void SetAbilityOnSlot(AbilityData ability, int slot)
         {
-            int i = _rewardSystem.abilities.IndexOf(ability);
-            _rewardSystem.abilityScripts[i].abilityKey = _slotToKeyDict[i];
-            abilitySlots.First(x => x.slot == slot).SetAbility(ability);
+            if (ability.canGetMoreThanOnce)
+            {
+                return;
+            }
+            
+            _rewardSystem.rewards[ability].abilityKey = _slotToKeyDict[slot];
+            abilitySlots.First(x => x.slot == slot + 1).SetAbility(ability); 
         }
     }
 }
