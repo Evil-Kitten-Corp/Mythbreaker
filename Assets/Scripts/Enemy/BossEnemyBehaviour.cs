@@ -29,12 +29,14 @@ namespace FinalScripts
             
             _entryActions.Add(EnemyStates.SEEK, () => 
             { 
+                Debug.Log("Boss is running away.");
                 //we will actually use this to instead flee
                 _anim.SetBool(Walking, true); 
             });
            
            _entryActions.Add(EnemyStates.ATTACK, () =>
            {
+               Debug.Log("Boss is attacking.");
                _laserTimer = 0;
                ShootLaser();
            });
@@ -43,10 +45,12 @@ namespace FinalScripts
            
            _entryActions.Add(EnemyStates.DEATH, () =>
            {
+               Debug.Log("Boss is dead.");
                _anim.SetTrigger(Die);
                TargetingSystem.Instance.screenTargets.Remove(gameObject);
                OnDeath?.Invoke(gameObject);
                Destroy(gameObject, _anim.GetCurrentAnimatorClipInfo(0).Length + 5f);
+               AttributesManager.OnDefeatBoss?.Invoke();
            });
            
            //UPDATE
@@ -86,6 +90,7 @@ namespace FinalScripts
            
            _exitActions.Add(EnemyStates.ATTACK, () =>
            {
+               Debug.Log("Boss stopped attacking.");
                StopAllCoroutines();
                laser.Deactivate();
                laser.HitDeactivate();
@@ -106,17 +111,19 @@ namespace FinalScripts
                    laser.length = 0;
                }
            });
+           
            _exitActions.Add(EnemyStates.HIT, null);
            _exitActions.Add(EnemyStates.DEATH, null);
            _exitActions.Add(EnemyStates.KNOCKDOWN, null);
            
            //
-           _entryActions.Add(EnemyStates.PREPARE, (() =>
+           _entryActions.Add(EnemyStates.PREPARE, () =>
            {
+               Debug.Log("Boss is preparing to attack.");
                _chargeTimer = 0;
                transform.LookAt(_target);
                _anim.SetTrigger("Prepare");
-           }));
+           });
            
            _updateActions.Add(EnemyStates.PREPARE, () =>
            {

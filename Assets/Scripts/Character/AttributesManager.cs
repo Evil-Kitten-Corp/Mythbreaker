@@ -3,6 +3,8 @@ using System.Collections;
 using DefaultNamespace;
 using Invector.vCharacterController;
 using Minimalist.Bar.Quantity;
+using TMPro;
+using TriInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,12 +21,90 @@ public class AttributesManager : MonoBehaviour
     public KeyCode keyToRecenterCamera;
     public WeaponAndAttackManager attackManager;
 
+    public static Action OnDie;
+    public static Action OnDefeatLastWave;
+    public static Action OnDefeatBoss;
+    
     public Animator anim;
     
     private static readonly int Hit = Animator.StringToHash("Hit");
-
-    public Action OnDie;
     private static readonly int Die = Animator.StringToHash("Die");
+    
+    private static readonly int OpenOrClose = Animator.StringToHash("OpenOrClose");
+
+    [Title("Warehouse Objects")] 
+    public GameObject[] warehouseObjects;
+    public GameObject triggeredWall;
+
+    [Title("Final Cutscene")] 
+    public CanvasGroup fadeInGroup;
+    public TMP_Text subtitle;
+    public AudioClip clip;
+
+    private AudioSource _source;
+
+    private void Start()
+    {
+        OnDefeatLastWave += OnLastWave;
+        OnDefeatBoss += OnWin;
+        _source = GetComponent<AudioSource>();
+    }
+
+    private void OnWin()
+    {
+        StartCoroutine(PlayCutscene());
+    }
+
+    IEnumerator PlayCutscene()
+    {
+        yield return StartCoroutine(FadeCanvasGroup(fadeInGroup, 0, 1, 2f));
+        yield return new WaitForSeconds(1f);
+        _source.PlayOneShot(clip);
+        StartCoroutine(FadeTMPText(subtitle, 0, 1, 1f));
+    }
+    
+    private IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float startAlpha, float endAlpha, float duration)
+    {
+        float startTime = Time.time;
+        while (Time.time < startTime + duration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, (Time.time - startTime) / duration);
+            yield return null;
+        }
+        canvasGroup.alpha = endAlpha;
+    }
+
+    private IEnumerator FadeTMPText(TMP_Text text, float startAlpha, float endAlpha, float duration)
+    {
+        float startTime = Time.time;
+        Color color = text.color;
+        while (Time.time < startTime + duration)
+        {
+            color.a = Mathf.Lerp(startAlpha, endAlpha, (Time.time - startTime) / duration);
+            text.color = color;
+            yield return null;
+        }
+        color.a = endAlpha;
+        text.color = color;
+    }
+
+    private void OnLastWave()
+    {
+        foreach (var go in warehouseObjects)
+        {
+            Animator tAnim = go.GetComponent<Animator>();
+
+            if (tAnim != null)
+            {
+                tAnim.SetTrigger(OpenOrClose);
+            }
+        }
+
+        if (triggeredWall != null)
+        {
+            triggeredWall.SetActive(true);
+        }
+    }
 
     public void TakeDamage(int amount, bool crit = false)
     {
@@ -133,4 +213,18 @@ public class AttributesManager : MonoBehaviour
     }
 
     public bool IsInvulnerable() => _invulnerable;
+
+    public void AddTemporaryBuff(int quantity, float time)
+    {
+        var tpc = GetComponent<vThirdPersonController>();
+        tpc.jumpHeight += quantity;
+        
+        StartCoroutine(JumpBuff());
+
+        IEnumerator JumpBuff()
+        {
+            yield return new WaitForSeconds(time);
+            tpc.jumpHeight -= quantity;
+        }
+    }
 }
