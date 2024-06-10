@@ -80,7 +80,7 @@ namespace Abilities
         {
             if (hasWeapon)
             {
-                animator.SetTrigger("ThrowAbility");
+                animator.SetTrigger("Throw");
                 Debug.Log("Triggered throw.");
             }
             else
@@ -96,7 +96,7 @@ namespace Abilities
             if (!hasWeapon)
             {
                 WeaponStartPull();
-                animator.SetTrigger("Pull");
+                animator.SetTrigger("Pull"); 
             }
             else
             {

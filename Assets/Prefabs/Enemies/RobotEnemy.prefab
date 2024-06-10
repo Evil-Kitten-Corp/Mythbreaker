@@ -11720,13 +11720,13 @@ MonoBehaviour:
   healthBar: {fileID: 7570786625635334348}
   health: {fileID: 1534596375866552711}
   startingState: 0
-  attackCooldown: 1
+  attackCooldown: 2
   skinnedMeshRenderer: {fileID: 4019704796685920553}
   dissolveRate: 0.0125
   refreshRate: 0.025
   stats: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
   shootPoint: {fileID: 6594544181586340992}
-  bullet: {fileID: 0}
+  bullet: {fileID: 8705571569374645004, guid: cd3f67667b933b8499bd12807c4d75a8, type: 3}
 --- !u!4 &562357794430018047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8430592349069714703, guid: 86874d8be234a3642ab48816e1495343,

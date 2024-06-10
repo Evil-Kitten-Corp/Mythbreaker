@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Abilities;
 using FinalScripts;
+using FinalScripts.Specials;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,18 +14,21 @@ namespace DefaultNamespace
     public class WaveFinal : MonoBehaviour
     {
         [Header("Wave")]
-        public List<WaveDefinition> waves;
+        public List<WaveData> waves;
         public Transform spawnPoint;
         
         [Header("Rewards")]
-        public List<string> rewards;
-        public string finalLoopReward;
+        public List<AbilityData> rewards;
+        public AbilityData finalLoopReward;
         
         [Header("References")]
         public GameObject rewardsParent;
         public TMP_Text[] rewardsView;
         public TMP_Text waveAnnouncer;
         public TMP_Text waveCount;
+        
+        public HealthPowerup healthPrefab;
+        public Transform healthSpawnPt;
         
         private bool _isSpawning;
         private bool _isEndable;
@@ -33,10 +38,10 @@ namespace DefaultNamespace
         private float _countdownTimer;
         private float _previousTimerValue;
 
-        private List<string> _availableRewards;
+        private List<AbilityData> _availableRewards;
 
         private List<GameObject> _currentEnemies = new();
-        private List<string> _possibleRewards = new();
+        private List<AbilityData> _possibleRewards = new();
 
         private Action<int> _chooseReward;
         private SaveLoadJsonFormatter _saveLoadSystem;
@@ -97,27 +102,35 @@ namespace DefaultNamespace
         {
             _currentWave++;
 
-            if (_currentWave > waves.Count)
+            if (_currentWave >= waves.Count)
             {
+                waveAnnouncer.gameObject.SetActive(false);
+                AttributesManager.OnDefeatLastWave?.Invoke();
                 return;
             }
-        
-            SpawnEnemies();
+
+            StartCoroutine(SpawnEnemies());
             waveCount.text = $"Wave {_currentWave + 1}";
         }
-        
-        void SpawnEnemies()
+
+        IEnumerator SpawnEnemies()
         {
-            foreach (var kvp in waves[_currentWave].enemiesToSpawn)
+            foreach (var entry in waves[_currentWave].spawnData)
             {
-                for (int i = 0; i < kvp.Value; i++)
+                EnemyStats enemyStats = entry.enemyType;
+                int count = entry.amountToSpawn;
+
+                for (int i = 0; i < count; i++)
                 {
-                    var en = Instantiate(kvp.Key, spawnPoint.position, Quaternion.identity);
-                    en.GetComponent<EnemyBehaviour>().OnDeath += KillEnemy;
-                    _currentEnemies.Add(en);
+                    Vector3 spawnPosition = entry.spawnPoint;
+                    GameObject enemy = Instantiate(enemyStats.prefab, spawnPosition, Quaternion.identity);
+            
+                    enemy.GetComponent<EnemyBehaviour>().OnDeath += KillEnemy;
+                    _currentEnemies.Add(enemy);
+                    yield return new WaitForSeconds(entry.delayBetweenSpawns);
                 }
             }
-            
+    
             _isEndable = true;
         }
         
@@ -126,6 +139,8 @@ namespace DefaultNamespace
             GetRewards();
             _saveLoadSystem.SaveGame(new PlayerData(_currentWave, _inv.abilities.Keys
                 .Select(ab => ab.id).ToList()));
+            
+            Instantiate(healthPrefab, healthSpawnPt);
             Time.timeScale = 0;
         }
 
@@ -137,13 +152,17 @@ namespace DefaultNamespace
         void GetRewards()
         {
             _possibleRewards.Clear();
-            HashSet<string> selectedRewards = new HashSet<string>();
+            
+            _availableRewards = rewards.Where(reward => 
+                reward.canGetMoreThanOnce || !_inv.abilities.Keys.Contains(reward)).ToList();
+            
+            HashSet<AbilityData> selectedRewards = new HashSet<AbilityData>();
         
             while (selectedRewards.Count < 3)
             {
                 if (_availableRewards.Count > 0)
                 {
-                    string reward = _availableRewards[Random.Range(0, _availableRewards.Count)];
+                    AbilityData reward = _availableRewards[Random.Range(0, _availableRewards.Count)];
                     if (selectedRewards.Add(reward))
                     {
                         _possibleRewards.Add(reward);
@@ -158,9 +177,9 @@ namespace DefaultNamespace
         
             _isChoosingRewards = true;
 
-            rewardsView[0].text = _possibleRewards[0];
-            rewardsView[1].text = _possibleRewards[1];
-            rewardsView[2].text = _possibleRewards[2];
+            rewardsView[0].text = _possibleRewards[0].abName;
+            rewardsView[1].text = _possibleRewards[1].abName;
+            rewardsView[2].text = _possibleRewards[2].abName;
             
             rewardsParent.SetActive(true);
             MythUIElement.IsInUI = true;

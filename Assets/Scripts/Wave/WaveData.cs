@@ -19,7 +19,7 @@ namespace FinalScripts
         {
             public EnemyStats enemyType;
             public int amountToSpawn;
-            public Transform spawnPoint;
+            public Vector3 spawnPoint;
             [Tooltip("This should never be less than 1")] public float delayBetweenSpawns;
         }
     }

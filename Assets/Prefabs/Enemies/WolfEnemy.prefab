@@ -8763,7 +8763,7 @@ MonoBehaviour:
   healthBar: {fileID: 8186761834665516481}
   health: {fileID: 1501032066929370480}
   startingState: 0
-  attackCooldown: 1
+  attackCooldown: 5
   skinnedMeshRenderer: {fileID: 0}
   dissolveRate: 0.0125
   refreshRate: 0.025

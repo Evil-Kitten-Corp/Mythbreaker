@@ -23,6 +23,7 @@ public class AttributesManager : MonoBehaviour
 
     public static Action OnDie;
     public static Action OnDefeatLastWave;
+    public static Action OnBossMeet;
     public static Action OnDefeatBoss;
     
     public Animator anim;
@@ -45,8 +46,8 @@ public class AttributesManager : MonoBehaviour
 
     private void Start()
     {
-        OnDefeatLastWave += OnLastWave;
         OnDefeatBoss += OnWin;
+        OnBossMeet += OnLastWave;
         _source = GetComponent<AudioSource>();
     }
 
