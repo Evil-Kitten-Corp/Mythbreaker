@@ -13,6 +13,7 @@ namespace DefaultNamespace
         private void Start()
         {
             button.image.sprite = ability.icon;
+            ability.Unlock += Unlock;
 
             if (!button.IsInteractable())
             {
@@ -20,9 +21,10 @@ namespace DefaultNamespace
             }
         }
 
-        private void Update()
+        private void Unlock()
         {
-            @lock.gameObject.SetActive(!button.IsInteractable());
+            button.interactable = true;
+            @lock.gameObject.SetActive(false);
         }
     }
 }

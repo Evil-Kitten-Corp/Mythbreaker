@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpikeAbility : AbilityController
 {
+    public AudioSource source;
+    public AudioClip soundOnCast;
+    
     private WeaponAndAttackManager _attackControl;
     private int _abilityStacks;
     private Transform _target;
@@ -53,17 +56,12 @@ public class SpikeAbility : AbilityController
         {
             GameObject projectile = Instantiate(spikePrefab, firePoint.position, firePoint.rotation);
             
-            projectile.GetComponent<HS_TargetProjectile>().UpdateTarget(_target, (Vector3) Vector3.zero);
+            projectile.GetComponent<TargetProjectile>().UpdateTarget(_target, Vector3.zero);
             
             var effect = spikePrefab.GetComponent<ParticleSystem>();
             effect.Play();
         
-            if (spikePrefab.GetComponent<AudioSource>())
-            {
-                var soundComponent = spikePrefab.GetComponent<AudioSource>();
-                var clip = soundComponent.clip;
-                soundComponent.PlayOneShot(clip);
-            }
+            source.PlayOneShot(soundOnCast);
         }
 
         _abilityStacks = 0;

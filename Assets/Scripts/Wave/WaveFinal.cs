@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using FinalScripts;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -38,11 +40,13 @@ namespace DefaultNamespace
 
         private Action<int> _chooseReward;
         private SaveLoadJsonFormatter _saveLoadSystem;
+        private PlayerInv _inv;
 
 
         void Start()
         {
             _saveLoadSystem = FindObjectOfType<SaveLoadJsonFormatter>();
+            _inv = FindObjectOfType<PlayerInv>();
             _availableRewards = rewards;
             
             LoadWave();
@@ -120,7 +124,8 @@ namespace DefaultNamespace
         void EndWave()
         {
             GetRewards();
-            _saveLoadSystem.SaveGame(new PlayerData(_currentWave));
+            _saveLoadSystem.SaveGame(new PlayerData(_currentWave, _inv.abilities.Keys
+                .Select(ab => ab.id).ToList()));
             Time.timeScale = 0;
         }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using FinalScripts;
 using TMPro;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class WaveManager : MonoBehaviour
     private SaveLoadJsonFormatter _saveLoadSystem;
     private bool _isSpawning;
     private bool _isEndable;
+    private PlayerInv _inv;
     
     void Start()
     {
@@ -38,7 +40,7 @@ public class WaveManager : MonoBehaviour
     private void EndWave()
     {
         GiveRewards();
-        _saveLoadSystem.SaveGame(new PlayerData(_currentWaveIndex));
+        _saveLoadSystem.SaveGame(new PlayerData(_currentWaveIndex, _inv.abilities.Keys.Select(ab => ab.id).ToList()));
         StartCountdown();
     }
     

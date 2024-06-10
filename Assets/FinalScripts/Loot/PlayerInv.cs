@@ -11,6 +11,7 @@ namespace FinalScripts
     public class PlayerInv : MonoBehaviour
     {
         private RewardSystem _rewardSystem;
+        private SaveLoadJsonFormatter _saveSystem;
 
         public List<AbilitySlot> abilitySlots;
 
@@ -28,7 +29,24 @@ namespace FinalScripts
 
         private void Start()
         {
-            _rewardSystem = FindObjectOfType<RewardSystem>(); _rewardSystem.GiveRewards += ReceiveRewards;
+            _rewardSystem = FindObjectOfType<RewardSystem>();
+            _saveSystem = FindObjectOfType<SaveLoadJsonFormatter>();
+            _rewardSystem.GiveRewards += ReceiveRewards;
+
+            LoadGameInventory();
+        }
+
+        private void LoadGameInventory()
+        {
+            _saveSystem.LoadGame(out List<string> abIds);
+
+            if (abIds is { Count: > 0 })
+            {
+                foreach (var id in abIds)
+                {
+                    abilities.Keys.First(x => x.id == id).Unlock?.Invoke();
+                }
+            }
         }
 
         private void ReceiveRewards(Reward obj)
@@ -37,6 +55,7 @@ namespace FinalScripts
             {
                 case RewardType.Ability:
                     abilities.Add(obj.ability, new List<AbilityUpgrade>());
+                    obj.ability.Unlock?.Invoke();
                     break;
                 
                 case RewardType.AbilityUpgrade:

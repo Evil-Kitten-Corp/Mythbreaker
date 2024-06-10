@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ public class SaveLoadJsonFormatter : MonoBehaviour
  
     void Start()
     {
-        _playerData = new PlayerData(0);
+        _playerData = new PlayerData(0, new List<string>());
         _saveFilePath = Application.persistentDataPath + "/PlayerData.json";
         DontDestroyOnLoad(gameObject);
     }
@@ -34,6 +35,23 @@ public class SaveLoadJsonFormatter : MonoBehaviour
         {
             Debug.Log("There is no save files to load!");
             currentWaveIndex = 0;
+        }
+    }
+    
+    public void LoadGame(out List<string> abilityIds)
+    {
+        if (File.Exists(_saveFilePath))
+        {
+            string loadPlayerData = File.ReadAllText(_saveFilePath);
+            _playerData = JsonUtility.FromJson<PlayerData>(loadPlayerData);
+ 
+            Debug.Log("Load game complete!");
+            abilityIds = _playerData.unlockedAbilities;
+        }
+        else
+        {
+            Debug.Log("There is no save files to load!");
+            abilityIds = new List<string>();
         }
     }
  

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HS_TargetProjectile : MonoBehaviour
+public class TargetProjectile : MonoBehaviour
 {
     public float speed = 15f;
     public GameObject hit;

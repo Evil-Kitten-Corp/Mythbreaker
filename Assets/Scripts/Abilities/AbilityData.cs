@@ -1,10 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Abilities
 {
     [CreateAssetMenu(fileName = "Ability", menuName = "Abilities/Data", order = 0)]
     public class AbilityData : ScriptableObject
     {
+        public Action Unlock;
+
+        public string id;
+        
         public string god;
         public string abName;
         [TextArea] public string abDescription;

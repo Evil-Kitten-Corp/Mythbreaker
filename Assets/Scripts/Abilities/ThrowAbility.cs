@@ -3,8 +3,12 @@ using UnityEngine;
 
 namespace Abilities
 {
-    public class ThrowCopy : AbilityController
+    public class ThrowAbility : AbilityController
     {
+        public AudioSource audioSource;
+        public AudioClip soundOnCast;
+        public AudioClip soundOnReturn;
+        
         public Animator animator;
         private Rigidbody weaponRb;
         private ThrowWeaponScript weaponScript;
@@ -76,7 +80,7 @@ namespace Abilities
         {
             if (hasWeapon)
             {
-                animator.SetTrigger("Throw");
+                animator.SetTrigger("ThrowAbility");
                 Debug.Log("Triggered throw.");
             }
             else
@@ -116,6 +120,8 @@ namespace Abilities
             //Trail
             trailRenderer.emitting = true;
             trailParticle.Play();
+            
+            audioSource.PlayOneShot(soundOnCast);
         }
     
         public void WeaponStartPull()
@@ -147,7 +153,8 @@ namespace Abilities
     
             //Shake
             cameraShake.TriggerShake();
-    
+            
+            audioSource.PlayOneShot(soundOnReturn);
         }
     
         public Vector3 GetQuadraticCurvePoint(float t, Vector3 p0, Vector3 p1, Vector3 p2)
