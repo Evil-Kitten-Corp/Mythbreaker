@@ -158,6 +158,7 @@ namespace DefaultNamespace
             rewardsView[2].text = _possibleRewards[2];
             
             rewardsParent.SetActive(true);
+            MythUIElement.IsInUI = true;
         }
 
         public void ChooseReward(int i)
@@ -165,6 +166,7 @@ namespace DefaultNamespace
             _chooseReward.Invoke(i);
             _isChoosingRewards = false;
             rewardsParent.SetActive(false);
+            MythUIElement.IsInUI = false; 
             Time.timeScale = 1;
         }
         
@@ -173,6 +175,7 @@ namespace DefaultNamespace
             Debug.Log("Loading wave.");
             waveAnnouncer.text = "Next wave will start in...";
             _saveLoadSystem.LoadGame(out _currentWave);
+            _currentWave--;
             StartCoroutine(WaveCooldown());
         }
     }

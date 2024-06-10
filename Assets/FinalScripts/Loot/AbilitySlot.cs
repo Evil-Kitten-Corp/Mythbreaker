@@ -11,7 +11,7 @@ namespace FinalScripts
 
         private AbilityData _abData;
 
-        private AbilityData AbilityRepresented
+        private AbilityData AbilityRepresented 
         {
             get => _abData;
             set

@@ -28,8 +28,7 @@ namespace FinalScripts
 
         private void Start()
         {
-            _rewardSystem = FindObjectOfType<RewardSystem>();
-            _rewardSystem.GiveRewards += ReceiveRewards;
+            _rewardSystem = FindObjectOfType<RewardSystem>(); _rewardSystem.GiveRewards += ReceiveRewards;
         }
 
         private void ReceiveRewards(Reward obj)

@@ -102,7 +102,7 @@ namespace Abilities
             base.Recast();
         }
 
-        public void WeaponThrow()
+        public void WeaponThrow() 
         {
             hasWeapon = false;
             weaponScript.activated = true;

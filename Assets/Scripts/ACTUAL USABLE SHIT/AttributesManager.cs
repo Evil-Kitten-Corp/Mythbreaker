@@ -10,6 +10,7 @@ public class AttributesManager : MonoBehaviour
 {
     public vThirdPersonController moveController;
     public vThirdPersonCamera cameraController;
+    public GameObject deathScreen;
     public QuantityBhv health;
     public int attack;
 
@@ -64,8 +65,9 @@ public class AttributesManager : MonoBehaviour
         moveController.lockMovement = true;
         
         anim.SetTrigger(Die);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(6f);
         Time.timeScale = 0;
+        deathScreen.SetActive(true);
     }
 
     public void DealDamage(GameObject target)
