@@ -11,6 +11,8 @@ namespace FinalScripts
     {
         public List<AbilityData> abilities;
         public List<AbilityUpgrade> abilityUpgrades;
+        public List<AbilityController> abilityScripts;
+
         public Action<Reward> GiveRewards;
 
         public RewardView rewardScreen;

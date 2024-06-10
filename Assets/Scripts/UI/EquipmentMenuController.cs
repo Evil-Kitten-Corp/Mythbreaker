@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Abilities;
 using DefaultNamespace;
 using UnityEngine;
 
@@ -7,6 +9,9 @@ public class EquipmentMenuController : MythUIElement
     
     public GameObject equipmentMenuPanel; // Reference to the EquipmentMenuPanel
     public GameObject pauseMenuPanel; // Reference to the PauseMenuPanel
+
+    public List<AbilityData> abilities;
+
     public GameObject[] abilityButtons; // References to the ability buttons
     public GameObject[] abilityImages; // References to the ability images
 
@@ -68,7 +73,6 @@ public class EquipmentMenuController : MythUIElement
         
         if (pauseMenuPanel.activeSelf)
         {
-            
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
