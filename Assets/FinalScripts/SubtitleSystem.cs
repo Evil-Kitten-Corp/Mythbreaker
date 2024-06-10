@@ -47,7 +47,7 @@ public class SubtitleSystem : MonoBehaviour
             }
         }
 
-        if (skippableLines && Input.GetMouseButtonDown(1))
+        if (skippableLines && Input.GetMouseButtonDown(0))
         {
             PlayNext();
         }
@@ -113,5 +113,5 @@ public struct Subtitle
     public AudioClip voiceline;
     public float duration;
     public string character;
-    public Sprite characterIcon;
+    public Sprite characterIcon; 
 }

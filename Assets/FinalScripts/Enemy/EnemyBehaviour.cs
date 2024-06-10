@@ -65,6 +65,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         OnDeath += OnDie;
         TakeDamage += OnTakeDamage;
+        _lastAttackTime = Time.time;
 
         if (_canBeKnockedup)
         {
@@ -154,4 +155,4 @@ public abstract class EnemyBehaviour : MonoBehaviour
     {
         return Time.time - _lastAttackTime >= attackCooldown;
     }
-}
+} 
