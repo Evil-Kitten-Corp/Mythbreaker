@@ -3,26 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5e185f76-a792-45d3-8eb0-9b79dc4342a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReDJD3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FinalScripts/Enemy/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FinalScripts/Enemy/WaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FinalScripts/Loot/DeathScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FinalScripts/Loot/DeathScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FinalScripts/Loot/PlayerInv.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FinalScripts/Loot/PlayerInv.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FinalScripts/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FinalScripts/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FinalScripts/SaveLoadJsonFormatter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FinalScripts/SaveLoadJsonFormatter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/AbilityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/AbilityData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/HS_TargetProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/TargetProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/HS_TargetProjectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/TargetProjectile.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/SpikeAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/SpikeAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ThrowCopy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/ThrowAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/ThrowCopy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/ThrowAbility.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbilityRepresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbilityRepresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheatConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cheats/CheatConsole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheatConsole.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cheats/CheatConsole.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheatDB.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cheats/CheatDB.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CheatDB.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cheats/CheatDB.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cheats/DisableOOBs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cheats/DisableOOBs.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComboResetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComboResetter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Wave/WaveFinal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Wave/WaveFinal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/EquipmentMenuController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/EquipmentMenuController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +15,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Me Gameys/MPWyzard Start/Assets/Scripts/PowerupOption.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Me Gameys/MPWyzard Start/Assets/Scripts/PowerupSelector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FinalScripts/Enemy/WaveData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FinalScripts/Loot/AnimationEventHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FinalScripts/Loot/DeathScreen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Animator Helpers/AnimationEventHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Debug/WaveTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Wave/WaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.8/Runtime/Utilities/PropertyBinding/Implementation/VFXPositionBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.8/Runtime/Utilities/PropertyBinding/Implementation/VFXTransformBinder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Unity_VRoid_Melee_Hits/After Tutorial/Assets/CameraShakeAddOn.cs" root0="SKIP_HIGHLIGHTING" />
@@ -115,7 +96,7 @@
       <workItem from="1717789092977" duration="254000" />
       <workItem from="1717791019179" duration="7856000" />
       <workItem from="1717948274227" duration="18808000" />
-      <workItem from="1718015781589" duration="2417000" />
+      <workItem from="1718015781589" duration="9425000" />
     </task>
     <servers />
   </component>

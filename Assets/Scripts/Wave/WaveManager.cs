@@ -2,23 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using FinalScripts;
+using FinalScripts.Specials;
 using TMPro;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    public HealthPowerup healthPrefab;
+    public Transform healthSpawnPt;
+    
     public WaveData[] waves;
-    public Transform[] spawnPoints;
-    public float spawnRadius = 10f;
     public TMP_Text waveAnnouncer;
+    
     public float delayBetweenWaves;
     
     private float _countdownTimer;
-    private int _currentWaveIndex = 0;
+    private int _currentWaveIndex;
+    
     private readonly List<GameObject> _currentEnemies = new();
-    private SaveLoadJsonFormatter _saveLoadSystem;
+    
     private bool _isSpawning;
     private bool _isEndable;
+        
+    private SaveLoadJsonFormatter _saveLoadSystem;
     private PlayerInv _inv;
     
     void Start()
@@ -40,7 +46,10 @@ public class WaveManager : MonoBehaviour
     private void EndWave()
     {
         GiveRewards();
-        _saveLoadSystem.SaveGame(new PlayerData(_currentWaveIndex, _inv.abilities.Keys.Select(ab => ab.id).ToList()));
+        _saveLoadSystem.SaveGame(new PlayerData(_currentWaveIndex, 
+            _inv.abilities.Keys.Select(ab => ab.id).ToList()));
+
+        Instantiate(healthPrefab, healthSpawnPt);
         StartCountdown();
     }
     
@@ -70,6 +79,8 @@ public class WaveManager : MonoBehaviour
         if (_currentWaveIndex >= waves.Length)
         {
             Debug.Log("All waves completed!");
+            waveAnnouncer.gameObject.SetActive(false);
+            AttributesManager.OnDefeatLastWave?.Invoke();
             return;
         }
         
@@ -82,36 +93,21 @@ public class WaveManager : MonoBehaviour
 
         foreach (var entry in wave.spawnData)
         {
-            EnemyStats enemyStats = entry.Key;
-            int count = entry.Value;
+            EnemyStats enemyStats = entry.enemyType;
+            int count = entry.amountToSpawn;
 
             for (int i = 0; i < count; i++)
             {
-                Vector3 spawnPosition;
-
-                if (spawnPoints.Length > 0)
-                {
-                    spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-                }
-                else
-                {
-                    spawnPosition = GetRandomSpawnPosition();
-                }
-
+                Vector3 spawnPosition = entry.spawnPoint.position;
                 GameObject enemy = Instantiate(enemyStats.prefab, spawnPosition, Quaternion.identity);
                 enemy.GetComponent<EnemyBehaviour>().stats = enemyStats;
                 _currentEnemies.Add(enemy);
                 enemy.GetComponent<EnemyBehaviour>().OnDeath += OnEnemyDeath;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(entry.delayBetweenSpawns);
             }
         }
 
         _isSpawning = false;
-    }
-
-    Vector3 GetRandomSpawnPosition()
-    {
-        return new Vector3(Random.Range(-spawnRadius, spawnRadius), 0, Random.Range(-spawnRadius, spawnRadius));
     }
 
     void OnEnemyDeath(GameObject enemy)
