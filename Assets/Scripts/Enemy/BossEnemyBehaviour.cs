@@ -10,6 +10,7 @@ namespace FinalScripts
         public EnemyAppendage[] legs;
         public Transform eye;
         public Laser laser;
+        public AudioClip laserSound;
         public float laserCooldown;
         private float _chargeTimer;
         private float _laserTimer;
@@ -21,6 +22,10 @@ namespace FinalScripts
         
         public float stompRadius = 5.0F;
         public float stompPower = 10.0F;
+        public AudioClip stompSound;
+
+        public AudioClip deathSound;
+        
         public ParticleSystem shockwave;
         
         private float _lastUsedLaser;
@@ -48,31 +53,31 @@ namespace FinalScripts
            
            _entryActions.Add(EnemyStates.ATTACK, () =>
            {
-               Debug.Log("Boss is attacking.");
-
+               Debug.Log("Boss is attacking."); 
+               _laserTimer = 0;
+               _lastUsedLaser = Time.time;
+               
                if (_canLaser)
                {
-                   _laserTimer = 0;
-                   _lastUsedLaser = Time.time;
                    ShootLaser();
                }
                else
                {
                    shockwave.Play();
+                   GetComponent<AudioSource>().PlayOneShot(stompSound);
                    Rigidbody rb = _target.GetComponent<Rigidbody>();
 
                    if (rb != null)
                        rb.AddExplosionForce(stompPower, transform.position, stompRadius, 3.0F);
 
                    if (rb.TryGetComponent<AttributesManager>(out var att))
-                   {
+                   { 
                        att.Knockup();
                    }
 
                    _canStomp = false;
                    StartCoroutine(StompCooldown());
                }
-               
            });
            
            _entryActions.Add(EnemyStates.HIT, null);
@@ -83,7 +88,10 @@ namespace FinalScripts
                _anim.SetTrigger(Die);
                TargetingSystem.Instance.screenTargets.Remove(gameObject);
                OnDeath?.Invoke(gameObject);
-               Destroy(gameObject, _anim.GetCurrentAnimatorClipInfo(0).Length + 5f);
+               Destroy(gameObject, 2f);
+               var aud = GetComponent<AudioSource>();
+               aud.volume = 0.4f;
+               aud.PlayOneShot(deathSound);
                AttributesManager.OnDefeatBoss?.Invoke();
            });
            
@@ -130,7 +138,7 @@ namespace FinalScripts
            _exitActions.Add(EnemyStates.ATTACK, () =>
            {
                Debug.Log("Boss stopped attacking.");
-               StopAllCoroutines();
+               //StopAllCoroutines();
                laser.Deactivate();
                laser.HitDeactivate();
                StartCoroutine(LaserDeactivateCoroutine());
@@ -212,6 +220,7 @@ namespace FinalScripts
         {
             laser.Activate();
             yield return new WaitForSeconds(laserActivateTimeDelay);
+            GetComponent<AudioSource>().PlayOneShot(laserSound);
             float startLength = 0;
             
             float lerp = 0;
@@ -262,7 +271,10 @@ namespace FinalScripts
                     if (_canLaser || _canStomp) SwitchState(EnemyStates.PREPARE);
                     break;
                 case EnemyStates.ATTACK:
-                    SwitchState(EnemyStates.IDLE);
+                    if (!_canLaser && !_canStomp) 
+                    {
+                        SwitchState(EnemyStates.IDLE);
+                    }
                     break;
                 case EnemyStates.HIT:
                     break;

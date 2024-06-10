@@ -16,7 +16,7 @@ MonoBehaviour:
   canGetMoreThanOnce: 1
   god: None
   abName: Health
-  abDescription: 
+  abDescription: Get 20 more health.
   cooldown: 0
   canRecast: 0
   maxRecastTime: 0

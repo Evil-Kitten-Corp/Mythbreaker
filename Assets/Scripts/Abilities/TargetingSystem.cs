@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
+using DefaultNamespace;
 using DG.Tweening;
 using Minimalist.Bar.Utility;
 using UnityEngine;
@@ -21,7 +20,7 @@ namespace Abilities
 
         private void Start()
         {
-            screenTargets = GameObject.FindGameObjectsWithTag("Enemy").ToList();
+            GetComponent<WaveFinal>().EnemySpawn += o => screenTargets.Add(o);
         }
 
         private void Update()

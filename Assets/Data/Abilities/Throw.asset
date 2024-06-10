@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Throw
   m_EditorClassIdentifier: 
   id: thor
+  canGetMoreThanOnce: 0
   god: Thor
   abName: Boomerang
   abDescription: Throw your weapon with the first click and return it with the second
-    (cooldown 5 seconds after second click )
+    (cooldown 5 seconds after recast).
   cooldown: 5
   canRecast: 1
   maxRecastTime: 5

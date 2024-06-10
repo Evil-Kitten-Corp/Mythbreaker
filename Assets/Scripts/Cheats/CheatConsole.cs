@@ -41,9 +41,9 @@ namespace DefaultNamespace
 
             ALL_POWERS = new DebugCheat("powers_all", "p_all", () =>
             {
-                RewardSystem rew = FindObjectOfType<RewardSystem>();
+                WaveFinal rew = FindObjectOfType<WaveFinal>();
 
-                foreach (var ability in rew.abilities)
+                foreach (var ability in rew.rewards.Keys)
                 {
                     ability.Unlock?.Invoke();
                 }

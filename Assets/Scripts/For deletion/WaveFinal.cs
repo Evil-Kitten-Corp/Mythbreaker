@@ -9,6 +9,7 @@ using FinalScripts.Specials;
 using SolidUtilities.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
@@ -27,8 +28,10 @@ namespace DefaultNamespace
         [Header("References")]
         public GameObject rewardsParent;
         public TMP_Text[] rewardsView;
+        public TMP_Text[] rewardsDescription;
         public TMP_Text waveAnnouncer;
         public TMP_Text waveCount;
+        public Image[] littleGuys;
         
         public HealthPowerup healthPrefab;
         public Transform healthSpawnPt;
@@ -50,6 +53,7 @@ namespace DefaultNamespace
         private SaveLoadJsonFormatter _saveLoadSystem;
         private PlayerInv _inv;
 
+        public Action<GameObject> EnemySpawn;
 
         void Start()
         {
@@ -113,6 +117,7 @@ namespace DefaultNamespace
         void SpawnWave()
         {
             _currentWave++;
+            littleGuys[_currentWave].color = Color.white;
 
             if (_currentWave >= waves.Count)
             {
@@ -136,6 +141,7 @@ namespace DefaultNamespace
                 {
                     Vector3 spawnPosition = entry.spawnPoint;
                     GameObject enemy = Instantiate(enemyStats.prefab, spawnPosition, Quaternion.identity);
+                    EnemySpawn?.Invoke(enemy);
             
                     enemy.GetComponent<EnemyBehaviour>().OnDeath += KillEnemy;
                     _currentEnemies.Add(enemy);
@@ -193,6 +199,10 @@ namespace DefaultNamespace
             rewardsView[1].text = _possibleRewards[1].abName;
             rewardsView[2].text = _possibleRewards[2].abName;
             
+            rewardsDescription[0].text = _possibleRewards[0].abDescription;
+            rewardsDescription[1].text = _possibleRewards[1].abDescription;
+            rewardsDescription[2].text = _possibleRewards[2].abDescription;
+            
             rewardsParent.SetActive(true);
             MythUIElement.IsInUI = true;
         }
@@ -212,6 +222,12 @@ namespace DefaultNamespace
             waveAnnouncer.text = "Next wave will start in...";
             _saveLoadSystem.LoadGame(out _currentWave);
             _currentWave--;
+
+            for (int i = 0; i < _currentWave; i++)
+            {
+                littleGuys[i].color = Color.white;
+            }
+            
             StartCoroutine(WaveCooldown());
         }
     }

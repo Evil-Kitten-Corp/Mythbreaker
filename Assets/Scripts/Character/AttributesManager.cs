@@ -6,6 +6,7 @@ using Minimalist.Bar.Quantity;
 using TMPro;
 using TriInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class AttributesManager : MonoBehaviour
@@ -41,7 +42,7 @@ public class AttributesManager : MonoBehaviour
     [Title("Final Cutscene")] 
     public CanvasGroup fadeInGroup;
     public TMP_Text subtitle;
-    public AudioClip clip;
+    //public AudioClip clip;
 
     private AudioSource _source;
 
@@ -59,10 +60,16 @@ public class AttributesManager : MonoBehaviour
 
     IEnumerator PlayCutscene()
     {
-        yield return StartCoroutine(FadeCanvasGroup(fadeInGroup, 0, 1, 2f));
+        yield return StartCoroutine(FadeCanvasGroup(fadeInGroup, 0, 1, 5f));
         yield return new WaitForSeconds(1f);
-        _source.PlayOneShot(clip);
-        StartCoroutine(FadeTMPText(subtitle, 0, 1, 1f));
+        //_source.PlayOneShot(clip);
+
+        yield return new WaitForSeconds(3f);
+        subtitle.text = "Thank you for playing.";
+        yield return new WaitForSeconds(3f);
+
+        MythUIElement.IsInUI = true;
+        SceneManager.LoadScene("MainMenu");
     }
     
     private IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float startAlpha, float endAlpha, float duration)

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Spike
   m_EditorClassIdentifier: 
   id: marti
+  canGetMoreThanOnce: 0
   god: Martichoras
   abName: Spike
-  abDescription: Fire spikes at a marked enemy ( max spikes 5)
+  abDescription: Fire spikes at a marked enemy (max charges 5).
   cooldown: 10
   canRecast: 0
   maxRecastTime: 0
