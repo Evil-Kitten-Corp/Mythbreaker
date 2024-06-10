@@ -20,11 +20,11 @@ namespace FinalScripts
 
         private readonly Dictionary<int, KeyCode> _slotToKeyDict = new()
         {
-            {1, KeyCode.Alpha1},
-            {2, KeyCode.Alpha2},
-            {3, KeyCode.Alpha3},
-            {4, KeyCode.Alpha4},
-            {5, KeyCode.Alpha5}
+            {0, KeyCode.Alpha1},
+            {1, KeyCode.Alpha2},
+            {2, KeyCode.Alpha3},
+            {3, KeyCode.Alpha4},
+            {4, KeyCode.Alpha5}
         };
 
         private void Start()

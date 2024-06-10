@@ -98,7 +98,7 @@ public class WaveManager : MonoBehaviour
 
             for (int i = 0; i < count; i++)
             {
-                Vector3 spawnPosition = entry.spawnPoint.position;
+                Vector3 spawnPosition = entry.spawnPoint;
                 GameObject enemy = Instantiate(enemyStats.prefab, spawnPosition, Quaternion.identity);
                 enemy.GetComponent<EnemyBehaviour>().stats = enemyStats;
                 _currentEnemies.Add(enemy);

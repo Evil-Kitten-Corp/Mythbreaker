@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d1b498b4654a02b812936d93b93d22, type: 3}
   m_Name: Throw
   m_EditorClassIdentifier: 
+  id: thor
   god: Thor
   abName: Boomerang
   abDescription: Throw your weapon with the first click and return it with the second

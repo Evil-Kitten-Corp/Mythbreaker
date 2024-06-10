@@ -107,34 +107,23 @@ namespace Invector.vCharacterController
                     if (isGrounded && useContinuousSprint)
                     {
                         isSprinting = !isSprinting;
-
-                        if (isSprinting)
-                        {
-                            ShowStamina(true);
-                            UseStamina(staminaDecay);
-                        }
                     }
                     else if (!isSprinting)
                     {
                         isSprinting = true;
-                        ShowStamina(true);
-                        UseStamina(staminaDecay);
                     }
                 }
                 else if (!useContinuousSprint && isSprinting)
                 {
-                    ShowStamina(false);
                     isSprinting = false;
                 }
             }
             else if (!CanSprint())
             {
-                ShowStamina(false);
                 isSprinting = false;
             }
             else if (isSprinting)
             {
-                ShowStamina(false);
                 isSprinting = false;
             }
         }
@@ -176,10 +165,6 @@ namespace Invector.vCharacterController
 
         #endregion
 
-        private void ShowStamina(bool t)
-        {
-            staminaBar.gameObject.SetActive(t);
-        }
 
         private void UseStamina(float qty)
         {

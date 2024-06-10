@@ -9,6 +9,7 @@ namespace Abilities
         public Action Unlock;
 
         public string id;
+        public bool canGetMoreThanOnce;
         
         public string god;
         public string abName;

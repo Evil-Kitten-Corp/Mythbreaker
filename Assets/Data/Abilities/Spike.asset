@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d1b498b4654a02b812936d93b93d22, type: 3}
   m_Name: Spike
   m_EditorClassIdentifier: 
+  id: marti
   god: Martichoras
   abName: Spike
   abDescription: Fire spikes at a marked enemy ( max spikes 5)
   cooldown: 10
   canRecast: 0
   maxRecastTime: 0
-  icon: {fileID: 21300000, guid: d586782485aebdd46846cb81c85f5ada, type: 3}
+  icon: {fileID: 21300000, guid: 56c1c14855d72564cbefc6f5b8ed0403, type: 3}
   altIcon: {fileID: 0}
   hasCastDelay: 1
   hasStacks: 1
