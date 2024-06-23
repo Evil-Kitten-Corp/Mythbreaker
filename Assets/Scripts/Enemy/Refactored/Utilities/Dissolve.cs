@@ -18,7 +18,7 @@ namespace Enemy.Refactored.Utilities
         float m_StartTime;
         float m_EndTime;
 
-        const string k_CutoffName = "_Cutoff";
+        const string k_CutoffName = "_Dissolve";
 
         void Awake()
         {

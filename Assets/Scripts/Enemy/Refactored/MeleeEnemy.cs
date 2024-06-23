@@ -31,13 +31,13 @@ namespace FinalScripts.Refactored
 
         private AttributesManager _target = null;
         private EnemyBase _controller;
-        private TargetDistributor.TargetFollower _followerInstance = null;
+        private TargetDistributor.TargetFollower _followerInstance = null; 
         
         protected void OnEnable()
         {
             _controller = GetComponentInChildren<EnemyBase>();
             OriginalPosition = transform.position;
-            meleeWeapon.SetOwner(gameObject);
+            meleeWeapon.SetOwner(gameObject); 
             _controller.Animator.Play("Idle", 0, Random.value);
 
             SceneLinkedSMB<MeleeEnemy>.Initialise(_controller.Animator, this);
@@ -173,6 +173,8 @@ namespace FinalScripts.Refactored
         {
             Vector3 fromTarget = transform.position - _target.transform.position;
             fromTarget.y = 0;
+
+            Debug.Log("Follower Instance is: " + _followerInstance.ToString());
 
             _followerInstance.RequiredPoint = _target.transform.position + fromTarget.normalized * AttackDistance * 0.9f;
         }
