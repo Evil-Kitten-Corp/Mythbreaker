@@ -144,17 +144,13 @@ public class AttributesManager : MonoBehaviour
 
         if (health.Amount <= 0)
         {
+            if (_dead) return;
             StartCoroutine(Death());
         }
     }
 
     private IEnumerator Death()
     {
-        if (_dead)
-        {
-            yield break;
-        }
-        
         OnDie?.Invoke();
         moveController.lockMovement = true;
         

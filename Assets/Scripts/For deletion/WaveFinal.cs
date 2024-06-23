@@ -76,21 +76,22 @@ namespace DefaultNamespace
 
         void OnRewardChosen(int obj)
         {
-            _availableRewards.Remove(_possibleRewards[obj - 1]);
-            
-            _possibleRewards.Clear();
-            
+            var chosenReward = _possibleRewards[obj - 1];  // Store the chosen reward
+            _availableRewards.Remove(chosenReward);  // Remove the chosen reward from available rewards
+
+            _possibleRewards.Clear();  // Clear possible rewards
+
             _inv.ReceiveRewards(new Reward
             {
-                ability = _possibleRewards[obj-1],
+                ability = chosenReward,  // Use the stored chosen reward
                 abilityUpgrade = null,
                 type = RewardType.Ability
             });
-            
+
             waveAnnouncer.text = "Next wave will start in...";
             StartCoroutine(WaveCooldown());
         }
-        
+
         IEnumerator WaveCooldown()
         {
             _countdownTimer = 5;

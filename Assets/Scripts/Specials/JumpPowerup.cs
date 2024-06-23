@@ -12,7 +12,7 @@ namespace FinalScripts.Specials
 
         private void JumpHigher()
         {
-            GetComponent<AttributesManager>().AddTemporaryBuff(addedJumpForce, timeout);
+            FindObjectOfType<AttributesManager>().AddTemporaryBuff(addedJumpForce, timeout);
         }
     }
 }

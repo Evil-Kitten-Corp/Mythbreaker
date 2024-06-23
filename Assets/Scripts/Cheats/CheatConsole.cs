@@ -17,11 +17,19 @@ namespace DefaultNamespace
         public static DebugCheat ALL_POWERS;
         public static DebugCheat UNLOCK_BOSS;
         public static DebugCheat REGINALD;
+        public static DebugCheat OP;
 
         private List<object> _commandList;
 
         private void Awake()
         {
+            OP = new DebugCheat("op", "op", () =>
+            {
+                AttributesManager am = FindObjectOfType<AttributesManager>();
+
+                am.attack = 100;
+            });
+
             KILL_ALL = new DebugCheat("kill_all", "kill_all", () =>
             {
                 List<EnemyBehaviour> allEnemies = FindObjectsOfType<EnemyBehaviour>().ToList();
@@ -63,7 +71,8 @@ namespace DefaultNamespace
                 INVUL,
                 ALL_POWERS,
                 UNLOCK_BOSS,
-                REGINALD
+                REGINALD,
+                OP
             };
         }
 
