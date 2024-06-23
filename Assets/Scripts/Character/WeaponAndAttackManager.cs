@@ -100,14 +100,16 @@ public class WeaponAndAttackManager : MonoBehaviour
             }
 
             Vector3 direction = (t.transform.position - transform.position).normalized;
-            EnemyBehaviour bh = rb.GetComponent<EnemyBehaviour>();
+            //EnemyBehaviour bh = rb.GetComponent<EnemyBehaviour>();
+            EnemyBase bh = rb.GetComponent<EnemyBase>();
 
             if (bh != null)
             {
-                bh.KnockUp?.Invoke();
+                //bh.KnockUp?.Invoke();
+                bh.AddForce(direction * blastForce, true);
             }
             
-            rb.AddForce(direction * blastForce, ForceMode.Impulse);
+            //rb.AddForce(direction * blastForce, ForceMode.Impulse);
         }
     }
 
