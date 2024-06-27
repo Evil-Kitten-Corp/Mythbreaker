@@ -36,7 +36,7 @@ namespace FinalScripts.Refactored
             _controller.Animator.Play("Idle", 0, Random.value);
             SceneLinkedSMB<RangedEnemy>.Initialise(_controller.Animator, this);
         }
-
+        
         public void OnReceiveMessage(bool die, Transform damager, int amount)
         {
             if (die)

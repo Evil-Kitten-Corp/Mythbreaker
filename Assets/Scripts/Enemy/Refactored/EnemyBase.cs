@@ -1,8 +1,10 @@
 using System;
+using FinalScripts.Refactored;
 using Minimalist.Bar.Quantity;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 [DefaultExecutionOrder(-1)]
 [RequireComponent(typeof(NavMeshAgent))]
@@ -73,14 +75,7 @@ public class EnemyBase : MonoBehaviour
     {
         ResetDamage();
         Collider = GetComponent<Collider>();
-
-		if (OnDeath == null) OnDeath = new();  
-
-		if (OnDeath != null) 
-			OnDeath.AddListener(() => Anim.SetTrigger("Thrown") );
     }
-
-	void Kill() => Anim.SetTrigger("Thrown");
 
     private void Update()
     {
@@ -125,7 +120,7 @@ public class EnemyBase : MonoBehaviour
         Collider.enabled = enabled;
     }
 
-    public void ApplyDamage(Transform damageSource, float dmg)
+    public void ApplyDamage(Transform damageSource, float dmg, bool crit = false)
     {
         if (CurrentHitPoints <= 0)
         {
@@ -138,6 +133,22 @@ public class EnemyBase : MonoBehaviour
             OnHitWhileInvulnerable.Invoke();
 			Debug.Log(gameObject.name + " is invulnerable.");
             return;
+        }
+        
+        Vector3 randomness = new Vector3(Random.Range(0f, 0.25f), 
+            Random.Range(0f, 0.25f), Random.Range(0f, 0.25f));
+        
+        switch (crit)
+        {
+            case false:
+                DamagePopUpGenerator.Current.CreatePopUp(transform.position + randomness, 
+                    dmg.ToString(), Color.yellow);
+                break;
+            
+            case true:
+                DamagePopUpGenerator.Current.CreatePopUp(transform.position + randomness, 
+                    dmg.ToString(), Color.red);
+                break;
         }
 
 		Debug.Log(gameObject.name + " is being damaged.");
@@ -156,9 +167,31 @@ public class EnemyBase : MonoBehaviour
 		Debug.Log(gameObject.name + "'s HP is " + CurrentHitPoints + ".");
 
         if (CurrentHitPoints <= 0)
+        {
             _schedule += OnDeath.Invoke;
+            
+            if (TryGetComponent<RangedEnemy>(out var r))
+            {
+                r.OnReceiveMessage(true, damageSource, (int)dmg);
+            }
+            else if (TryGetComponent<MeleeEnemy>(out var m))
+            {
+                m.OnReceiveMessage(true, damageSource, (int)dmg);
+            }
+        }
         else
+        {
             OnReceiveDamage.Invoke();
+            
+            if (TryGetComponent<RangedEnemy>(out var r))
+            {
+                r.OnReceiveMessage(false, damageSource, (int)dmg);
+            }
+            else if (TryGetComponent<MeleeEnemy>(out var m))
+            {
+                m.OnReceiveMessage(false, damageSource, (int)dmg);
+            }
+        }
     }
 
     void CheckGrounded()
