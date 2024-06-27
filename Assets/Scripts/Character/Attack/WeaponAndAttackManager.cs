@@ -21,11 +21,15 @@ public class WeaponAndAttackManager : MonoBehaviour
     [Header("Debug++")]
     private int attackCount = 0;
     private float lastAttackTime = 0f;
-    public float attackWindow = 1.0f;
-    public float clickThreshold = 0.3f; // Adjust this threshold as needed
     public float cooldownDuration = 1.0f; // Adjust this cooldown duration as needed
     private bool isCoolingDown = false;
     private bool _controllable = true;
+    
+    [Header("Attack Data")]
+    public AttackData[] lightAttackData;  // Array of light attack data
+    public AttackData[] heavyAttackData;  // Array of heavy attack data
+    private int lightAttackIndex = 0;
+    private int heavyAttackIndex = 0;
 
     private void Awake()
     {
@@ -39,17 +43,26 @@ public class WeaponAndAttackManager : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Mouse0))
             {
                 _anim.SetTrigger("Attack");
+                SetCurrentAttackData(lightAttackData[lightAttackIndex]);
                 EnableWeapon();
                 LightAttackAllowed?.Invoke();
+                lightAttackIndex = (lightAttackIndex + 1) % lightAttackData.Length;  // Cycle through light attack data
             }
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 _anim.SetTrigger("HeavyAttack");
+                SetCurrentAttackData(heavyAttackData[heavyAttackIndex]);
                 EnableWeapon();
                 HeavyAttackAllowed?.Invoke();
+                heavyAttackIndex = (heavyAttackIndex + 1) % heavyAttackData.Length;  // Cycle through heavy attack data
             }
         }
+    }
+    
+    private void SetCurrentAttackData(AttackData data)
+    {
+        weapon.GetComponent<WeaponAttributes>().currentAttackData = data;
     }
 
     public void SetControllable(bool b)
