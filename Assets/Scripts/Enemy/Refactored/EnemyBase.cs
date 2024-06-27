@@ -68,13 +68,14 @@ public class EnemyBase : MonoBehaviour
         Rigidbody.useGravity = false;
         Rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
 
-        FollowNavmeshAgt = true;
+        FollowNavmeshAgt = false;
     }
 
     private void Start()
     {
         ResetDamage();
         Collider = GetComponent<Collider>();
+        Anim.applyRootMotion = false;
     }
 
     private void Update()
@@ -136,7 +137,7 @@ public class EnemyBase : MonoBehaviour
         }
         
         Vector3 randomness = new Vector3(Random.Range(0f, 0.25f), 
-            Random.Range(0f, 0.25f), Random.Range(0f, 0.25f));
+            Random.Range(0f, 0.25f), Random.Range(0f, 0.25f)); 
         
         switch (crit)
         {
@@ -147,7 +148,7 @@ public class EnemyBase : MonoBehaviour
             
             case true:
                 DamagePopUpGenerator.Current.CreatePopUp(transform.position + randomness, 
-                    dmg.ToString(), Color.red);
+                    dmg.ToString(), Color.cyan);
                 break;
         }
 

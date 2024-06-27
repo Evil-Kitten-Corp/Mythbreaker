@@ -75,6 +75,7 @@ namespace FinalScripts.Refactored
             Controller.AddForce(pushForce.normalized * 5.5f, false);
 
             Controller.Animator.SetTrigger("Hit");
+            Controller.Animator.SetTrigger("HitTrue"); 
             hitAudio.PlayRandomClip();
         }
 

@@ -6,7 +6,7 @@ public class LoadingManager : MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine(LoadSceneAsync("Combat"));
+        StartCoroutine(LoadSceneAsync("Combat Test"));
     }
 
     IEnumerator LoadSceneAsync(string sceneId)
