@@ -24,4 +24,18 @@ public class ChangeWeaponState : StateMachineBehaviour
             _attackControl.DisableWeapon();
         }
     }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        _attackControl = animator.GetComponent<WeaponAndAttackManager>();
+        
+        if (stateToBe == Option.Disable)
+        {
+            _attackControl.EnableWeapon();
+        }
+        else
+        {
+            _attackControl.DisableWeapon();
+        }
+    }
 }
