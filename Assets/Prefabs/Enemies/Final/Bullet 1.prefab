@@ -103,7 +103,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -121,14 +121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7abd293b7c0475da8f2bd6e95edef0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 1
+  projectileSpeed: 10
   damageAmount: 5
   explosionRadius: 0.2
   explosionTimer: 100
-  explosionVFX: {fileID: 1862289243324462536}
-  vfxOnGround: 0
-  explosionPlayer: {fileID: 0}
-  bouncePlayer: {fileID: 0}
+  hitVFX: {fileID: 1862289243324462536}
+  vfxOnGround: 1
+  hitSound: {fileID: 0}
 --- !u!96 &6267265731955683186
 TrailRenderer:
   serializedVersion: 3
@@ -250,9 +249,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6597896470033449230}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -262,7 +261,7 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0

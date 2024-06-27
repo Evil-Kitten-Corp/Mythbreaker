@@ -9,5 +9,5 @@ namespace FinalScripts.Refactored.MoreSMBs
         {
             MonoBehaviour.Spotted();
         }
-    }
+    } 
 }

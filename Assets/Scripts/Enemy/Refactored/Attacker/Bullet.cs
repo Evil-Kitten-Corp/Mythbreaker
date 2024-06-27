@@ -10,11 +10,10 @@ namespace FinalScripts.Refactored.Attacker
         public float explosionRadius;
         public float explosionTimer;
         
-        public ParticleSystem explosionVFX;
+        public ParticleSystem hitVFX;
         public bool vfxOnGround;
 
-        public RandomAudioPlayer explosionPlayer;
-        public RandomAudioPlayer bouncePlayer;
+        public RandomAudioPlayer hitSound;
 
         private float _sinceFired;
 
@@ -29,7 +28,7 @@ namespace FinalScripts.Refactored.Attacker
             _rb = GetComponent<Rigidbody>();
             _rb.detectCollisions = false;
 
-            _vfx = Instantiate(explosionVFX);
+            _vfx = Instantiate(hitVFX);
             _vfx.gameObject.SetActive(false);
         }
 
@@ -57,17 +56,17 @@ namespace FinalScripts.Refactored.Attacker
 
         public void Explosion()
         {
-            if (explosionPlayer)
+            if (hitSound)
             {
-                explosionPlayer.transform.SetParent(null);
-                explosionPlayer.PlayRandomClip();
+                hitSound.transform.SetParent(null);
+                hitSound.PlayRandomClip();
             }
 
             int count = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, ExplosionHitCache);
 
-            for (int i = 0; i < count; ++i)
+            for (int i = 0; i < count; ++i) 
             {
-                AttributesManager d = ExplosionHitCache[i].GetComponentInChildren<AttributesManager>();
+                AttributesManager d = ExplosionHitCache[i].GetComponentInChildren<AttributesManager>(); 
 
                 if (d != null)
                     d.TakeDamage(damageAmount);
@@ -94,13 +93,8 @@ namespace FinalScripts.Refactored.Attacker
             _vfx.Play(true);
         }
 
-        public void OnCollisionEnter()
+        public void OnTriggerEnter()
         {
-            if (bouncePlayer != null)
-            {
-                bouncePlayer.PlayRandomClip();
-            }
-            
             if (explosionTimer < 0)
             {
                 Explosion();

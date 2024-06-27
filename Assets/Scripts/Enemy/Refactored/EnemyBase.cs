@@ -73,7 +73,14 @@ public class EnemyBase : MonoBehaviour
     {
         ResetDamage();
         Collider = GetComponent<Collider>();
+
+		if (OnDeath == null) OnDeath = new();  
+
+		if (OnDeath != null) 
+			OnDeath.AddListener(() => Anim.SetTrigger("Thrown") );
     }
+
+	void Kill() => Anim.SetTrigger("Thrown");
 
     private void Update()
     {
@@ -122,15 +129,18 @@ public class EnemyBase : MonoBehaviour
     {
         if (CurrentHitPoints <= 0)
         {
+			Debug.Log("Tried to damage " + gameObject.name + ", but they're dead.");
             return;
         }
 
         if (IsInvulnerable)
         {
             OnHitWhileInvulnerable.Invoke();
+			Debug.Log(gameObject.name + " is invulnerable.");
             return;
         }
 
+		Debug.Log(gameObject.name + " is being damaged.");
         Vector3 forward = transform.forward;
         forward = Quaternion.AngleAxis(hitForwardRotation, transform.up) * forward;
 
@@ -143,6 +153,7 @@ public class EnemyBase : MonoBehaviour
 
         IsInvulnerable = true;
         CurrentHitPoints -= dmg;
+		Debug.Log(gameObject.name + "'s HP is " + CurrentHitPoints + ".");
 
         if (CurrentHitPoints <= 0)
             _schedule += OnDeath.Invoke;

@@ -23,10 +23,11 @@ namespace FinalScripts.Refactored.SMBs
 
             MonoBehaviour.transform.forward = toTarget.normalized;
             MonoBehaviour.Controller.SetForward(MonoBehaviour.transform.forward);
+            Debug.Log("Robot is attacking.");
 
             if (MonoBehaviour.attackAudio != null)
             {
-                MonoBehaviour.attackAudio.PlayRandomClip();
+                MonoBehaviour.attackAudio.PlayRandomClip(); 
             }
         }
 

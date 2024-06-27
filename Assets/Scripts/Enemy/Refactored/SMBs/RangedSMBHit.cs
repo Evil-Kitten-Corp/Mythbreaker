@@ -8,6 +8,7 @@ namespace FinalScripts.Refactored.SMBs
         public override void OnSLStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             animator.ResetTrigger("Attack");
+            Debug.Log("Robot was hit.");
         }
 
         public override void OnSLStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
