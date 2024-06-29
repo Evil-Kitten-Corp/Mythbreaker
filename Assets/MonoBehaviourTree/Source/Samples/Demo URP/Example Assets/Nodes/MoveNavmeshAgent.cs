@@ -110,17 +110,20 @@ namespace MBTExample
         {
             Vector3 targetDir = targetTransform.Value.position - agent.transform.position;
 
-			float relativeHeading = Vector3.Angle(agent.transform.forward, agent.transform.TransformVector(targetTransform.Value.forward));
+			float relativeHeading = Vector3.Angle(agent.transform.forward, 
+                agent.transform.TransformVector(targetTransform.Value.forward));
 
 			float toTarget = Vector3.Angle(agent.transform.forward, agent.transform.TransformVector(targetDir));
 
-			if ((toTarget > 90 && relativeHeading < 20) || targetTransform.Value.GetComponent<NavMeshAgent>().speed < 0.01f) 
+            float targetSpeed = GetComponent<Rigidbody>().velocity.magnitude;
+
+			if ((toTarget > 90 && relativeHeading < 20) || targetSpeed < 0.01f) 
 			{	
 				agent.SetDestination(targetTransform.Value.position);
 				return;
 			}
 
-            float lookAhead = targetDir.magnitude / (agent.speed + targetTransform.Value.GetComponent<NavMeshAgent>().speed);
+            float lookAhead = targetDir.magnitude / (agent.speed + targetSpeed);
             agent.SetDestination(targetTransform.Value.position + targetTransform.Value.forward * lookAhead * 3);
         }
         

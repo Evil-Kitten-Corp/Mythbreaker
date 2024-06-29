@@ -1,3 +1,4 @@
+using Invector.vCharacterController;
 using UnityEngine;
 
 public class ChangeWeaponState : StateMachineBehaviour

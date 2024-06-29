@@ -34,7 +34,7 @@ namespace FinalScripts.Refactored
 
         public void Die()
         {
-            
+            ragdoll.Replace();
         }
 
         public void AnimatorEventShoot()
