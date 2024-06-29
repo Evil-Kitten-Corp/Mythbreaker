@@ -1,63 +1,85 @@
-﻿using System.Collections;
-using Abilities;
-using Minimalist.Bar.Quantity;
+﻿using Minimalist.Bar.Quantity;
+using TriInspector;
 using UnityEngine;
 
 namespace FinalScripts.Refactored
 {
-    public class EnemyBT: MonoBehaviour
+    public abstract class EnemyBT: MonoBehaviour
     {
-        public Bullet bullet;
-        public Transform shootPoint;
-
         public RagdollReplacer ragdoll;
         public QuantityBhv health;
-
         public Animator anim;
         
-        private Transform _t;
-        private float lastShootTime;
-        public float shootCooldown = 2.0f;
+        [Title("Audio")]
+        public RandomAudioPlayer attackAudio;
+        public RandomAudioPlayer footstepAudio;
+        public RandomAudioPlayer hitAudio;
+        public RandomAudioPlayer gruntAudio;
+        public RandomAudioPlayer deathAudio;
 
-        public void TakeDamage(float amount)
+        public void TakeDamage(float amount, bool crit)
         {
-            if (health.Amount >= 0)
+            if (health.Amount <= 0)
             {
                 return;
             }
 
             health.Amount -= amount;
+            Debug.Log(gameObject.name + " was damaged.");
+            
+            Vector3 randomness = new Vector3(Random.Range(0f, 0.25f), 
+                Random.Range(0f, 0.25f), Random.Range(0f, 0.25f)); 
+        
+            switch (crit)
+            {
+                case false:
+                    DamagePopUpGenerator.Current.CreatePopUp(transform.position + randomness, 
+                        amount.ToString(), Color.yellow);
+                    break;
+            
+                case true:
+                    DamagePopUpGenerator.Current.CreatePopUp(transform.position + randomness, 
+                        amount.ToString(), Color.cyan);
+                    break;
+            } 
+            
             anim.SetTrigger("Hit");
+            
+            if (hitAudio != null)
+            {
+                hitAudio.PlayRandomClip();
+            }
 
-            if (health.Amount >= 0) Die();
+            if (health.Amount <= 0) Die();
         }
 
-        public void Die()
+        private void Die()
         {
+            if (deathAudio != null)
+            {
+                deathAudio.PlayRandomClip();
+            }
+            
             ragdoll.Replace();
         }
-
-        public void AnimatorEventShoot()
+        
+        public void PlayStep()
         {
-            //bullet.Shoot(shootPoint);
-            lastShootTime = Time.time;
-            StartCoroutine(Cooldown());
+            if (footstepAudio != null)
+            {
+                footstepAudio.PlayRandomClip();
+            }
         }
 
-        public bool Shoot(Transform target)
+        public void Grunt()
         {
-            _t = target;
-            return true;
+            if (gruntAudio != null)
+            {
+                gruntAudio.PlayRandomClip();
+            }
         }
 
-        public bool CanShoot()
-        {
-            return Time.time >= lastShootTime + shootCooldown;
-        }
-
-        private IEnumerator Cooldown()
-        {
-            yield return new WaitForSeconds(shootCooldown);
-        }
+        public abstract bool Attack(Transform target);
+        public abstract bool CanAttack();
     }
 }

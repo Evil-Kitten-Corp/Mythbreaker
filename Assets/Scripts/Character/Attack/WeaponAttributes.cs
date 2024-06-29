@@ -1,4 +1,5 @@
 using FinalScripts;
+using FinalScripts.Refactored;
 using UnityEngine;
 
 public class WeaponAttributes : MonoBehaviour
@@ -9,8 +10,13 @@ public class WeaponAttributes : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         WeaponAndAttackManager wp = GetComponentInParent<WeaponAndAttackManager>();
-
-        if (other.TryGetComponent<EnemyBase>(out var eb))
+        
+        if (other.TryGetComponent<EnemyBT>(out var bt))
+        {
+            bt.TakeDamage(currentAttackData.damage, currentAttackData.canCrit);
+            wp.AttackSuccessful();
+        }
+        else if (other.TryGetComponent<EnemyBase>(out var eb))
         {
             eb.ApplyDamage(attributes.transform, currentAttackData.damage, currentAttackData.canCrit);
             wp.AttackSuccessful();

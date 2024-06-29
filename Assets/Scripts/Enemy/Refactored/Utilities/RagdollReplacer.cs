@@ -9,12 +9,16 @@ namespace FinalScripts.Refactored
         public void Replace()
         {
             GameObject ragdollInstance = Instantiate(ragdollPrefab, transform.position, transform.rotation);
+            ragdollInstance.SetActive(true); 
+            Destroy(gameObject);
+            
+            return;
+            
             ragdollInstance.SetActive(false);
 
-            EnemyBase baseController = GetComponent<EnemyBase>();
-
-            RigidbodyDelayedForce t = ragdollInstance.AddComponent<RigidbodyDelayedForce>();
-            t.forceToAdd = baseController.ExternalForce;
+            //EnemyBase baseController = GetComponent<EnemyBase>();
+            //RigidbodyDelayedForce t = ragdollInstance.AddComponent<RigidbodyDelayedForce>();
+            //t.forceToAdd = baseController.ExternalForce;
 
             Transform ragdollCurrent = ragdollInstance.transform;
             Transform current = transform;

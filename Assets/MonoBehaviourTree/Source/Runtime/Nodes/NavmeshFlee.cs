@@ -35,9 +35,17 @@ namespace MBTExample
         
         private void UpdateDestination()
         {
-            Vector3 fleeVector = targetTransform.Value.position- agent.transform.position;
-            Vector3 newPos = agent.transform.position - fleeVector;
-            agent.SetDestination(newPos);
+            Vector3 fleeVector = agent.transform.position - targetTransform.Value.position;
+            Vector3 newPos = agent.transform.position + fleeVector.normalized * stopWhenDistance;
+
+            if (NavMesh.SamplePosition(newPos, out var hit, stopWhenDistance, NavMesh.AllAreas))
+            {
+                agent.SetDestination(hit.position);
+            }
+            else
+            {
+                Debug.LogWarning("Flee destination is not on the NavMesh");
+            }
         }
         
         public override NodeResult Execute()
@@ -64,6 +72,15 @@ namespace MBTExample
                 return NodeResult.success;
             }
             
+            // Ensure the agent is not stopped and is moving
+            if (!agent.isStopped && agent.velocity.sqrMagnitude > 0.1f)
+            {
+                return NodeResult.running;
+            }
+
+            // Log state for debugging
+            Debug.LogWarning("Agent is not moving. Path status: " + agent.hasPath + ", Velocity: " + agent.velocity);
+
             // Check if there is any path (if not pending, it should be set)
             if (agent.hasPath)
             {

@@ -32,7 +32,7 @@ namespace MBT
         {
             if (_enemyBt != null) 
             {
-                if (_enemyBt.Shoot(targetTransform.Value))
+                if (_enemyBt.Attack(targetTransform.Value))
                 {
                     return NodeResult.success;
                 }

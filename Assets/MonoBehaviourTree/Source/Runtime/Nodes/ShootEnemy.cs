@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MBT
@@ -11,8 +9,7 @@ namespace MBT
         public AnimatorReference animator;
         
         private static readonly int ShootHash = Animator.StringToHash("Shoot");
-
-        private bool hasStartedShooting = false;
+        private bool _hasStartedShooting;
         
         public override NodeResult Execute()
         {
@@ -24,10 +21,10 @@ namespace MBT
             
             AnimatorStateInfo stateInfo = animator.Value.GetCurrentAnimatorStateInfo(0);
             
-            if (!hasStartedShooting)
+            if (!_hasStartedShooting)
             {
-                animator.Value.SetTrigger("Shoot");
-                hasStartedShooting = true;
+                animator.Value.SetTrigger(ShootHash);
+                _hasStartedShooting = true;
                 return NodeResult.running;
             }
             
@@ -40,7 +37,7 @@ namespace MBT
             // Check if the animation has finished
             if (stateInfo.IsName("Shoot") && stateInfo.normalizedTime >= 1.0f)
             {
-                hasStartedShooting = false;
+                _hasStartedShooting = false;
                 return NodeResult.success;
             }
 

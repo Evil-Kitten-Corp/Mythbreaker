@@ -10,6 +10,7 @@ TagManager:
   - TargetCenter
   - Effects
   - UnlockBoss
+  - ShootPt
   layers:
   - Default
   - TransparentFX
