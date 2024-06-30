@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be7b058864b48b195bcb383786441d3, type: 3}
   m_Name: MeleeEnemy
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4898409188086454636, guid: caa5b9735921bb24e9a44fa57c2ba8e1, type: 3}
+  prefab: {fileID: 6422880189439628567, guid: 43df99e709280bf4095dfe57059e9f94, type: 3}
   health: 5
   speed: 5
   attackDamage: 5

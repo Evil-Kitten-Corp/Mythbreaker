@@ -14,10 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnData:
   - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
-    amountToSpawn: 6
+    amountToSpawn: 2
     spawnPoint: {x: 38.89, y: -0.57, z: -56.49}
     delayBetweenSpawns: 1
-  - enemyType: {fileID: 11400000, guid: 801b1bbf0d8b9db4aa46649501e50589, type: 2}
+  - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
     amountToSpawn: 1
-    spawnPoint: {x: 17.63, y: -0.57, z: -70.6}
+    spawnPoint: {x: 41, y: -0.57, z: -70.49}
+    delayBetweenSpawns: 1
+  - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
+    amountToSpawn: 1
+    spawnPoint: {x: 38.89, y: -0.57, z: -70.49}
+    delayBetweenSpawns: 1
+  - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
+    amountToSpawn: 2
+    spawnPoint: {x: 38.89, y: -0.57, z: -84.49}
     delayBetweenSpawns: 1

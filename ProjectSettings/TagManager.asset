@@ -11,6 +11,7 @@ TagManager:
   - Effects
   - UnlockBoss
   - ShootPt
+  - Teleporters
   layers:
   - Default
   - TransparentFX

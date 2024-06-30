@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using Abilities;
+using DG.Tweening;
 using UnityEngine;
 
 namespace FinalScripts
@@ -15,10 +16,15 @@ namespace FinalScripts
         private float _chargeTimer;
         private float _laserTimer;
 
+        public Light eyeLight;
         public float laserActivateTimeDelay;
         public float lerpSpeed;
         public float lerpThicknessSpeed;
         public ParticleSystem scorch;
+
+        public GameObject[] laserComponents;
+        public LineRenderer[] laserParts;
+        public GameObject laserHit;
         
         public float stompRadius = 5.0F;
         public float stompPower = 10.0F;
@@ -33,22 +39,52 @@ namespace FinalScripts
         private bool _canLaser = false;
         private bool _canStomp = true;
 
+        private Coroutine _laserCo;
+        private Coroutine _chargeCo;
+        private bool _forceEmptyTarget;
+
         public override void Start()
         {
             _canBeKnockedup = false;
             _lastUsedLaser = Time.time;
             StartCoroutine(LaserCooldown());
             base.Start();
+
+            _target = GameObject.FindWithTag("ShootPt").transform;
+
+            if (_target != null)
+            {
+                _target.GetComponentInParent<AttributesManager>().OnDie += () =>
+                {
+                    _forceEmptyTarget = true;
+                    _target = null;
+                };
+            }
+            
+            _agent.updateRotation = false;
+            
+            // [ IDLE ]
+            
+            _entryActions.Add(EnemyStates.IDLE, null);
+
+            _updateActions.Add(EnemyStates.IDLE, () =>
+            {
+                if (!_forceEmptyTarget)
+                {
+                    _target = GameObject.FindWithTag("ShootPt").transform;
+                }
+            });
+            
+            _exitActions.Add(EnemyStates.IDLE, null);
             
             //ENTRY
             _entryActions.Add(EnemyStates.KNOCKDOWN, null);
-            _entryActions.Add(EnemyStates.IDLE, null);
             
             _entryActions.Add(EnemyStates.SEEK, () => 
             { 
                 Debug.Log("Boss is running away.");
                 //we will actually use this to instead flee
-                _anim.SetBool(Walking, true); 
+                //_anim.SetBool(Walking, true); 
             });
            
            _entryActions.Add(EnemyStates.ATTACK, () =>
@@ -57,27 +93,49 @@ namespace FinalScripts
                _laserTimer = 0;
                _lastUsedLaser = Time.time;
                
-               if (_canLaser)
+               if (_laserCo == null && _canLaser)
                {
-                   ShootLaser();
+                   //check if the player is in our fov, to evade the case where the player is under us,
+                   //and we still laser shoot it on an ungodly angle
+                   Vector3 targetDir = _target.transform.position - transform.position;
+                   float angle = Vector3.Angle(targetDir, transform.forward);
+                   
+                   if (angle <= 45)
+                   {
+                       ShootLaser();
+                       Debug.Log("I see you.");
+                       return;
+                   }
+                   else
+                   {
+                       Debug.Log("I can't see you.");
+                   }
                }
-               else
+               
+               shockwave.Play();
+               GetComponent<AudioSource>().PlayOneShot(stompSound);
+
+               var att = _target.GetComponentInParent<AttributesManager>();
+
+               if (att != null)
                {
-                   shockwave.Play();
-                   GetComponent<AudioSource>().PlayOneShot(stompSound);
-                   Rigidbody rb = _target.GetComponent<Rigidbody>();
+                   if (att.CanStomp())
+                   {
+                       Debug.Log("Can be stomped.");
+                       Rigidbody rb = _target.GetComponent<Rigidbody>();
 
-                   if (rb != null)
-                       rb.AddExplosionForce(stompPower, transform.position, stompRadius, 3.0F);
-
-                   if (rb.TryGetComponent<AttributesManager>(out var att))
-                   { 
+                       if (rb != null)
+                       {
+                           rb.AddExplosionForce(stompPower, transform.position, stompRadius, 3.0F);
+                           Debug.Log("We actually added force to Vita's rb.");
+                       }
+                   
                        att.Knockup();
                    }
-
-                   _canStomp = false;
-                   StartCoroutine(StompCooldown());
                }
+
+               _canStomp = false;
+               StartCoroutine(StompCooldown());
            });
            
            _entryActions.Add(EnemyStates.HIT, null);
@@ -86,85 +144,38 @@ namespace FinalScripts
            {
                Debug.Log("Boss is dead.");
                _anim.SetTrigger(Die);
-               TargetingSystem.Instance.screenTargets.Remove(gameObject);
+               
+               if (TargetingSystem.Instance != null)
+               {
+                   TargetingSystem.Instance.screenTargets.Remove(gameObject);
+               }
+               
                OnDeath?.Invoke(gameObject);
                Destroy(gameObject, 2f);
                var aud = GetComponent<AudioSource>();
                aud.volume = 0.4f;
                aud.PlayOneShot(deathSound);
-               AttributesManager.OnDefeatBoss?.Invoke();
+               _target.GetComponentInParent<AttributesManager>().OnDefeatBoss?.Invoke();
            });
            
            //UPDATE
            
-           _updateActions.Add(EnemyStates.IDLE, () =>
-           {
-               _target = GameObject.FindWithTag("Player").transform;
-               transform.LookAt(_target);
-           });
-           
-           _updateActions.Add(EnemyStates.SEEK, Flee);
-           
-           _updateActions.Add(EnemyStates.ATTACK, () =>
-           {
-               if (_canLaser)
-               {
-                   _laserTimer += Time.deltaTime;
-
-                   if (_laserTimer >= 3)
-                   {
-                       laser.gameObject.SetActive(false);
-                       _canLaser = false;
-                       StartCoroutine(LaserCooldown());
-                       SwitchState(EnemyStates.IDLE);
-                       _lastAttackTime = Time.time;
-                   }
-               }
-           });
-           
+           _updateActions.Add(EnemyStates.SEEK, null);
+           _updateActions.Add(EnemyStates.ATTACK, null);
            _updateActions.Add(EnemyStates.HIT, null);
            _updateActions.Add(EnemyStates.DEATH, null);
            _updateActions.Add(EnemyStates.KNOCKDOWN, null);
            
            //EXIT
            
-           _exitActions.Add(EnemyStates.IDLE, null);
            
-           _exitActions.Add(EnemyStates.SEEK, () =>
-           {
-               _anim.SetBool(Walking, false);
-           });
-           
-           _exitActions.Add(EnemyStates.ATTACK, () =>
-           {
-               Debug.Log("Boss stopped attacking.");
-               //StopAllCoroutines();
-               laser.Deactivate();
-               laser.HitDeactivate();
-               StartCoroutine(LaserDeactivateCoroutine());
-
-               IEnumerator LaserDeactivateCoroutine()
-               {
-                   float startThickness = laser.thickness;
-                   float lerp = 0;
-                   while (lerp < 1)
-                   {
-                       laser.thickness = Mathf.Lerp(startThickness, 0, lerp);
-                       lerp += Time.deltaTime * lerpThicknessSpeed;
-                       yield return null;
-                   }
-               
-                   laser.ResetLaser();
-                   laser.length = 0;
-               }
-               
-           });
-           
+           _exitActions.Add(EnemyStates.SEEK, null);
+           _exitActions.Add(EnemyStates.ATTACK, null);
            _exitActions.Add(EnemyStates.HIT, null);
            _exitActions.Add(EnemyStates.DEATH, null);
            _exitActions.Add(EnemyStates.KNOCKDOWN, null);
            
-           //
+           // [ PREPARE ]
            _entryActions.Add(EnemyStates.PREPARE, () =>
            {
                Debug.Log("Boss is preparing to attack.");
@@ -173,23 +184,20 @@ namespace FinalScripts
                _anim.SetTrigger("Prepare");
            });
            
-           _updateActions.Add(EnemyStates.PREPARE, () =>
-           {
-               _chargeTimer += Time.deltaTime;
-
-               if (_chargeTimer >= 3)
-               {
-                   SwitchState(EnemyStates.ATTACK);
-               }
-           });
+           _updateActions.Add(EnemyStates.PREPARE, () => { _chargeCo ??= StartCoroutine(Charge()); });
            
            _exitActions.Add(EnemyStates.PREPARE, null);
+           
+           Debug.Log("Entry Actions Keys: " + string.Join(", ", _entryActions.Keys));
+           Debug.Log("Update Actions Keys: " + string.Join(", ", _updateActions.Keys));
+           Debug.Log("Exit Actions Keys: " + string.Join(", ", _exitActions.Keys));
         }
 
         private void Flee()
         {
             Vector3 dirToPlayer = transform.position - _target.transform.position;
             Vector3 newPos = transform.position + dirToPlayer;
+            transform.LookAt(_target); 
             
             _agent.SetDestination(newPos);
         }
@@ -201,7 +209,8 @@ namespace FinalScripts
 
         private void ShootLaser()
         {
-            StartCoroutine(Laser(_target));
+            _laserTimer = 0;
+            _laserCo = StartCoroutine(Laser(_target));
         }
 
         private IEnumerator StompCooldown()
@@ -214,43 +223,58 @@ namespace FinalScripts
         {
             yield return new WaitForSeconds(laserCooldown);
             _canLaser = true;
+            _laserCo = null;
+        }
+
+        private IEnumerator Charge()
+        {
+            eyeLight.color = Color.red;
+            eyeLight.intensity = 0;
+            eyeLight.DOIntensity(10, laserActivateTimeDelay);
+            GetComponent<AudioSource>().PlayOneShot(laserSound);
+            yield return new WaitForSeconds(laserActivateTimeDelay);
+            
+            SwitchState(EnemyStates.ATTACK);
+            _chargeCo = null;
         }
 
         private IEnumerator Laser(Transform target)
         {
-            laser.Activate();
-            yield return new WaitForSeconds(laserActivateTimeDelay);
-            GetComponent<AudioSource>().PlayOneShot(laserSound);
-            float startLength = 0;
-            
-            float lerp = 0;
-            
-            while (lerp < 1)
+            foreach (var go in laserComponents)
             {
-                laser.length = Mathf.Lerp(startLength, (target.position - eye.position).magnitude, lerp);
-                lerp += Time.deltaTime * lerpSpeed;
-                yield return null;
+                go.SetActive(true);
             }
             
-            laser.HitActivate();
-            //scorch.Play();
+            scorch.Play();
             
-            while (true)
+            while (_laserTimer < 3)
             {
-               // scorch.transform.localPosition = new Vector3(target.position.x * 2 - 1f, target.position.y * 2 - 1f, 10);
+                _laserTimer += Time.deltaTime;
                 
-                if ((target.position - eye.position).magnitude < 0)
+                foreach (var line in laserParts)
                 {
-                    laser.length += Time.deltaTime * lerpSpeed * 20;
-                    laser.HitDeactivate();
+                    line.SetPosition(0, eye.position);
+                    line.SetPosition(1, target.position);
                 }
-                else
-                {
-                    laser.length = (target.position - eye.position).magnitude;
-                }
+
+                laserHit.transform.position = laserParts[0].GetPosition(1);
 
                 yield return null;
             }
+            
+            _canLaser = false;
+            SwitchState(EnemyStates.IDLE);
+            _lastAttackTime = Time.time;
+
+            foreach (var go in laserComponents)
+            {
+                go.SetActive(false); 
+            }
+            
+            eyeLight.DOColor(Color.green, 1f);
+            eyeLight.DOIntensity(38, 1f);
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(LaserCooldown());
         }
         
         public override void Update()
@@ -259,6 +283,21 @@ namespace FinalScripts
             {
                 SwitchState(EnemyStates.DEATH);
                 return;
+            }
+            
+            if (!_forceEmptyTarget && _currentState != EnemyStates.PREPARE && _currentState != EnemyStates.DEATH)
+            {
+                //check if the player is in our fov
+                Vector3 targetDir = _target.transform.position - transform.position;
+                float angle = Vector3.Angle(targetDir, transform.forward);
+                   
+                if (angle <= 45)
+                {
+                    var targetRotation = Quaternion.LookRotation(_target.transform.position - transform.position);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, .5f * Time.deltaTime);
+                }
+                
+                //else lets just not frustrate the player a lot
             }
             
             switch (_currentState) 

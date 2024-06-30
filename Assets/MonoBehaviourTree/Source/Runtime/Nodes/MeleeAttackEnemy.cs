@@ -23,7 +23,6 @@ namespace MBT
             
             if (!_hasStartedAttacking)
             {
-                
                 animator.Value.SetTrigger(AttackHash);
                 _hasStartedAttacking = true;
                 return NodeResult.running;
@@ -36,7 +35,7 @@ namespace MBT
             }
 
             // Check if the animation has finished
-            if (stateInfo.IsName("Attack") && stateInfo.normalizedTime >= 1.0f)
+            if (stateInfo.normalizedTime >= 1f)
             {
                 _hasStartedAttacking = false;
                 return NodeResult.success;

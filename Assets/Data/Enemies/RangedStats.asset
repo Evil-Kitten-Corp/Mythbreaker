@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be7b058864b48b195bcb383786441d3, type: 3}
   m_Name: RangedStats
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3386848574670431, guid: 5538a7e463bcf42438d77a3634fff870, type: 3}
+  prefab: {fileID: 5264806095037940573, guid: 35c963060f55d65438cf02844b5c5574, type: 3}
   health: 100
   speed: 5
   attackDamage: 15

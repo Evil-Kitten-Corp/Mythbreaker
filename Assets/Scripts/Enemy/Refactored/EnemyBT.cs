@@ -1,6 +1,8 @@
-﻿using Minimalist.Bar.Quantity;
+﻿using System;
+using Minimalist.Bar.Quantity;
 using TriInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace FinalScripts.Refactored
 {
@@ -60,6 +62,7 @@ namespace FinalScripts.Refactored
                 deathAudio.PlayRandomClip();
             }
             
+            OnDeath?.Invoke(gameObject);
             ragdoll.Replace();
         }
         
@@ -81,5 +84,12 @@ namespace FinalScripts.Refactored
 
         public abstract bool Attack(Transform target);
         public abstract bool CanAttack();
+        
+        public event Action<GameObject> OnDeath;
+
+        public void TriggerDeath()
+        {
+            Die();
+        }
     }
 }

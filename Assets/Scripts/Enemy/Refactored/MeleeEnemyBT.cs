@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DG.Tweening;
 using Enemy.Refactored.Utilities;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace FinalScripts.Refactored
 {
@@ -14,7 +16,22 @@ namespace FinalScripts.Refactored
         private bool _canAttack = true;
 
         private TargetDistributor.TargetFollower _followerInstance;
-        
+        private NavMeshAgent _agent;
+
+        private void Start()
+        {
+            _agent = GetComponent<NavMeshAgent>();
+            _agent.updateRotation = false;
+        }
+
+        private void Update()
+        {
+            if (_agent.velocity.sqrMagnitude > Mathf.Epsilon)
+            {
+                transform.rotation = Quaternion.LookRotation(_agent.velocity.normalized);
+            }
+        }
+
         public void AnimatorEventShoot()
         {
             if (attackAudio != null)

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,11 +11,12 @@ namespace DefaultNamespace
         private void Start()
         {
             deathScreen.SetActive(false);
-            AttributesManager.OnDie += OnDeath;
+            FindObjectOfType<AttributesManager>().OnDie += () => StartCoroutine(OnDeath());
         }
 
-        private void OnDeath()
+        private IEnumerator OnDeath()
         {
+            yield return new WaitForSeconds(6f);
             deathScreen.SetActive(true);
             Time.timeScale = 0;
             IsInUI = true;
@@ -25,7 +27,7 @@ namespace DefaultNamespace
             deathScreen.SetActive(false);
             Time.timeScale = 1;
             IsInUI = false;
-            SceneManager.LoadScene("Combat");
+            SceneManager.LoadScene("Combat Test");
         }
 
         public void ReturnToMain()

@@ -1,6 +1,10 @@
 using System.Collections;
 using Abilities;
+using FinalScripts;
+using FinalScripts.Refactored;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpikeAbility : AbilityController
 {
@@ -13,11 +17,18 @@ public class SpikeAbility : AbilityController
 
     public GameObject spikePrefab;
     public Transform firePoint;
+    private ParticleSystem _effect;
 
     protected override void Start()
     {
+        _effect = spikePrefab.GetComponent<ParticleSystem>();
         _attackControl = GetComponentInParent<WeaponAndAttackManager>();
         _attackControl.OnAttackSuccessful += AddStack;
+    }
+
+    public override int Stacks()
+    {
+        return _abilityStacks;
     }
 
     private void AddStack()
@@ -34,22 +45,48 @@ public class SpikeAbility : AbilityController
 
     protected override IEnumerator WaitForCast()
     {
-        TargetingSystem.Instance.Activate();
+        if (IsCooldown)
+        {
+            yield break;
+        }
+        
+        if (TargetingSystem.Instance != null)
+        {
+            TargetingSystem.Instance.Activate();
+        }
+        
         yield return new WaitUntil(() => Input.GetKeyUp(abilityKey));
-        _target = TargetingSystem.Instance.Deactivate();
+
+        if (TargetingSystem.Instance != null)
+        {
+            _target = TargetingSystem.Instance.Deactivate();
+        }
+        else
+        {
+            if (_target == null)
+            {
+                _target = FindObjectOfType<EnemyBT>().transform;
+
+                if (_target == null)
+                {
+                    _target = FindObjectOfType<EnemyAppendage>().transform;
+                }
+            }
+        }
+        
         yield return base.WaitForCast();
     }
 
-    protected override void Ability()
+    protected override bool Ability()
     {
         if (_abilityStacks <= 0)
         {
-            return;
+            return false;
         }
         
         if (_target == null)
         {
-            return;
+            return false;
         }
 
         for (int i = 0; i < _abilityStacks; i++)
@@ -57,9 +94,8 @@ public class SpikeAbility : AbilityController
             GameObject projectile = Instantiate(spikePrefab, firePoint.position, firePoint.rotation);
             
             projectile.GetComponent<TargetProjectile>().UpdateTarget(_target, Vector3.zero);
-            
-            var effect = spikePrefab.GetComponent<ParticleSystem>();
-            effect.Play();
+
+            _effect.Play();
         
             source.PlayOneShot(soundOnCast);
         }
@@ -67,5 +103,6 @@ public class SpikeAbility : AbilityController
         _abilityStacks = 0;
         
         base.Ability();
+        return true;
     }
 }

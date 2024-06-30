@@ -9738,6 +9738,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   dissolveMaterial: {fileID: 2100000, guid: 03217db3f84256c49adb1384e7a6e8ab, type: 2}
+  mr: {fileID: 0}
+  sr: {fileID: 7919895449704387480}
 --- !u!1 &5728714121685675037
 GameObject:
   m_ObjectHideFlags: 0

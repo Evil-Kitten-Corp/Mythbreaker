@@ -29,7 +29,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
     
     internal EnemyStates _currentState;
     internal Animator _anim;
-    internal NavMeshAgent _agent;
+    [SerializeField] internal NavMeshAgent _agent;
     internal Transform _target;
     internal float _dmgToTake;
     internal float _lastAttackTime;
@@ -62,7 +62,12 @@ public abstract class EnemyBehaviour : MonoBehaviour
     {
         _currentState = startingState;
         _anim = GetComponent<Animator>();
-        _agent = GetComponent<NavMeshAgent>();
+
+        if (_agent == null)
+        {
+            _agent = GetComponent<NavMeshAgent>();
+        }
+         
         OnDeath += OnDie;
         TakeDamage += OnTakeDamage;
         _lastAttackTime = Time.time;
@@ -144,12 +149,28 @@ public abstract class EnemyBehaviour : MonoBehaviour
         _updateActions[_currentState]?.Invoke();
     }
     
-    internal void SwitchState(EnemyStates state) 
+    internal void SwitchState(EnemyStates state)
     {
+        Debug.Log($"Switching state from {_currentState} to {state}");
+
+        if (!_exitActions.ContainsKey(_currentState))
+        {
+            Debug.LogError($"_exitActions does not contain key: {_currentState}");
+        }
+        if (!_entryActions.ContainsKey(state))
+        {
+            Debug.LogError($"_entryActions does not contain key: {state}");
+        }
+        if (!_updateActions.ContainsKey(state))
+        {
+            Debug.LogError($"_updateActions does not contain key: {state}");
+        }
+
         _exitActions[_currentState]?.Invoke();
         _currentState = state;
         _entryActions[_currentState]?.Invoke();
     }
+
     
     internal bool CanAttack()
     {

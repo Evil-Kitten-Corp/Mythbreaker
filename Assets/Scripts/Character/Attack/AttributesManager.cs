@@ -15,18 +15,24 @@ public class AttributesManager : MonoBehaviour
     public vThirdPersonCamera cameraController;
     public GameObject deathScreen;
     public QuantityBhv health;
-    public int attack;
+
+    public int Attack
+    {
+        get => attackManager.baseAttack;
+        set => attackManager.baseAttack = value;
+    }
 
     private bool _invulnerable;
     private bool _dead;
+    private bool _canBeKnockedUp = true;
     
     public KeyCode keyToRecenterCamera;
     public WeaponAndAttackManager attackManager;
 
-    public static Action OnDie;
-    public static Action OnDefeatLastWave;
-    public static Action OnBossMeet;
-    public static Action OnDefeatBoss;
+    public Action OnDie;
+    public Action OnDefeatLastWave;
+    public Action OnBossMeet;
+    public Action OnDefeatBoss;
     
     public Animator anim;
     
@@ -45,12 +51,37 @@ public class AttributesManager : MonoBehaviour
     //public AudioClip clip;
 
     private AudioSource _source;
+    private SaveLoadJsonFormatter _saveSystem;
 
     private void Start()
     {
         OnDefeatBoss += OnWin;
         OnBossMeet += OnLastWave;
         _source = GetComponent<AudioSource>();
+        
+        _saveSystem = FindObjectOfType<SaveLoadJsonFormatter>();
+
+        LoadGame();
+    }
+
+    void LoadGame()
+    {
+        _saveSystem.LoadGame(out var att, out var h, out var sp);
+
+        if (att != 0)
+        {
+            Attack = att;
+        }
+
+        if (h != 0)
+        {
+            health.MaximumAmount = h;
+        }
+
+        if (sp != 0)
+        {
+            moveController.freeSpeed.walkSpeed = sp;
+        }
     }
 
     private void OnWin()
@@ -60,7 +91,7 @@ public class AttributesManager : MonoBehaviour
 
     IEnumerator PlayCutscene()
     {
-        yield return StartCoroutine(FadeCanvasGroup(fadeInGroup, 0, 1, 5f));
+        yield return StartCoroutine(FadeCanvasGroup(fadeInGroup, 0, 1, 2f));
         yield return new WaitForSeconds(1f);
         //_source.PlayOneShot(clip);
 
@@ -69,6 +100,7 @@ public class AttributesManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         MythUIElement.IsInUI = true;
+        Cursor.visible = true;
         SceneManager.LoadScene("MainMenu");
     }
     
@@ -144,21 +176,19 @@ public class AttributesManager : MonoBehaviour
 
         if (health.Amount <= 0)
         {
-            if (_dead) return;
-            StartCoroutine(Death());
+            if (_dead) return; 
+            Death();
         }
     }
 
-    private IEnumerator Death()
+    private void Death()
     {
         OnDie?.Invoke();
         moveController.lockMovement = true;
-        
+        moveController.lockRotation = true; 
+        cameraController.lockCamera = true;
         anim.SetTrigger(Die);
         _dead = true;
-        yield return new WaitForSeconds(6f);
-        Time.timeScale = 0;
-        deathScreen.SetActive(true);
     }
 
     private void Update()
@@ -175,6 +205,8 @@ public class AttributesManager : MonoBehaviour
             cameraController.lockCamera = false;
             attackManager.enabled = true; 
         }
+        
+        anim.SetBool("Dead", _dead);
         
         if (MythUIElement.IsInUI)
         {
@@ -213,7 +245,13 @@ public class AttributesManager : MonoBehaviour
         _invulnerable = val;
     }
 
+    public void SetKnockUp(bool val)
+    {
+        _canBeKnockedUp = val;
+    }
+
     public bool IsInvulnerable() => _invulnerable;
+    public bool CanStomp() => _canBeKnockedUp;
 
     public void AddTemporaryBuff(int quantity, float time)
     {

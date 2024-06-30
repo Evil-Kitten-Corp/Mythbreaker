@@ -46,8 +46,7 @@ public class WaveManager : MonoBehaviour
     private void EndWave()
     {
         GiveRewards();
-        _saveLoadSystem.SaveGame(new PlayerData(_currentWaveIndex, 
-            _inv.abilities.Keys.Select(ab => ab.id).ToList()));
+        _saveLoadSystem.SaveGame(new PlayerData(_currentWaveIndex, 0,0,0));
 
         Instantiate(healthPrefab, healthSpawnPt);
         StartCountdown();
@@ -80,7 +79,7 @@ public class WaveManager : MonoBehaviour
         {
             Debug.Log("All waves completed!");
             waveAnnouncer.gameObject.SetActive(false);
-            AttributesManager.OnDefeatLastWave?.Invoke();
+            FindObjectOfType<AttributesManager>().OnDefeatLastWave?.Invoke();
             return;
         }
         
@@ -125,24 +124,5 @@ public class WaveManager : MonoBehaviour
         _saveLoadSystem.LoadGame(out _currentWaveIndex);
         _currentWaveIndex--;
         StartCountdown();
-    }
-
-    public void OnPlayerDeath()
-    {
-        RestartWave();
-    }
-
-    public void RestartWave()
-    {
-        StopAllCoroutines();
-        
-        foreach (var enemy in _currentEnemies)
-        {
-            Destroy(enemy);
-        }
-        
-        _currentEnemies.Clear();
-        
-        StartWave();
     }
 }

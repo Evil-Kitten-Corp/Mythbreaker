@@ -5,12 +5,12 @@ using System.Linq;
 using Abilities;
 using AYellowpaper.SerializedCollections;
 using FinalScripts;
+using FinalScripts.Refactored;
 using FinalScripts.Specials;
 using SolidUtilities.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
 {
@@ -18,7 +18,8 @@ namespace DefaultNamespace
     {
         [Header("Wave")]
         public List<WaveData> waves;
-        public Transform spawnPoint;
+        public AttributesManager player;
+        public GameObject finalWaveTeleporter;
         
         [Header("Rewards")]
         [SerializedDictionary("Abilities", "Script")]
@@ -51,14 +52,12 @@ namespace DefaultNamespace
 
         private Action<int> _chooseReward;
         private SaveLoadJsonFormatter _saveLoadSystem;
-        private PlayerInv _inv;
 
         public Action<GameObject> EnemySpawn;
 
         void Start()
         {
             _saveLoadSystem = FindObjectOfType<SaveLoadJsonFormatter>();
-            _inv = FindObjectOfType<PlayerInv>();
             _availableRewards = rewards.Keys.ToList();
             
             LoadWave();
@@ -80,13 +79,6 @@ namespace DefaultNamespace
             _availableRewards.Remove(chosenReward);  // Remove the chosen reward from available rewards
 
             _possibleRewards.Clear();  // Clear possible rewards
-
-            _inv.ReceiveRewards(new Reward
-            {
-                ability = chosenReward,  // Use the stored chosen reward
-                abilityUpgrade = null,
-                type = RewardType.Ability
-            });
 
             waveAnnouncer.text = "Next wave will start in...";
             StartCoroutine(WaveCooldown());
@@ -118,15 +110,19 @@ namespace DefaultNamespace
         void SpawnWave()
         {
             _currentWave++;
-            littleGuys[_currentWave].color = Color.white;
-
-            if (_currentWave >= waves.Count)
+            
+            if (_currentWave == 8)
             {
                 waveAnnouncer.gameObject.SetActive(false);
-                AttributesManager.OnDefeatLastWave?.Invoke();
+                finalWaveTeleporter.SetActive(true);
+                waveCount.text = $"Final Round";
+                _saveLoadSystem.SaveGame(new PlayerData(_currentWave, player.moveController.freeSpeed.walkSpeed, 
+                    player.health.Amount, player.Attack));
+                player.OnDefeatLastWave?.Invoke();
                 return;
-            }
-
+            } 
+            
+            littleGuys[_currentWave].color = Color.white;
             StartCoroutine(SpawnEnemies());
             waveCount.text = $"Wave {_currentWave + 1}";
         }
@@ -144,7 +140,9 @@ namespace DefaultNamespace
                     GameObject enemy = Instantiate(enemyStats.prefab, spawnPosition, Quaternion.identity);
                     EnemySpawn?.Invoke(enemy);
             
-                    enemy.GetComponent<EnemyBehaviour>().OnDeath += KillEnemy;
+                    enemy.GetComponent<EnemyBT>().OnDeath += KillEnemy;
+
+                    AdequateEnemyStat(enemy, enemyStats);
                     _currentEnemies.Add(enemy);
                     yield return new WaitForSeconds(entry.delayBetweenSpawns);
                 }
@@ -152,12 +150,45 @@ namespace DefaultNamespace
     
             _isEndable = true;
         }
+
+        private void AdequateEnemyStat(GameObject enemy, EnemyStats enemyStats)
+        {
+            var x = enemy.GetComponent<EnemyBT>();
+            
+            // Initial amount (P0)
+            float P0 = enemyStats.health;
         
+            // Growth rate (r)
+            float r = 0.4f;
+        
+            // Time (t)
+            float t = _currentWave;
+
+            x.health.MaximumAmount = CalculateExponentialGrowth(P0, r, t);
+            x.health.Amount = x.health.MaximumAmount;
+            
+            switch (x)
+            {
+                case RangedEnemyBT b:
+                    b.projectile.baseDamage = CalculateExponentialGrowth(enemyStats.attackDamage, r, t);
+                    break;
+                case MeleeEnemyBT m:
+                    m.damage = (int)CalculateExponentialGrowth(m.damage, r, t);
+                    break;
+            }
+        }
+        
+        private float CalculateExponentialGrowth(float initialAmount, float growthRate, float time)
+        {
+            return (float)(initialAmount * Math.Exp(growthRate * time));
+        }
+
         void EndWave()
         {
             GetRewards();
-            _saveLoadSystem.SaveGame(new PlayerData(_currentWave, _inv.abilities.Keys
-                .Select(ab => ab.id).ToList()));
+            
+            _saveLoadSystem.SaveGame(new PlayerData(_currentWave, player.moveController.freeSpeed.walkSpeed, 
+                player.health.Amount, player.Attack));
             
             Instantiate(healthPrefab, healthSpawnPt);
             Time.timeScale = 0;
@@ -170,7 +201,7 @@ namespace DefaultNamespace
 
         void GetRewards()
         {
-            _possibleRewards.Clear();
+            /*_possibleRewards.Clear();
             
             _availableRewards = rewards.Keys.Where(reward => 
                 reward.canGetMoreThanOnce || !_inv.abilities.Keys.Contains(reward)).ToList();
@@ -202,7 +233,7 @@ namespace DefaultNamespace
             
             rewardsDescription[0].text = _possibleRewards[0].abDescription;
             rewardsDescription[1].text = _possibleRewards[1].abDescription;
-            rewardsDescription[2].text = _possibleRewards[2].abDescription;
+            rewardsDescription[2].text = _possibleRewards[2].abDescription;*/
             
             rewardsParent.SetActive(true);
             MythUIElement.IsInUI = true;
@@ -210,11 +241,14 @@ namespace DefaultNamespace
 
         public void ChooseReward(int i)
         {
-            _chooseReward.Invoke(i);
+            //_chooseReward.Invoke(i);
             _isChoosingRewards = false;
             rewardsParent.SetActive(false);
             MythUIElement.IsInUI = false; 
             Time.timeScale = 1;
+            
+            waveAnnouncer.text = "Next wave will start in...";
+            StartCoroutine(WaveCooldown());
         }
         
         void LoadWave()
@@ -230,6 +264,25 @@ namespace DefaultNamespace
             }
             
             StartCoroutine(WaveCooldown());
+        }
+
+        public void SpeedReward()
+        {
+            player.moveController.freeSpeed.walkSpeed += 1f;
+            player.health.Amount += player.health.MaximumAmount / 0.3f;
+            ChooseReward(0);
+        }
+
+        public void MaxHealthReward()
+        {
+            player.health.MaximumAmount += 25;
+            ChooseReward(0);
+        }
+
+        public void AttackReward()
+        {
+            player.Attack += 20;
+            ChooseReward(0);
         }
     }
 }

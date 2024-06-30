@@ -1993,7 +1993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Daniela Dantas - Programmer\n\nFrancisco Anjos - Game Designer\n\nJo\xE3o
+  m_text: "Daniela Dantas - Programmer\n\nFrancisco Anjos - Game Designer and Artist\n\nJo\xE3o
     S\xE1 Marques - Artist"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}

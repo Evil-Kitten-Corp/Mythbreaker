@@ -14,8 +14,6 @@ namespace FinalScripts.Specials
             {
                 OnPickup?.Invoke();
             }
-            
-            Destroy(gameObject);
         }
     }
 }

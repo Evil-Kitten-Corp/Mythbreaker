@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: WaveThree
   m_EditorClassIdentifier: 
   spawnData:
-  - enemyType: {fileID: 11400000, guid: 27810bb574a4b2c48a926040e1bb07d0, type: 2}
-    amountToSpawn: 3
-    spawnPoint: {x: 25.2, y: -0.57, z: -76.21}
-    delayBetweenSpawns: 1
   - enemyType: {fileID: 11400000, guid: cbd7fd1c647185b4a9701255f5f48ba3, type: 2}
     amountToSpawn: 5
     spawnPoint: {x: 17.63, y: -0.57, z: -70.6}

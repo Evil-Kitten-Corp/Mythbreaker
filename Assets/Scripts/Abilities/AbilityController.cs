@@ -17,6 +17,7 @@ namespace Abilities
         public float Cooldown => data.cooldown;
         public float MaxRecastTime => data.maxRecastTime; // New
         public bool IsRecastable => data.canRecast;
+        public bool HasStacks => data.hasStacks; 
 
         public event Action OnCooldownStart;
         public event Action OnCooldownEnd;
@@ -64,7 +65,7 @@ namespace Abilities
                 Tick();
             }
 
-            if (Input.GetKeyDown(abilityKey) && !data.hasCastDelay)
+            if (Input.GetKeyDown(abilityKey) && !IsCooldown && !data.hasCastDelay)
             {
                 Use();
             }
@@ -104,7 +105,12 @@ namespace Abilities
             }
 
             BeforeAbility();
-            Ability();    
+            
+            if (!Ability())
+            {
+                return;
+            }   
+            
             AfterAbility();
 
             if (IsRecastable)
@@ -127,12 +133,14 @@ namespace Abilities
 
         protected virtual void BeforeAbility() { } // Can be overridden in derived classes
 
-        protected virtual void Ability()
+        protected virtual bool Ability()
         {
             if (IsRecastable)
             {
                 _timeSinceRecast = Time.time;
             }
+
+            return true;
         } // Can be overridden in derived classes
         
         protected virtual void AfterAbility() { }  // Can be overridden in derived classes
@@ -142,5 +150,10 @@ namespace Abilities
             Debug.Log("Called recast.");
             OnRecast?.Invoke();
         }  // Can be overridden in derived classes
+
+        public virtual int Stacks()
+        {
+            return 0;
+        }
     }
 }

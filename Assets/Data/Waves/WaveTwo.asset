@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: WaveTwo
   m_EditorClassIdentifier: 
   spawnData:
-  - enemyType: {fileID: 11400000, guid: 27810bb574a4b2c48a926040e1bb07d0, type: 2}
-    amountToSpawn: 1
-    spawnPoint: {x: 25.2, y: -0.57, z: -76.21}
+  - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
+    amountToSpawn: 2
+    spawnPoint: {x: 38.89, y: -0.57, z: -56.49}
     delayBetweenSpawns: 1
   - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
-    amountToSpawn: 5
-    spawnPoint: {x: 38.89, y: -0.57, z: -56.49}
+    amountToSpawn: 1
+    spawnPoint: {x: 38.89, y: -0.57, z: -67.49}
+    delayBetweenSpawns: 1
+  - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
+    amountToSpawn: 1
+    spawnPoint: {x: 38.89, y: -0.57, z: -71.49}
+    delayBetweenSpawns: 1
+  - enemyType: {fileID: 11400000, guid: 2eae5c8198b84344d8a0ae3dd010228a, type: 2}
+    amountToSpawn: 1
+    spawnPoint: {x: 38.89, y: -0.57, z: -84.49}
     delayBetweenSpawns: 1

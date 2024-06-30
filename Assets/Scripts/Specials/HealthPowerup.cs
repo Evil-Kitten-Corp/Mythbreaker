@@ -9,7 +9,8 @@ namespace FinalScripts.Specials
 
         private void Heal()
         {
-            GetComponent<AttributesManager>().health.Amount = 1000;
+            FindObjectOfType<AttributesManager>().health.Amount += 30;
+            Destroy(gameObject);
         }
     }
 }

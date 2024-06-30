@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using FinalScripts;
+using FinalScripts.Refactored;
+using UnityEngine;
 
 public class ThrowWeaponScript: MonoBehaviour
 {
@@ -24,17 +26,17 @@ public class ThrowWeaponScript: MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = true;
             activated = false;
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy") && activated)
+        if (activated && other.TryGetComponent<EnemyBT>(out var bt))
         {
-            if (other.GetComponent<EnemyBehaviour>() != null)
-            {
-                other.GetComponent<EnemyBehaviour>().TakeDamage.Invoke(100);
-            }
+            bt.TakeDamage(30 + FindObjectOfType<WeaponAndAttackManager>().baseAttack, true);
+        }
+        else if (activated && other.TryGetComponent<EnemyAppendage>(out var ea))
+        {
+            ea.TakeDamage(30 + FindObjectOfType<WeaponAndAttackManager>().baseAttack);
         }
     }
 }

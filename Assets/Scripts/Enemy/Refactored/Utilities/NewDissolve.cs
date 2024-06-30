@@ -15,24 +15,56 @@ namespace FinalScripts.Refactored.Utilities
 
         public Material dissolveMaterial;
 
+        public MeshRenderer mr;
+        public SkinnedMeshRenderer sr;
+
         private float _dissolveAmount;
         
         private static readonly int Dissolve = Shader.PropertyToID(DissolveProperty);
+        private Material _cachedMat;
 
         const string DissolveProperty = "_Dissolve";
+        public bool canStart = true;
 
         private void Start()
         {
-            dissolveMaterial.SetFloat(Dissolve, 0);
-            _dissolveAmount = startDissolve;
-            DOTween.To(() => _dissolveAmount, x => _dissolveAmount = x, endDissolve, timer)
-                .SetEase(curve)
-                .OnComplete(() => Destroy(gameObject));
+            //cache
+            if (mr != null)
+            {
+                mr.material = new Material(dissolveMaterial);
+                _cachedMat = mr.material;
+            }
+            else if (sr != null)
+            {
+                sr.material = new Material(dissolveMaterial);
+                _cachedMat = sr.material;
+            }
+            else
+            {
+                Debug.Log("Changing OG material!");
+                _cachedMat = dissolveMaterial;
+            }
+
+            if (!canStart)
+            {
+                return;
+            }
+            
+            ForceStart();
         }
 
         private void Update()
         {
-            dissolveMaterial.SetFloat(Dissolve, _dissolveAmount);
+            _cachedMat.SetFloat(Dissolve, _dissolveAmount);
+        }
+
+        public void ForceStart()
+        {
+            _cachedMat.SetFloat(Dissolve, 0);
+            _dissolveAmount = startDissolve;
+            DOTween.To(() => _dissolveAmount, x => _dissolveAmount = x, endDissolve, timer)
+                .SetEase(curve)
+                .OnComplete(() => Destroy(gameObject));
         }
     }
 }

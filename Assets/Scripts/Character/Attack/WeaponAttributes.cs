@@ -13,17 +13,17 @@ public class WeaponAttributes : MonoBehaviour
         
         if (other.TryGetComponent<EnemyBT>(out var bt))
         {
-            bt.TakeDamage(currentAttackData.damage, currentAttackData.canCrit);
+            bt.TakeDamage(wp.baseAttack + currentAttackData.damage, currentAttackData.canCrit);
             wp.AttackSuccessful();
         }
         else if (other.TryGetComponent<EnemyBase>(out var eb))
         {
-            eb.ApplyDamage(attributes.transform, currentAttackData.damage, currentAttackData.canCrit);
+            eb.ApplyDamage(attributes.transform, wp.baseAttack + currentAttackData.damage, currentAttackData.canCrit);
             wp.AttackSuccessful();
         }
         else if (other.TryGetComponent<EnemyAppendage>(out var ap))
         {
-            ap.TakeDamage((int)currentAttackData.damage);
+            ap.TakeDamage((int)(wp.baseAttack + currentAttackData.damage));
             wp.AttackSuccessful();
         }
     }

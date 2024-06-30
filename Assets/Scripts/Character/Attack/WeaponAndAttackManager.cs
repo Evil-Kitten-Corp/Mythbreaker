@@ -30,6 +30,7 @@ public class WeaponAndAttackManager : MonoBehaviour
     public AttackData[] heavyAttackData;  // Array of heavy attack data
     private int lightAttackIndex = 0;
     private int heavyAttackIndex = 0;
+    public int baseAttack = 10;
 
     private void Awake()
     {

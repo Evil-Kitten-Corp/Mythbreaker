@@ -22,6 +22,7 @@ namespace Abilities
         public Transform weapon;
         public Transform hand;
         public Transform curvePoint;
+        public Collider weaponCollider;
         
         [Space]
         
@@ -76,7 +77,7 @@ namespace Abilities
             base.Update();
         }
 
-        protected override void Ability()
+        protected override bool Ability()
         {
             if (hasWeapon)
             {
@@ -89,6 +90,7 @@ namespace Abilities
             }
             
             base.Ability();
+            return true;
         }
 
         protected override void Recast()
@@ -116,6 +118,8 @@ namespace Abilities
             weapon.eulerAngles = new Vector3(0, -90 +transform.eulerAngles.y, 0);
             weapon.transform.position += transform.right/5;
             weaponRb.AddForce(Camera.main.transform.forward * throwPower + transform.up * 2, ForceMode.Impulse);
+
+            weaponCollider.enabled = true;
     
             //Trail
             trailRenderer.emitting = true;
@@ -145,6 +149,8 @@ namespace Abilities
             weapon.localEulerAngles = origLocRot;
             weapon.localPosition = origLocPos; 
             hasWeapon = true;
+            
+            weaponCollider.enabled = false;
     
             //Particle and trail
             catchParticle.Play();

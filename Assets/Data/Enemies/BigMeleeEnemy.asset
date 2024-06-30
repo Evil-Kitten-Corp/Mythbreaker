@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be7b058864b48b195bcb383786441d3, type: 3}
   m_Name: BigMeleeEnemy
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2491867353365704758, guid: 0483e31389979034c8a44fb96824cba7, type: 3}
+  prefab: {fileID: 7238638664245256546, guid: f87d458347594f1408c538fc5d4b43e5, type: 3}
   health: 10
   speed: 2
   attackDamage: 10

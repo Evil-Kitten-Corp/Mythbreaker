@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FinalScripts;
+using FinalScripts.Refactored;
 using UnityEngine;
 
 public class TargetProjectile : MonoBehaviour
@@ -19,9 +21,16 @@ public class TargetProjectile : MonoBehaviour
     private float randomSideAngle;
     public float sideAngle = 25;
     public float upAngle = 20;
+    
+    private WeaponAndAttackManager _weaponAndAttackManager;
+    private EnemyBT _enemyBt;
+    private EnemyAppendage _appendage;
 
     void Start()
     {
+        _enemyBt = target.GetComponentInParent<EnemyBT>();
+        _appendage = target.GetComponent<EnemyAppendage>();
+        _weaponAndAttackManager = FindObjectOfType<WeaponAndAttackManager>();
         FlashEffect();
         newRandom();
     }
@@ -69,7 +78,8 @@ public class TargetProjectile : MonoBehaviour
 
         Vector3 forward = ((target.position + targetOffset) - transform.position);
         Vector3 crossDirection = Vector3.Cross(forward, Vector3.up);
-        Quaternion randomDeltaRotation = Quaternion.Euler(0, randomSideAngle*saturatedDistanceToTarget, 0) * Quaternion.AngleAxis(randomUpAngle * saturatedDistanceToTarget, crossDirection);
+        Quaternion randomDeltaRotation = Quaternion.Euler(0, randomSideAngle*saturatedDistanceToTarget, 0) * 
+                                         Quaternion.AngleAxis(randomUpAngle * saturatedDistanceToTarget, crossDirection);
         Vector3 direction = randomDeltaRotation * forward;
 
         float distanceThisFrame = Time.deltaTime * speed;
@@ -133,10 +143,16 @@ public class TargetProjectile : MonoBehaviour
             }
         }
 
-        if (target.GetComponentInParent<EnemyBehaviour>() != null)
+        if (_enemyBt != null)
         {
-            target.GetComponentInParent<EnemyBehaviour>().TakeDamage.Invoke(10);
+            _enemyBt.TakeDamage(10 + _weaponAndAttackManager.baseAttack, false);
         }
+
+        if (_appendage != null)
+        {
+            _appendage.TakeDamage(10 + _weaponAndAttackManager.baseAttack);
+        }
+        
         Destroy(gameObject);
     }
 }

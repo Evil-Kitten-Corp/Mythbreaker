@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using DefaultNamespace;
 using DG.Tweening;
-using Minimalist.Bar.Utility;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,18 +24,26 @@ namespace Abilities
 
         private void Update()
         {
-            if (isLocked)
-            {
-                UserInterface();
-                target = screenTargets[TargetIndex()].transform;
-            }
-            
             if (screenTargets.Count < 1)
                 return;
 
+            if (isLocked)
+            {
+                UserInterface();
+                int targetIndex = TargetIndex();
+                if (targetIndex >= 0 && targetIndex < screenTargets.Count && screenTargets[targetIndex] != null)
+                {
+                    target = screenTargets[targetIndex].transform;
+                }
+            }
+
             if (!isLocked)
             {
-                target = screenTargets[TargetIndex()].transform;
+                int targetIndex = TargetIndex();
+                if (targetIndex >= 0 && targetIndex < screenTargets.Count && screenTargets[targetIndex] != null)
+                {
+                    target = screenTargets[targetIndex].transform;
+                }
             }
         }
 
@@ -55,14 +62,17 @@ namespace Abilities
         
         private void UserInterface()
         {
-            aim.transform.position = Camera.main.WorldToScreenPoint(target.position + (Vector3)uiOffset);
-            Color c = screenTargets.Count < 1 ? Color.clear : Color.white;
-            aim.color = c;
+            if (target != null)
+            {
+                aim.transform.position = Camera.main.WorldToScreenPoint(target.position + (Vector3)uiOffset);
+                Color c = screenTargets.Count < 1 ? Color.clear : Color.white;
+                aim.color = c;
+            }
         }
 
         void LockInterface(bool state)
         {
-            float size = state ? 1 : 2;
+            float size = state ? .5f : 1;
             float fade = state ? 1 : 0;
             lockAim.DOFade(fade, .15f);
             aim.DOFade(fade, .15f);
@@ -73,25 +83,31 @@ namespace Abilities
         
         public int TargetIndex()
         {
-            float[] distances = new float[screenTargets.Count];
+            if (screenTargets.Count == 0)
+                return -1;
 
+            float[] distances = new float[screenTargets.Count];
             for (int i = 0; i < screenTargets.Count; i++)
             {
-                distances[i] = Vector2.Distance(Camera.main.WorldToScreenPoint(screenTargets[i].transform.position), 
+                if (screenTargets[i] != null)
+                {
+                    distances[i] = Vector2.Distance(Camera.main.WorldToScreenPoint(screenTargets[i].transform.position), 
                     new Vector2(Screen.width / 2, Screen.height / 2));
+                }
+                else
+                {
+                    distances[i] = float.MaxValue;
+                }
             }
 
             float minDistance = Mathf.Min(distances);
-            int index = 0;
-
             for (int i = 0; i < distances.Length; i++)
             {
                 if (minDistance == distances[i])
-                    index = i;
+                    return i;
             }
 
-            return index;
-
+            return -1;
         } 
     }
 }

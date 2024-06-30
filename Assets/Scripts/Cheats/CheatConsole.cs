@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FinalScripts;
+using FinalScripts.Refactored;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -9,6 +10,7 @@ namespace DefaultNamespace
     {
         public KeyCode key;
         private bool _showConsole;
+        bool userHasHitReturn = false;
 
         string _input;
 
@@ -18,40 +20,57 @@ namespace DefaultNamespace
         public static DebugCheat UNLOCK_BOSS;
         public static DebugCheat REGINALD;
         public static DebugCheat OP;
+        public static DebugCheat ANTI_CC;
+        public static DebugCheat STATS;
 
         private List<object> _commandList;
+        
+        private AttributesManager _am;
+        private EnemyBT[] _enemyBehaviours;
+        private WaveFinal _rew;
+        private TeleportIndicator _ob;
 
         private void Awake()
         {
+            _ob = FindObjectOfType<TeleportIndicator>(true);
+            _rew = FindObjectOfType<WaveFinal>();
+            _enemyBehaviours = FindObjectsOfType<EnemyBT>();
+            _am = FindObjectOfType<AttributesManager>();
+            
+            STATS = new DebugCheat("stats", "stats", () =>
+            {
+                Debug.Log($"Life: {_am.health.Amount}. Base Damage: {_am.Attack}. Can be knocked: {_am.CanStomp()}. " +
+                          $"Can be damaged: {!_am.IsInvulnerable()}");
+            });
+            
+            ANTI_CC = new DebugCheat("no_cc", "no_cc", () =>
+            {
+                _am.SetKnockUp(false);
+            });
+            
             OP = new DebugCheat("op", "op", () =>
             {
-                AttributesManager am = FindObjectOfType<AttributesManager>();
-
-                am.attack = 100;
+                _am.Attack = 1000;
             });
 
             KILL_ALL = new DebugCheat("kill_all", "kill_all", () =>
             {
-                List<EnemyBehaviour> allEnemies = FindObjectsOfType<EnemyBehaviour>().ToList();
+                List<EnemyBT> allEnemies = _enemyBehaviours.ToList();
 
                 foreach (var enemy in allEnemies)
                 {
-                    enemy.OnDeath?.Invoke(enemy.gameObject);
+                    enemy.TriggerDeath();
                 }
             });
 
             INVUL = new DebugCheat("inv", "invul", () =>
             {
-                AttributesManager am = FindObjectOfType<AttributesManager>();
-
-                am.SetInvulnerable(!am.IsInvulnerable());
+                _am.SetInvulnerable(!_am.IsInvulnerable());
             });
 
             ALL_POWERS = new DebugCheat("powers_all", "p_all", () =>
             {
-                WaveFinal rew = FindObjectOfType<WaveFinal>();
-
-                foreach (var ability in rew.rewards.Keys)
+                foreach (var ability in _rew.rewards.Keys)
                 {
                     ability.Unlock?.Invoke();
                 }
@@ -59,8 +78,7 @@ namespace DefaultNamespace
             
             UNLOCK_BOSS = new DebugCheat("u_boss", "unlock_boss", () =>
             {
-                GameObject ob = GameObject.FindWithTag("UnlockBoss");
-                ob.SetActive(false);
+                _ob.gameObject.SetActive(true);
             });
             
             REGINALD = new DebugCheat("reggie", "reginald", () => {});
@@ -72,7 +90,9 @@ namespace DefaultNamespace
                 ALL_POWERS,
                 UNLOCK_BOSS,
                 REGINALD,
-                OP
+                OP,
+                ANTI_CC,
+                STATS
             };
         }
 
@@ -94,16 +114,36 @@ namespace DefaultNamespace
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Return) && _showConsole)
+            if (Input.GetKeyDown(KeyCode.Return) && _showConsole || userHasHitReturn)
             {
                 HandleInput();
                 _input = "";
+                userHasHitReturn = false;
             }
         }
 
         private void OnGUI()
         {
             if (!_showConsole) return;
+            
+            Event e = Event.current;
+            
+            if (e.keyCode == KeyCode.Return)
+            {
+                userHasHitReturn = true;
+                _showConsole = !_showConsole;
+                
+                if (_showConsole)
+                {
+                    MythUIElement.IsInUI = true;
+                    Time.timeScale = 0;
+                }
+                else
+                {
+                    MythUIElement.IsInUI = false;
+                    Time.timeScale = 1;
+                }
+            }
 
             float y = 0f;
             GUI.Box(new Rect(0, y, Screen.width, 30), "");

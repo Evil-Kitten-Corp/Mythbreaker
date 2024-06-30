@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AntimatterBeamMat
-  m_Shader: {fileID: -6465566751694194690, guid: ee32324672095d44eb16095fb62a033e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ee32324672095d44eb16095fb62a033e,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -93,9 +94,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_13ec6c3ed6db4d23b7d66fc091499fcb: 0.46
+    - Vector1_13ec6c3ed6db4d23b7d66fc091499fcb: 5.18
     - Vector1_4ef4c0c7c95b4ba082dd59d81206335c: -2
-    - Vector1_f983093601e141f08d3b82414610276a: 0.3
+    - Vector1_f983093601e141f08d3b82414610276a: 0.29
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -124,9 +125,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_a8b72dac868345f586ed88c7588a8e6a: {r: 3.3866124, g: 0.7361687, b: 0.6560452, a: 0}
+    - Color_a8b72dac868345f586ed88c7588a8e6a: {r: 5.656854, g: 0.18366408, b: 0, a: 0}
     - Color_dfd3755ef82e45aa9a8227073d33fafb: {r: 1, g: 1, b: 1, a: 0}
-    - Vector2_1b0dc191284743c0a512d2b3b26fa314: {r: 0.16, g: 0.53, b: 0, a: 0}
+    - Vector2_1b0dc191284743c0a512d2b3b26fa314: {r: 4.94, g: 5.11, b: 0, a: 0}
     - Vector2_1fbad7aea90e4b69a273f7690309860b: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

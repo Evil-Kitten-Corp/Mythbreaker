@@ -33,10 +33,10 @@ namespace FinalScripts
             _rewardSystem = FindObjectOfType<WaveFinal>();
             _saveSystem = FindObjectOfType<SaveLoadJsonFormatter>();
 
-            LoadGameInventory();
+            //LoadGameInventory();
         }
 
-        private void LoadGameInventory()
+        /*private void LoadGameInventory()
         {
             _saveSystem.LoadGame(out List<string> abIds);
 
@@ -47,7 +47,7 @@ namespace FinalScripts
                     abilities.Keys.First(x => x.id == id).Unlock?.Invoke();
                 }
             }
-        }
+        }*/
 
         public void ReceiveRewards(Reward obj)
         {

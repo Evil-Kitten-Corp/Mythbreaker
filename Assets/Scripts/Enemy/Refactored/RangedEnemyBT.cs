@@ -17,6 +17,7 @@ namespace FinalScripts.Refactored
         public RangedEnemyProjectile projectile;
         
         private RangedEnemyProjectile _loadedProjectile;
+        private bool _isAfraid = false;
 
         private void Start()
         {
@@ -77,6 +78,27 @@ namespace FinalScripts.Refactored
         public override bool CanAttack()
         {
             return _canShoot;
+        }
+
+        public void Afraid(bool v)
+        {
+            if (_isAfraid == v) //if we want him afraid and he's already afraid or
+                                //if we don't want him afraid and he's already not
+            {
+                return;
+            }
+
+            if (_isAfraid && v == false) //if we don't want him afraid and he's currently afraid
+            {
+                anim.SetBool("Ducking", false);
+                _isAfraid = false;
+            }
+            else //if we want him afraid
+            {
+                anim.SetTrigger("Afraid");
+                anim.SetBool("Ducking", true);
+                _isAfraid = true;
+            }
         }
 
         private IEnumerator Cooldown()
