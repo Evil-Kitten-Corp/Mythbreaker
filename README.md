@@ -128,4 +128,4 @@ The game features different classes of enemies, such as:
 We are not planning on expanding this project further. It remains as a vertical slice prototype made for a class to test our competences on building this type of game in such a short amount of time.
 
 ## License
-This project is licensed under the Attribution-Non Commercial-Share Alike 4.0 International License - see the [LICENSE](license.md) file for details.
+This project is licensed under the Attribution-Non Commercial-Share Alike 4.0 International License - see the [LICENSE](LICENSE.md) file for details.
