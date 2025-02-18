@@ -2,7 +2,7 @@
   
 # Mythbreaker
 
-  ![Unity Version](https://img.shields.io/badge/Unity-2022.3.44f1-blue)
+  ![Unity Version](https://img.shields.io/badge/Unity-2022.3.10f1-blue)
 [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com)
 [![CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
